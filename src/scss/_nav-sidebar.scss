@@ -1,0 +1,134 @@
+.nav {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100vh;
+
+
+  &__toggle {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      position: absolute;
+      top: 1.75em;
+      right: 1.5em;
+  
+      z-index: 1000;
+    }
+
+  &__navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25em;
+  
+    color: var(--clr-light);
+    z-index: 100;
+  
+    transform: translateX(100%);
+    transition: transform 400ms cubic-bezier(.5, 0, .5, 1);
+  
+    background: #000000f1;
+    overflow: hidden;
+  }
+
+  &__navbar-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+
+  &__navbar-item {
+    margin: 0 5px;
+  }
+
+  &__navbar-link {
+    margin: 0;
+    font-size: var(--fs-h2);
+    text-decoration: none;
+    color: var(--clr-light);
+    cursor: pointer;
+
+    &:hover {
+      text-shadow: var(--bs-accent);
+      font-weight: bolder;
+    }
+  }
+  
+  &__hamburger {
+    display: block;
+    position: relative;
+    
+    &:before {
+      top: 6px;
+    }
+  
+    &:after {
+      bottom: 6px;
+    }
+  }
+
+  &__hamburger,
+  &__hamburger:before,
+  &__hamburger:after {
+    background: var(--clr-accent);
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    transition: transform 400ms ease-in-out;
+  }
+
+  &__hamburger:before,
+  &__hamburger:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}
+
+.nav-open {
+  .nav__toggle {
+    position: fixed;
+  }
+
+  .navbar {
+    transform: translateX(0%);
+    box-shadow: var(--bs-accent);
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    background: var(--clr-accent);
+  }
+
+  .hamburger {
+    transform: rotate(.625turn);
+    
+    &::before {
+      transform: rotate(90deg) translateX(-6px);
+    }
+
+    &::after {
+      background: none;
+      border: 3px solid var(--clr-accent);
+      width: 37px;
+      height: 37px;
+      transform: rotate(-45deg) translate(-21px, 12px);
+    }
+  }
+}
