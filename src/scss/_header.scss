@@ -1,7 +1,6 @@
 .header {
-  @include flex(row, center, center);
+  @include flex(row, center, space-between);
   width: 100vw;
-  height: 8vh;
 
   padding: 1em;
 
@@ -10,33 +9,12 @@
 
   &__logo {
     border-radius: 50%;
-    max-width: 45px;
-    transition: transform 2000ms ease-in-out;
+    max-width: 80px;
+    transition: transform 50ms ease-in-out;
 
     &:hover {
-      transform: scale(1.1) rotate(10turn);
+      transform: scale(1.1);
     }
-  }
-
-  &__title-div {
-    height: 100%;
-    /* border: 1px solid aqua; */
-    display: flex;
-    align-items: center;
-    margin-left: 1em;
-    font-size: var(--fs-body);
-  }
-
-  &__title-1:hover {
-    transform: scale(1.2) skew(30deg, 20deg);
-  }
-  
-  &__title-2:hover {
-    transform: scale(1.2) skew(30deg, -20deg);
-  }
-  
-  &__title-3:hover {
-    transform: scale(1.2) skew(-30deg, 20deg);
   }
 }
 
@@ -44,51 +22,4 @@
   /* color: var(--clr-light); */
   transition: transform 500ms ease-in-out;
   cursor: pointer;
-}
-
-@keyframes header-title-fade-scale {
-  0% {
-    opacity: 1;
-  }
-
-  80% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes header-title-move1 {
-  0% {
-    margin: 0;
-  }
-
-  100% {
-    color: var(--clr-accent);
-    margin: -1.8em 0 0 0;
-  }
-}
-
-@keyframes header-title-move2 {
-  0% {
-    margin: 0;
-  }
-
-  100% {
-    margin: 0;
-    color: var(--clr-accent);
-  }
-}
-
-@keyframes header-title-move3 {
-  0% {
-    margin: 0;
-  }
-
-  100% {
-    color: var(--clr-accent);
-    margin: 1.8em 0 0 0;
-  }
 }

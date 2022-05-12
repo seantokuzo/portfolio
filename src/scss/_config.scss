@@ -2,7 +2,11 @@ $color-primary: #DAE5D0;
 $color-secondary: #FEFBE7;
 $color-three: #F9EBC8;
 $color-four: #A0BCC2;
+$color-light: #FEFBE7;
 $color-dark: #0F0E0E;
+
+$bs-black: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
+0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
 
 * {
   box-sizing: border-box;
@@ -19,6 +23,12 @@ $color-dark: #0F0E0E;
 
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
+}
+
+@mixin page-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 @function set-text-color($color) {
