@@ -30,6 +30,10 @@ module.exports = {
         test: /\.(png|jpe?g|svg|gif)?$/,
         use: "file-loader?name=./img/[name].[ext]",
       },
+      {
+        test: /\.(wav|mp3|mp4|m4a)$/i,
+        use: "file-loader?name=./assets/audio/[name].[ext]",
+      },
     ],
   },
   plugins: [

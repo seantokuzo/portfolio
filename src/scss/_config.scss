@@ -4,6 +4,10 @@ $color-three: #F9EBC8;
 $color-four: #A0BCC2;
 $color-light: #FEFBE7;
 $color-dark: #0F0E0E;
+$kuzo-sherbert: #ffad61;
+$kuzo-orange: #ff5d43;
+$kuzo-pink: #c2237d;
+$kuzo-purp: #b077ba;
 
 $bs-black: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
 0.125em 0.125em 0.25em rgba(0, 0, 0, .15);
@@ -31,15 +35,15 @@ $bs-black: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
   height: 100%;
 }
 
-@function set-text-color($color) {
-  @if (lightness($color) > 40%) {
-    @return #000;
-  }
+// @function set-text-color($color) {
+//   @if (lightness($color) > 40%) {
+//     @return #000;
+//   }
 
-  @else {
-    @return #fff;
-  }
-}
+//   @else {
+//     @return #fff;
+//   }
+// }
 
 // @mixin media-md {
 //   @media screen and (min-width: 768px) {
