@@ -1,0 +1,79 @@
+$s1: "";
+$s2: "";
+$s3: "";
+
+@for $i from 1 through 400 {
+  $s1: $s1 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
+  $s2: $s2 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
+  $s3: $s3 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
+
+  @if $i < 400 {
+    $s1: $s1 +",";
+    $s2: $s2 +",";
+    $s3: $s3 +",";
+  }
+}
+
+
+// .particles-wrapper {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+// }
+
+.particles {
+  border-radius: 50%;
+  opacity: 0.8;
+  color: $kuzo-sherbert;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+  
+@keyframes fall {
+  0%{
+    transform: translateY(-200vh);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+.dark-mode .particles {
+  color: $kuzo-purp;
+}
+
+.particles-layer1 {
+  width: .25rem;
+  height: .25rem;
+  filter: blur(.5px);
+  box-shadow: #{$s1};
+  animation-duration: 18s;
+}
+.particles-layer1.dup {
+  animation-delay: -11s;
+}
+
+.particles-layer2 {
+  width: .25rem;
+  height: .25rem;
+  filter: blur(.75px);
+  box-shadow: #{$s2};
+  animation-duration: 20s;
+}
+
+.particles-layer1.dup {
+  animation-delay: -10s
+}
+
+.particles-layer3 {
+  width: 0.25rem;
+  height: 0.25rem;
+  filter: blur(2px);
+  box-shadow: #{$s3};
+  animation-duration: 22s;
+}
+
+.particles-layer1.dup {
+  animation-delay: -9s;
+}

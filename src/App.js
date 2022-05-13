@@ -6,13 +6,11 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
+import Particles from './components/Particles'
 
 import './scss/main.scss'
 
 export default function App() {
-  const mouseRef = useRef()
-  // gsap.set(mouseRef, { xPercent: -50, yPercent: -50 })
-
   useEffect(() => {
     const ball = document.querySelector('.mouse')
     const pos = { x: window.innerWidth, y: window.innerHeight }
@@ -40,6 +38,7 @@ export default function App() {
 
   return (
     <div className="app">
+      {/* <Particles /> */}
       <div className="mouse"></div>
       <Header />
       <Routes>

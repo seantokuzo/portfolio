@@ -1,9 +1,9 @@
 .header {
   @include flex(row, center, space-between);
-  width: 100vw;
-
+  width: 100%;
+  
   padding: 1em;
-
+  
   z-index: 10;
   box-shadow: var(--bs-black);
   
@@ -50,14 +50,136 @@
   }
 }
 
-// @keyframes spin {
-//   0% {
-//     transform: rotate(0);
-//   }
-//   100% {
-//     transform: rotate(1turn);
-//   }
-// }
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+    // opacity: 1;
+  }
+  4% {
+    opacity: 1;
+  }
+  5% {
+    opacity: 0.2;
+  }
+  7% {
+    opacity: 1;
+  }
+  11% {
+    opacity: 1;
+  }
+  12% {
+    opacity: .8;
+  }
+  14% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 0;
+  }
+  19% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  28% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  42% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0.4;
+  }
+  47% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0.6;
+  }
+  54% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  56% {
+    opacity: 0.1;
+  }
+  57% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  63% {
+    opacity: 0.3;
+  }
+  64% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  76% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 1;
+  }
+  83% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  88% {
+    opacity: 1;
+  }
+  94% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.2;
+  }
+  97% {
+    opacity: 1;
+  }
+  99% {
+    opacity: .5;
+  }
+  100% {
+    transform: rotate(1turn);
+    opacity: 1;
+  }
+}
 
 /* ************************************ */
 /* ***   SUN MOON DARMODE TOGGLER   *** */
@@ -89,7 +211,7 @@
   color: $kuzo-sherbert;
   /* margin-top: 10px; */
   transition: transform 500ms ease-out;
-  transform: translateY(-18.5px);
+  transform: translateY(-18px);
 }
 
 .toggle-moon {
@@ -108,5 +230,5 @@
 }
 
 .toggle-on .toggle-moon {
-  transform: translateY(4.5px);
+  transform: translateY(5px);
 }
