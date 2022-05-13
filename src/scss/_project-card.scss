@@ -1,0 +1,97 @@
+.work-card {
+  width: 65%;
+  max-width: 500px;
+
+  padding: 0 2em;
+
+  border: 4px solid black;
+  border-radius: 5px;
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto minmax(auto, 200px) auto;
+  grid-template-areas:
+    "title"
+    "img"
+    "text";
+
+  transition: transform 500ms ease-in-out;
+  transform: translateX(0px);
+}
+
+.work-card-hidden {
+  position: fixed;
+}
+
+.work-card-hidden-left {
+  transform: translateX(-1000px);
+  transition: transform 500ms ease-in-out;
+}
+
+.work-card-hidden-right {
+  transform: translateX(1000px);
+  transition: transform 500ms ease-in-out;
+}
+
+.word-card-link-title {
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-card-title {
+  grid-area: title;
+  padding: .5em 0;
+  text-align: center;
+}
+
+.word-card-img-container {
+  grid-area: img;
+  background-color: var(--clr-accent);
+  min-height: 300px;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.work-card-link {
+  background-color: var(--clr-accent);
+}
+
+.work-card-img {
+  max-width: 100%;
+  transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.work-card-link:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.work-card-img:hover,
+.work-card-link:focus .work-card-img {
+  transform: scale(1.1);
+  opacity: .9;
+}
+
+.project-description {
+  grid-area: text;
+  padding: .75em .75em;
+
+  font-size: smaller;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  text-align: center;
+
+  cursor: pointer;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}

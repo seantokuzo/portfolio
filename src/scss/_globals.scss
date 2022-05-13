@@ -1,4 +1,4 @@
-.home {
+.section {
   @include page-container;
   @include flex(column, center, center)
 }

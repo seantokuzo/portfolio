@@ -2,7 +2,7 @@ $color-primary: #DAE5D0;
 $color-secondary: #FEFBE7;
 $color-three: #F9EBC8;
 $color-four: #A0BCC2;
-$color-light: #FEFBE7;
+$color-light: #ffffff;
 $color-dark: #0F0E0E;
 $kuzo-sherbert: #ffad61;
 $kuzo-orange: #ff5d43;
@@ -37,11 +37,11 @@ $bs-black: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25),
 
 // @function set-text-color($color) {
 //   @if (lightness($color) > 40%) {
-//     @return #000;
+//     @return $kuzo-sherbert;
 //   }
 
 //   @else {
-//     @return #fff;
+//     @return $kuzo-purp;
 //   }
 // }
 
