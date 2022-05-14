@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
 import Logo from './Logo'
 import SunMoonToggle from './SunMoonToggle'
 
 export default function Header() {
-  const [vw, setVw] = useState(window.innerWidth)
   const { pathname } = useLocation()
   console.log(pathname)
 
@@ -13,20 +12,14 @@ export default function Header() {
   const q = gsap.utils.selector(navList)
 
   useEffect(() => {
-    if (vw >= 750) {
-      gsap.from(q('.nav__list-item'), {
-        opacity: 0,
-        duration: 1,
-        delay: 5,
-        y: '-200px',
-        stagger: 0.2
-      })
-    }
+    gsap.from(q('.nav__list-item'), {
+      opacity: 0,
+      duration: 1,
+      delay: 5,
+      y: '-200px',
+      stagger: 0.2
+    })
   }, [])
-
-  useEffect(() => {
-    setVw(window.innerWidth)
-  }, [window.innerWidth])
 
   const navLinks = (
     <nav className="nav">
