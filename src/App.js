@@ -20,10 +20,14 @@ export default function App() {
     const xSet = gsap.quickSetter(ball, 'x', 'px')
     const ySet = gsap.quickSetter(ball, 'y', 'px')
 
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.x - 10
-      mouse.y = e.y - 10
-    })
+    window.addEventListener(
+      'mousemove',
+      (e) => {
+        mouse.x = e.x - 10
+        mouse.y = e.y - 10
+      },
+      []
+    )
 
     gsap.ticker.add(() => {
       // adjust speed for higher refresh monitors

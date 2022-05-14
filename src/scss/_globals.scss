@@ -1,4 +1,16 @@
 .section {
   @include page-container;
-  @include flex(column, center, center)
+  @include flex(column, center, center);
+
+  &__title {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+  }
+  
+  &__subtitle {
+    font-size: 2em;
+    font-weight: 500;
+    font-family: 'Orbitron';
+  }
 }

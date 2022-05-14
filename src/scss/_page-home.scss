@@ -1,0 +1,31 @@
+.home {
+  align-items: flex-start;
+  border: 1px solid red;
+
+  &__title-container {
+    width: fit-content;
+    margin: 0 auto;
+
+    // border: 1px solid red;
+  }
+
+  &__subtitle-container {
+    margin: 2rem auto 0;
+    text-align: center;
+  }
+
+  &__subtitle-welcome {
+  }
+  
+  &__title-span {
+    font-weight: bolder;
+  }
+
+  &__span-name {
+    font-weight: bolder;
+  }
+
+  &__home__span-fed {
+    display: inline-block;
+  }
+}
