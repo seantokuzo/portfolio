@@ -16,7 +16,7 @@ export default function SunMoonToggle() {
       {
         opacity: 0,
         duration: 1,
-        delay: 1,
+        delay: 6.75,
         y: '-100px'
       },
       []

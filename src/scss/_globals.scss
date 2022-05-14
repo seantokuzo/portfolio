@@ -5,7 +5,7 @@
   &__title {
     font-family: 'Orbitron', 'Inter', sans-serif;
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 500;
   }
   
   &__subtitle {
@@ -13,4 +13,8 @@
     font-weight: 500;
     font-family: 'Orbitron';
   }
+}
+
+.underline {
+  text-decoration: underline;
 }
