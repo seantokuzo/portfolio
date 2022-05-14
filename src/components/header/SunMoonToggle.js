@@ -1,26 +1,33 @@
 import React, { useEffect, useRef, useContext } from 'react'
+import { useLocation } from 'react-router-dom'
 import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
 
 export default function SunMoonToggle() {
+  const { pathname } = useLocation()
   const { darkMode, toggleTheme } = useContext(ThemeContext)
 
   const toggleBtn = useRef()
   const q = gsap.utils.selector(toggleBtn)
 
   useEffect(() => {
-    gsap.from(
-      q('.toggle-btn'),
-      {
+    if (pathname === '/') {
+      gsap.from(q('.toggle-btn'), {
         opacity: 0,
         duration: 1,
         delay: 6.75,
         y: '-100px'
-      },
-      []
-    )
+      })
+    } else {
+      gsap.from(q('.toggle-btn'), {
+        y: '-10px',
+        opacity: 0,
+        duration: 1,
+        delay: 0.5
+      })
+    }
 
     // const dragLogo = document.querySelector(".logo-ball")
     Draggable.create('.toggle-btn', {

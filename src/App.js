@@ -23,8 +23,8 @@ export default function App() {
     window.addEventListener(
       'mousemove',
       (e) => {
-        mouse.x = e.x - 10
-        mouse.y = e.y - 10
+        mouse.x = e.x - 25
+        mouse.y = e.y - 25
       },
       []
     )

@@ -1,6 +1,6 @@
 .section {
-  @include page-container;
   @include flex(column, center, center);
+  padding: 4rem 0;
 
   &__title {
     font-family: 'Orbitron', 'Inter', sans-serif;
@@ -12,6 +12,12 @@
     font-size: 2em;
     font-weight: 500;
     font-family: 'Orbitron';
+  }
+
+  &__text {
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.05em;
   }
 }
 

@@ -41,7 +41,8 @@
   border: 3px solid;
   border-color: $kuzo-sherbert;
   font-size: 1.75em;
-
+  box-shadow: $bs-black;
+  
   &:hover {
     cursor: pointer;
   }
@@ -49,4 +50,5 @@
 
 .dark-mode .home__next {
   border-color: $kuzo-purp;
+  box-shadow: $bs-purp;
 }

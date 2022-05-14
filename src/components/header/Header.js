@@ -12,13 +12,22 @@ export default function Header() {
   const q = gsap.utils.selector(navList)
 
   useEffect(() => {
-    gsap.from(q('.nav__list-item'), {
-      opacity: 0,
-      duration: 1,
-      delay: 5,
-      y: '-200px',
-      stagger: 0.2
-    })
+    if (pathname === '/') {
+      gsap.from(q('.nav__list-item'), {
+        opacity: 0,
+        duration: 1,
+        delay: 5,
+        y: '-200px',
+        stagger: 0.2
+      })
+    } else {
+      gsap.from(q('.nav__list-item'), {
+        opacity: 0,
+        duration: 1,
+        y: '-10px',
+        stagger: 0.1
+      })
+    }
   }, [])
 
   const navLinks = (
