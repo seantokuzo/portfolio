@@ -15,9 +15,7 @@ export default function Portfolio(props) {
     setGridMode((prev) => !prev)
   }
 
-  const bgImg = {
-    background: darkMode ? nightBg : dayBg
-  }
+  const bgImg = darkMode ? nightBg : dayBg
 
   const myWorkContent = (
     <>
@@ -29,7 +27,10 @@ export default function Portfolio(props) {
   )
 
   return (
-    <section className="section portfolio" style={bgImg}>
+    <section
+      className="section portfolio"
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
       <h1 className="section-title section__title-work">MyWork</h1>
       {myWorkContent}
     </section>

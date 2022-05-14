@@ -5,10 +5,10 @@ import { gsap } from 'gsap'
 import HeaderTitle from '../components/HomeTitle'
 
 export default function Home() {
-  const line1 = 'Hello there'
-  const line2a = "I'm "
+  const line1 = 'hello there'
+  const line2a = "i'm "
   const line2b = 'sean tokuzo simpson'
-  const line3 = 'Front End Developer'
+  const line3 = 'front end developer'
   const home = useRef()
   const q = gsap.utils.selector(home)
 

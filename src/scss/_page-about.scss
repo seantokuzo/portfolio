@@ -56,22 +56,27 @@
   text-align: left;
 }
 
-.stack-icon {
+.stack-icon-div {
   @include transition-ease;
-  width: 45px;
-  margin: 10px 10px;
-  opacity: .85;
-
+  
   &:hover {
     transform: scale(1.15);
     opacity: 1;
   }
+}
+
+.stack-icon {
+  width: 45px;
+  margin: 10px 10px;
+  opacity: .85;
 
 }
 
-.ableton-icon {
+// .next-icon,
+.special-icon {
   width: 42px;
+  height: 42px;
   padding: 2px;
-  background-color: #e1e1e1;
+  background-color: $color-light;
   border-radius: 2px;
 }

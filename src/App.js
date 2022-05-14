@@ -7,10 +7,12 @@ import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Particles from './components/Particles'
+import bgImage from './assets/img/luna/kuzo-shadow-hi_res-drkgrey.png'
 
 import './scss/main.scss'
 
 export default function App() {
+  // TURN MOUSE INTO SHADOW THING
   useEffect(() => {
     const ball = document.querySelector('.mouse')
     const pos = { x: window.innerWidth, y: window.innerHeight }
