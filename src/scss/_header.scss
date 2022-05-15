@@ -72,7 +72,6 @@
 .dark-mode .toggle-btn {
   border-color: $kuzo-purp;
   background: $color-dark;
-  box-shadow: $bs-purp;
 }
 
 .toggle-icon {
@@ -109,7 +108,7 @@
 @keyframes spin {
   0% {
     transform: rotate(0);
-    // opacity: 1;
+    opacity: 1;
   }
 
   4% {

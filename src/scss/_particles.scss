@@ -1,79 +1,358 @@
-$s1: "";
-$s2: "";
-$s3: "";
+/* Config */
+$color-bg: #1e1e1e;
+$color-particle: #fff;
+$spacing: 2560px;
+$time-1: 60s;
+$time-2: 120s;
+$time-3: 180s;
+$time-4: 200s;
 
-@for $i from 1 through 400 {
-  $s1: $s1 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
-  $s2: $s2 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
-  $s3: $s3 +random(1000)*0.1vw+" "+random(1000)*0.1vh+" "+0+" "+random(50)*-0.01rem;
+/* mixins */
+@function particles($max) {
+  $val: 0px 0px;
 
-  @if $i < 400 {
-    $s1: $s1 +",";
-    $s2: $s2 +",";
-    $s3: $s3 +",";
+  @for $i from 1 through $max {
+    $val: #{$val},
+    random($spacing)+px random($spacing)+px;
   }
+
+  @return $val;
 }
 
-
-// .particles-wrapper {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-// }
-
-.particles {
+@mixin particles($max) {
+  box-shadow: particles($max);
   border-radius: 50%;
-  opacity: 0.8;
-  color: $kuzo-sherbert;
-  animation-name: fall;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
-  
-@keyframes fall {
-  0%{
-    transform: translateY(-200vh);
+
+.animation-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.particle,
+.particle:after {
+  background: transparent;
+}
+
+.particle:after {
+  position: absolute;
+  content: "";
+  top: $spacing;
+}
+
+.particle-1 {
+  animation: animParticle $time-1 linear infinite;
+  @include particles(1000);
+  height: 3px;
+  width: 3px;
+}
+
+.particle-1:after {
+  @include particles(900);
+  height: 2px;
+  width: 2px;
+}
+
+.particle-2 {
+  animation: animParticle $time-2 linear infinite;
+  @include particles(800);
+  height: 2px;
+  width: 2px;
+}
+
+.particle-2:after {
+  @include particles(500);
+  height: 3px;
+  width: 3px;
+}
+
+.particle-3:after {
+  @include particles(1100);
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+}
+
+.particle-4 {
+  animation: animParticle $time-4 linear infinite;
+  @include particles(1200);
+  height: 1px;
+  width: 1px;
+}
+
+.particle-4:after {
+  @include particles(700);
+  height: 1px;
+  width: 1px;
+}
+
+@keyframes animParticle {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  5% {
+    opacity: 0.5;
+  }
+
+  7% {
+    opacity: 1;
+  }
+  9% {
+    opacity: 0;
+  }
+  11% {
+    opacity: .2;
+  }
+
+  12% {
+    opacity: .8;
+  }
+
+  14% {
+    opacity: 0;
+  }
+
+  17% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 0.4;
+  }
+
+  19% {
+    opacity: 1;
+  }
+
+  23% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.3;
+  }
+
+  28% {
+    opacity: .8;
+  }
+
+  36% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  46% {
+    opacity: 0.4;
+  }
+
+  47% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .6;
+  }
+
+  53% {
+    opacity: 0.2;
+  }
+
+  54% {
+    opacity: 1;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  56% {
+    opacity: 0.5;
+  }
+
+  57% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  63% {
+    opacity: 0.3;
+  }
+
+  64% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+
+  72% {
+    opacity: .4;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+  77% {
+    opacity: 1;
+  }
+
+  83% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 0.7;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  94% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 0.4;
+  }
+
+  97% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: .5;
   }
   100% {
-    transform: translateY(200vh);
+    opacity: 0;
+    transform: translateX($spacing * -1) scale(1.1);
   }
 }
 
-.dark-mode .particles {
-  color: $kuzo-purp;
+.page-wrapper {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
 }
 
-.particles-layer1 {
-  width: .25rem;
-  height: .25rem;
-  filter: blur(.5px);
-  box-shadow: #{$s1};
-  animation-duration: 18s;
-}
-.particles-layer1.dup {
-  animation-delay: -11s;
+h4 {
+  color: #fff;
+  font-family: Monoton;
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate;
 }
 
-.particles-layer2 {
-  width: .25rem;
-  height: .25rem;
-  filter: blur(.75px);
-  box-shadow: #{$s2};
-  animation-duration: 20s;
+h4:hover {
+  color: #FF1177;
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
 }
 
-.particles-layer1.dup {
-  animation-delay: -10s
+/*glow for webkit*/
+
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
 }
 
-.particles-layer3 {
-  width: 0.25rem;
-  height: 0.25rem;
-  filter: blur(2px);
-  box-shadow: #{$s3};
-  animation-duration: 22s;
+/*glow for mozilla*/
+
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
 }
 
-.particles-layer1.dup {
-  animation-delay: -9s;
+/*glow*/
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #fff,
+      0 0 40px #FF1177,
+      0 0 70px #FF1177,
+      0 0 80px #FF1177,
+      0 0 100px #FF1177,
+      0 0 150px #FF1177;
+  }
+
+  to {
+    text-shadow: 0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #FF1177,
+      0 0 35px #FF1177,
+      0 0 40px #FF1177,
+      0 0 50px #FF1177,
+      0 0 75px #FF1177;
+  }
 }

@@ -32,7 +32,7 @@
 
 .section__toolbox {
   margin: 5em auto;
-  max-width: 500px;
+  max-width: 600px;
 
   /* border: 1px solid red; */
 }
@@ -58,7 +58,8 @@
 
 .stack-icon-div {
   @include transition-ease;
-  
+  opacity: .85;
+
   &:hover {
     transform: scale(1.15);
     opacity: 1;
@@ -67,9 +68,8 @@
 
 .stack-icon {
   width: 45px;
-  margin: 10px 10px;
-  opacity: .85;
-
+  margin: .85rem;
+  
 }
 
 // .next-icon,

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { Draggable } from 'gsap/Draggable'
+gsap.registerPlugin(Draggable)
 import html5Icon from '../assets/img/stack-icons/html5-icon.svg'
 import css3Icon from '../assets/img/stack-icons/css3-icon.svg'
 import javascriptIcon from '../assets/img/stack-icons/javascript-icon.svg'
@@ -11,9 +13,9 @@ import mongoIcon from '../assets/img/stack-icons/mongodb-icon.svg'
 import gitIcon from '../assets/img/stack-icons/git-icon.svg'
 import gsapIcon from '../assets/img/stack-icons/gsap-icon.svg'
 import postmanIcon from '../assets/img/stack-icons/postman-icon.svg'
-import nextjsIcon from '../assets/img/stack-icons/nextjs-icon.svg'
-import typescriptIcon from '../assets/img/stack-icons/typescript-icon.svg'
-import tailwindIcon from '../assets/img/stack-icons/tailwindcss-icon.svg'
+// import nextjsIcon from '../assets/img/stack-icons/nextjs-icon.svg'
+// import typescriptIcon from '../assets/img/stack-icons/typescript-icon.svg'
+// import tailwindIcon from '../assets/img/stack-icons/tailwindcss-icon.svg'
 import photoshopIcon from '../assets/img/stack-icons/photoshop-icon.svg'
 import illustratorIcon from '../assets/img/stack-icons/illustrator-icon.svg'
 import abletonIcon from '../assets/img/stack-icons/ableton-icon.svg'
@@ -30,9 +32,15 @@ export default function MyToolbox() {
       y: 10,
       stagger: 0.15
     })
+
+    Draggable.create('.stack-icon', {
+      type: 'x,y',
+      bounds: document.querySelector('.section__toolbox'),
+      inertia: true
+    })
   }, [])
 
-  function createIcon(url, img, tip, special) {
+  function createIcon(url, img, name, special) {
     return (
       <a
         href={url}
@@ -44,9 +52,8 @@ export default function MyToolbox() {
           <img
             className={!special ? 'stack-icon' : 'stack-icon special-icon'}
             src={img}
-            alt={`${tip} icon`}
+            alt={`${name} icon`}
           />
-          <p className="stack-icon-tip">{tip}</p>
         </div>
       </a>
     )
@@ -87,11 +94,6 @@ export default function MyToolbox() {
           'https://greensock.com/',
           gsapIcon,
           'Green Sock Animation Platform'
-        )}
-        {createIcon(
-          'https://www.adobe.com/products/photoshop.html',
-          photoshopIcon,
-          'Adobe Photoshop'
         )}
         {createIcon(
           'https://www.adobe.com/products/photoshop.html',

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { gsap } from 'gsap'
 import Header from './components/header/Header'
@@ -7,11 +7,12 @@ import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Particles from './components/Particles'
-import bgImage from './assets/img/luna/kuzo-shadow-hi_res-drkgrey.png'
 
 import './scss/main.scss'
 
 export default function App() {
+  const [logoActive, setLogoActive] = useState(false)
+
   // TURN MOUSE INTO SHADOW THING
   useEffect(() => {
     const ball = document.querySelector('.mouse')
@@ -42,11 +43,15 @@ export default function App() {
     })
   }, [])
 
+  function toggleLogoActive() {
+    setLogoActive((prev) => !prev)
+  }
+
   return (
     <div className="app">
-      {/* <Particles /> */}
+      {logoActive && <Particles />}
       <div className="mouse"></div>
-      <Header />
+      <Header logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

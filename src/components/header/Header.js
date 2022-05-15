@@ -4,7 +4,7 @@ import { gsap } from 'gsap'
 import Logo from './Logo'
 import SunMoonToggle from './SunMoonToggle'
 
-export default function Header() {
+export default function Header({ logoActive, toggleLogoActive }) {
   const { pathname } = useLocation()
   console.log(pathname)
 
@@ -81,7 +81,7 @@ export default function Header() {
 
   return (
     <header className="header">
-      <Logo />
+      <Logo logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
       <div className="header__right-div">
         {navLinks}
         <SunMoonToggle />

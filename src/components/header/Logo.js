@@ -1,16 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
+import { useLocation } from 'react-router-dom'
+import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
-import kuzoIcon from '../../assets/img/luna/kuzo-nobck-hiRes.png'
+import kuzoDayIcon from '../../assets/img/luna/kuzo-nobck-hiRes.png'
+import kuzoNightIcon from '../../assets/img/luna/kuzo-nobck-purp.png'
 import ichiAudio from '../../assets/audio/ichi-loop.m4a'
 
-export default function Logo() {
-  const [logoActive, setLogoActive] = useState(false)
-  console.log(logoActive)
+export default function Logo({ logoActive, toggleLogoActive }) {
+  const { darkMode } = useContext(ThemeContext)
+  const { pathname } = useLocation()
   const logo = useRef()
+  const q = gsap.utils.selector(logo)
 
   useEffect(() => {
+    gsap.from(q('.header__logo'), {
+      opacity: 0,
+      y: '-20px',
+      duration: 1,
+      delay: pathname === '/' ? 5 : 0
+    })
+
     Draggable.create('.header__logo-div', {
       type: 'rotation'
     })
@@ -26,9 +37,7 @@ export default function Logo() {
     audioEl.pause()
   }, [logoActive])
 
-  function toggleLogoActive() {
-    setLogoActive((prev) => !prev)
-  }
+  const dynamicLogo = darkMode ? kuzoNightIcon : kuzoDayIcon
 
   return (
     <div
@@ -38,7 +47,7 @@ export default function Logo() {
     >
       <audio src={ichiAudio} loop={true} id="bg-audio" />
       <img
-        src={kuzoIcon}
+        src={dynamicLogo}
         alt="logo"
         className="header__logo"
         onClick={toggleLogoActive}
