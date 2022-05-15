@@ -5,8 +5,8 @@ import { gsap } from 'gsap'
 import HeaderTitle from '../components/HomeTitle'
 
 export default function Home({ logoActive, toggleLogoActive }) {
-  const line1 = 'hello there'
-  const line2a = "i'm "
+  const line1 = "hello there, i'm"
+  // const line2a = "i'm "
   const line2b = 'sean tokuzo simpson'
   const line3 = 'front end developer'
   const home = useRef()
@@ -15,6 +15,10 @@ export default function Home({ logoActive, toggleLogoActive }) {
   useEffect(() => {
     var tl = gsap.timeline()
     tl.from(q('.home__span'), {
+      opacity: 0,
+      stagger: 0.075
+    })
+    tl.from(q('.home__span-name'), {
       opacity: 0,
       stagger: 0.075
     })
@@ -46,19 +50,19 @@ export default function Home({ logoActive, toggleLogoActive }) {
       ))}
     </>
   )
-  const line2aEl = (
-    <>
-      {line2a.split('').map((str) => (
-        <span key={nanoid()} className="home__span">
-          {str}
-        </span>
-      ))}
-    </>
-  )
+  // const line2aEl = (
+  //   <>
+  //     {line2a.split('').map((str) => (
+  //       <span key={nanoid()} className="home__span">
+  //         {str}
+  //       </span>
+  //     ))}
+  //   </>
+  // )
   const line2bEl = (
     <>
       {line2b.split('').map((str) => (
-        <span key={nanoid()} className="home__span home__span-name">
+        <span key={nanoid()} className="home__span-name">
           {str}
         </span>
       ))}
@@ -89,10 +93,8 @@ export default function Home({ logoActive, toggleLogoActive }) {
     <section className="home section" ref={home}>
       <div className="home__title-container">
         <h1 className="home__title section__title">{line1El}</h1>
-        <h1 className="home__title section__title">
-          {line2aEl}
-          {line2bEl}
-        </h1>
+        {/* <h1 className="home__title section__title">{line2aEl}</h1> */}
+        <h1 className="home__title home__title-name section__title">{line2bEl}</h1>
         <h1 className="home__title section__title">{line3El}</h1>
       </div>
       <div className="home__subtitle-container">

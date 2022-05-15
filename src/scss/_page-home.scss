@@ -1,11 +1,20 @@
 .home {
-  align-items: flex-start;
+  // @include flex(column, center, center);
+  width: 100%;
+  // height: 90%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
 
-
-  border: 1px solid red;
+  padding: 2rem;
   
   &__title-container {
-    margin: 0 auto;
+    margin: 0 auto 1rem;
+  }
+
+  &__title {
+    margin-top: .5rem;
   }
 
   &__subtitle-container {
@@ -15,12 +24,17 @@
   &__subtitle-welcome {
   }
   
-  &__title-span {
+  &__title-title {
     font-weight: bolder;
   }
 
+
   &__span-name {
     font-weight: bolder;
+    color: $color-light;
+    background-color: $kuzo-sherbert;
+    padding: 2px 1px;
+    margin: 0 -1px;
   }
 
   &__span-fed {
@@ -46,7 +60,13 @@
   }
 }
 
+.dark-mode {
+  .home__span-name {
+    color: $color-dark;
+    background-color: $kuzo-purp;
+  }
 
-.dark-mode .home__next {
-  border-color: $kuzo-purp;
+  .home__next {
+    border-color: $kuzo-purp;
+  }
 }

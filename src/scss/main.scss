@@ -7,6 +7,7 @@
 @import 'project-card';
 @import 'page-about';
 @import 'page-contact';
+@import 'volume-slider';
 @import 'particles';
 
 html {
@@ -16,7 +17,7 @@ html {
 body {
   background: $color-light;
   color: $kuzo-sherbert;
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
   line-height: 1;
   // cursor: none;
 }

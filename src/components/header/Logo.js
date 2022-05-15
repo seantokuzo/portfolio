@@ -6,7 +6,6 @@ import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
 import kuzoDayIcon from '../../assets/img/luna/kuzo-nobck-hiRes.png'
 import kuzoNightIcon from '../../assets/img/luna/kuzo-nobck-purp.png'
-import ichiAudio from '../../assets/audio/ichi-loop.m4a'
 
 export default function Logo({ logoActive, toggleLogoActive }) {
   const { darkMode } = useContext(ThemeContext)
@@ -27,33 +26,21 @@ export default function Logo({ logoActive, toggleLogoActive }) {
     })
   }, [])
 
-  useEffect(() => {
-    const audioEl = document.getElementById('bg-audio')
-
-    if (logoActive) {
-      audioEl.play()
-      return
-    }
-    audioEl.pause()
-    audioEl.currentTime = 0
-  }, [logoActive])
-
   const dynamicLogo = darkMode ? kuzoNightIcon : kuzoDayIcon
 
   return (
-    <div
-      className="header__logo-div"
-      ref={logo}
-      style={{ animation: logoActive ? 'spin 4s linear infinite' : '' }}
-    >
-      <audio src={ichiAudio} loop={true} id="bg-audio" />
-      <img
-        src={dynamicLogo}
-        alt="logo"
-        className="header__logo"
-        onClick={toggleLogoActive}
-      ></img>
-    </div>
+      <div
+        className="header__logo-div"
+        ref={logo}
+        style={{ animation: logoActive ? 'spin 4s linear infinite' : '' }}
+      >
+        <img
+          src={dynamicLogo}
+          alt="logo"
+          className="header__logo"
+          onClick={toggleLogoActive}
+        ></img>
+      </div>
   )
 }
 
