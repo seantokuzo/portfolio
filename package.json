@@ -6,8 +6,10 @@
   "scripts": {
     "webpack-dev-server": "webpack-dev-server",
     "dev": "webpack serve --mode=development",
-    "prod": "NODE_ENV=production webpack --mode=development",
-    "serve": "npm run prod && serve -s dist"
+    "build": "NODE_ENV=production webpack --mode=development",
+    "serve": "npm run prod && serve -s dist",
+    "launch": "sudo netlify deploy",
+    "launch:prod": "sudo netlify deploy --prod"
   },
   "keywords": [],
   "author": "",
