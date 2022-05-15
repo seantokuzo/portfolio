@@ -30,51 +30,23 @@ export default function Header({ logoActive, toggleLogoActive }) {
     }
   }, [])
 
+  const listLinkFactory = (path, label) => (
+    <li className="nav__list-item">
+      <Link to={path}>
+        <h2 className={pathname === path ? 'nav__link underline' : 'nav__link'}>
+          {label}
+        </h2>
+      </Link>
+    </li>
+  )
+
   const navLinks = (
     <nav className="nav">
       <ul className="nav__list" ref={navList}>
-        <li className="nav__list-item">
-          <Link to="/">
-            <h2
-              className={pathname === '/' ? 'nav__link underline' : 'nav__link'}
-            >
-              Home
-            </h2>
-          </Link>
-        </li>
-        <li className="nav__list-item">
-          <Link to="/portfolio">
-            <h2
-              className={
-                pathname === '/portfolio' ? 'nav__link underline' : 'nav__link'
-              }
-            >
-              Portfolio
-            </h2>
-          </Link>
-        </li>
-        <li className="nav__list-item">
-          <Link to="/about">
-            <h2
-              className={
-                pathname === '/about' ? 'nav__link underline' : 'nav__link'
-              }
-            >
-              About Me
-            </h2>
-          </Link>
-        </li>
-        <li className="nav__list-item">
-          <Link to="/contact">
-            <h2
-              className={
-                pathname === '/contact' ? 'nav__link underline' : 'nav__link'
-              }
-            >
-              Contact Me
-            </h2>
-          </Link>
-        </li>
+        {listLinkFactory('/', 'Home')}
+        {listLinkFactory('/portfolio', 'Portfolio')}
+        {listLinkFactory('/about', 'About Me')}
+        {listLinkFactory('/contact', 'Contact')}
       </ul>
     </nav>
   )

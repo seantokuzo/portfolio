@@ -16,7 +16,6 @@ html {
 body {
   background: $color-light;
   color: $kuzo-sherbert;
-  height: 100vh;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
   // cursor: none;
@@ -43,8 +42,7 @@ a {
   border-bottom: 5px solid;
   border-color: $kuzo-sherbert;
 
-  width: 100%;
-  min-height: 100vh;
+  @include page-container;
   @include transition-ease;
 }
 

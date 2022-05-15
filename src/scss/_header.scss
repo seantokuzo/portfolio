@@ -9,7 +9,7 @@
   
   &__logo {
     border-radius: 50%;
-    max-width: 6rem;
+    width: 50px;
   }
 
   &__right-div {
@@ -29,12 +29,8 @@
     list-style: none;
     
     &-item {
-      margin: 0 .5rem;
+      margin: 0 5px;
       // cursor: pointer;
-
-      &:last-child {
-        margin-left: 1rem;
-      }
 
       &:hover {
 
@@ -43,12 +39,13 @@
   }
 
   &__link {
+    font-size: .75em;
     font-weight: 300;
     @include transition-ease;
 
     &:hover {
       transform: translateY(-5px);
-      font-weight: 400;
+      font-weight: 500;
     }
   }
 }
