@@ -80,7 +80,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
     </Link>
   ) : (
     <i
-      class="fa-solid fa-caret-right section__next home__next"
+      className="fa-solid fa-caret-right section__next home__next"
       onClick={toggleLogoActive}
     ></i>
   )

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import GridIcon from '../components/portfolio/GridIcon'
 import ProjectCarousel from '../components/portfolio/ProjectCarousel'
 import ProjectGrid from '../components/portfolio/ProjectGrid'
 
@@ -10,6 +9,14 @@ export default function Portfolio(props) {
     setGridMode((prev) => !prev)
   }
 
+  const gridIcon = (
+    <div className="grid-icon-container" onClick={toggleGridMode}>
+      {new Array(16).fill('').map((s, i) => (
+        <div className="grid-sqr" key={`grid-sqr${i}`}></div>
+      ))}
+    </div>
+  )
+
   const carouselBtn = (
     <div className="carousel-icon-container" onClick={toggleGridMode}>
       <i className="fa-solid fa-caret-left"></i>
@@ -19,10 +26,10 @@ export default function Portfolio(props) {
 
   const myWorkContent = (
     <>
-      <div className="work-toggles-container">
-        {gridMode ? carouselBtn : <GridIcon toggleGridMode={toggleGridMode} />}
+      <div className="portfolio__container">
+        {gridMode ? carouselBtn : gridIcon}
+        {gridMode ? <ProjectGrid /> : <ProjectCarousel />}
       </div>
-      {gridMode ? <ProjectGrid /> : <ProjectCarousel />}
     </>
   )
 

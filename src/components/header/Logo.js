@@ -35,6 +35,7 @@ export default function Logo({ logoActive, toggleLogoActive }) {
       return
     }
     audioEl.pause()
+    audioEl.currentTime = 0
   }, [logoActive])
 
   const dynamicLogo = darkMode ? kuzoNightIcon : kuzoDayIcon

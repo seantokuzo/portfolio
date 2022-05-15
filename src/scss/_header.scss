@@ -5,7 +5,7 @@
   padding: .5rem 1rem;
   
   z-index: 10;
-  box-shadow: var(--bs-black);
+  box-shadow: $bs-black;
   
   &__logo {
     border-radius: 50%;

@@ -2,19 +2,18 @@
   min-height: 100vh;
 }
 
-.work-toggles-container {
+.portfolio__container {
   width: 100%;
+
   padding: 0 2em;
   
-  display: flex;
-  justify-content: flex-end;
-  
+  @include flex(column, center, center);
   border: 1px solid red;
 }
 
 .portfolio__title {
-  margin-top: .75em;
-  margin-bottom: 2em;
+  margin: 0;
+  margin-bottom: 1em;
   margin-left: 1em;
 }
 
