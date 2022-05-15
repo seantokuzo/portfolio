@@ -86,7 +86,7 @@ export default function Home() {
       </div>
       <div className="home__subtitle-container">
         <h3 className="home__subtitle-welcome section__subtitle">Welcome</h3>
-        <Link to="/about">
+        <Link to="/portfolio">
           <i className="fa-solid fa-angles-right section__next home__next"></i>
         </Link>
       </div>

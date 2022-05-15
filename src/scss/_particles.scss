@@ -50,6 +50,11 @@ $time-4: 200s;
   width: 3px;
 }
 
+.dark-mode .particle-1 {
+  height: 2px;
+  width: 2px;
+}
+
 .particle-1:after {
   @include particles(900);
   height: 2px;

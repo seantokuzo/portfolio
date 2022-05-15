@@ -1,5 +1,7 @@
 .portfolio {
-  @include page-container
+  // @include page-container;
+
+  border: 1px solid red;
 }
 
 .work-toggles-container {

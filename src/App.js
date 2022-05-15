@@ -54,8 +54,8 @@ export default function App() {
       <Header logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>

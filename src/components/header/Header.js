@@ -43,17 +43,6 @@ export default function Header({ logoActive, toggleLogoActive }) {
           </Link>
         </li>
         <li className="nav__list-item">
-          <Link to="/about">
-            <h2
-              className={
-                pathname === '/about' ? 'nav__link underline' : 'nav__link'
-              }
-            >
-              About Me
-            </h2>
-          </Link>
-        </li>
-        <li className="nav__list-item">
           <Link to="/portfolio">
             <h2
               className={
@@ -61,6 +50,17 @@ export default function Header({ logoActive, toggleLogoActive }) {
               }
             >
               Portfolio
+            </h2>
+          </Link>
+        </li>
+        <li className="nav__list-item">
+          <Link to="/about">
+            <h2
+              className={
+                pathname === '/about' ? 'nav__link underline' : 'nav__link'
+              }
+            >
+              About Me
             </h2>
           </Link>
         </li>
