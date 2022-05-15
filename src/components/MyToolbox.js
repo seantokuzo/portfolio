@@ -2,23 +2,23 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
-import html5Icon from '../assets/img/stack-icons/html5-icon.svg'
-import css3Icon from '../assets/img/stack-icons/css3-icon.svg'
-import javascriptIcon from '../assets/img/stack-icons/javascript-icon.svg'
-import reactIcon from '../assets/img/stack-icons/react-icon.svg'
-import reactRouterIcon from '../assets/img/stack-icons/react-router-icon.svg'
-import sassIcon from '../assets/img/stack-icons/sass-icon.svg'
-import nodeIcon from '../assets/img/stack-icons/nodejs-icon.svg'
-import mongoIcon from '../assets/img/stack-icons/mongodb-icon.svg'
-import gitIcon from '../assets/img/stack-icons/git-icon.svg'
-import gsapIcon from '../assets/img/stack-icons/gsap-icon.svg'
-import postmanIcon from '../assets/img/stack-icons/postman-icon.svg'
-// import nextjsIcon from '../assets/img/stack-icons/nextjs-icon.svg'
-// import typescriptIcon from '../assets/img/stack-icons/typescript-icon.svg'
-// import tailwindIcon from '../assets/img/stack-icons/tailwindcss-icon.svg'
-import photoshopIcon from '../assets/img/stack-icons/photoshop-icon.svg'
-import illustratorIcon from '../assets/img/stack-icons/illustrator-icon.svg'
-import abletonIcon from '../assets/img/stack-icons/ableton-icon.svg'
+// import html5Icon from '../assets/img/stack-icons/html5-icon.svg'
+// import css3Icon from '../assets/img/stack-icons/css3-icon.svg'
+// import javascriptIcon from '../assets/img/stack-icons/javascript-icon.svg'
+// import reactIcon from '../assets/img/stack-icons/react-icon.svg'
+// import reactRouterIcon from '../assets/img/stack-icons/react-router-icon.svg'
+// import sassIcon from '../assets/img/stack-icons/sass-icon.svg'
+// import nodeIcon from '../assets/img/stack-icons/nodejs-icon.svg'
+// import mongoIcon from '../assets/img/stack-icons/mongodb-icon.svg'
+// import gitIcon from '../assets/img/stack-icons/git-icon.svg'
+// import gsapIcon from '../assets/img/stack-icons/gsap-icon.svg'
+// import postmanIcon from '../assets/img/stack-icons/postman-icon.svg'
+// // import nextjsIcon from '../assets/img/stack-icons/nextjs-icon.svg'
+// // import typescriptIcon from '../assets/img/stack-icons/typescript-icon.svg'
+// // import tailwindIcon from '../assets/img/stack-icons/tailwindcss-icon.svg'
+// import photoshopIcon from '../assets/img/stack-icons/photoshop-icon.svg'
+// import illustratorIcon from '../assets/img/stack-icons/illustrator-icon.svg'
+// import abletonIcon from '../assets/img/stack-icons/ableton-icon.svg'
 
 export default function MyToolbox() {
   const toolbox = useRef()
@@ -51,7 +51,7 @@ export default function MyToolbox() {
         <div className="stack-icon-div">
           <img
             className={!special ? 'stack-icon' : 'stack-icon special-icon'}
-            src={img}
+            src={`/images/stack-icons/${img}`}
             alt={`${name} icon`}
           />
         </div>
@@ -65,49 +65,49 @@ export default function MyToolbox() {
       <div className="toolbox-div">
         {createIcon(
           'https://developer.mozilla.org/en-US/docs/Glossary/HTML5',
-          html5Icon,
+          'html5-icon.svg',
           'HTML5'
         )}
         {createIcon(
           'https://developer.mozilla.org/en-US/docs/Web/CSS',
-          css3Icon,
+          'css3-icon.svg',
           'CSS3'
         )}
         {createIcon(
           'https://www.youtube.com/watch?v=Sh6lK57Cuk4',
-          javascriptIcon,
+          'javascript-icon.svg',
           'JavaScript'
         )}
-        {createIcon('https://reactjs.org/', reactIcon, 'React')}
+        {createIcon('https://reactjs.org/', 'react-icon.svg', 'React')}
         {createIcon(
           'https://reactrouter.com/',
-          reactRouterIcon,
+          'react-router-icon.svg',
           'React Router',
           true
         )}
-        {createIcon('https://sass-lang.com/', sassIcon, 'Sass')}
-        {createIcon('https://nodejs.org/', nodeIcon, 'Node.js')}
-        {createIcon('https://www.mongodb.com/', mongoIcon, 'MongoDB')}
-        {createIcon('https://www.postman.com/', postmanIcon, 'Postman')}
-        {createIcon('https://git-scm.com/', gitIcon, 'Git')}
+        {createIcon('https://sass-lang.com/', 'sass-icon.svg', 'Sass')}
+        {createIcon('https://nodejs.org/', 'nodejs-icon.svg', 'Node.js')}
+        {createIcon('https://www.mongodb.com/', 'mongodb-icon.svg', 'MongoDB')}
+        {createIcon('https://www.postman.com/', 'postman-icon.svg', 'Postman')}
+        {createIcon('https://git-scm.com/', 'git-icon.svg', 'Git')}
         {createIcon(
           'https://greensock.com/',
-          gsapIcon,
+          'gsap-icon.svg',
           'Green Sock Animation Platform'
         )}
         {createIcon(
           'https://www.adobe.com/products/photoshop.html',
-          photoshopIcon,
+          'photoshop-icon.svg',
           'Adobe Photoshop'
         )}
         {createIcon(
           'https://www.adobe.com/products/illustrator.html',
-          illustratorIcon,
+          'illustrator-icon.svg',
           'Adobe Illustrator'
         )}
         {createIcon(
           'https://www.ableton.com/',
-          abletonIcon,
+          'ableton-icon.svg',
           'Ableton Live',
           true
         )}
@@ -116,49 +116,4 @@ export default function MyToolbox() {
   )
 
   return <>{myStack}</>
-}
-
-// NEED TO LEARN TO EARN THESE ICONS
-{
-  /* <a
-          href="https://nextjs.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="stack-icon-link"
-        >
-          <div className="stack-icon-div">
-            <img className="stack-icon next-icon" src={nextjsIcon} alt="Next.js icon" />
-            <p className="stack-icon-tip">Next.js</p>
-          </div>
-        </a>
-        <a
-          href="https://www.typescriptlang.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="stack-icon-link"
-        >
-          <div className="stack-icon-div">
-            <img
-              className="stack-icon"
-              src={typescriptIcon}
-              alt="typescript icon"
-            />
-            <p className="stack-icon-tip">TypeScript</p>
-          </div>
-        </a>
-        <a
-          href="https://tailwindcss.com/"
-          target="_blank"
-          rel="noreferrer"
-          className="stack-icon-link"
-        >
-          <div className="stack-icon-div">
-            <img
-              className="stack-icon"
-              src={tailwindIcon}
-              alt="tailwind css icon"
-            />
-            <p className="stack-icon-tip">Tailwind CSS</p>
-          </div>
-        </a> */
 }

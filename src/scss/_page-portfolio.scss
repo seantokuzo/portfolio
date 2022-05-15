@@ -1,18 +1,18 @@
 .portfolio {
-  // @include page-container;
-
-  border: 1px solid red;
+  min-height: 100vh;
 }
 
 .work-toggles-container {
-  padding: 0 1.5em;
-
+  width: 100%;
+  padding: 0 2em;
+  
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  
+  border: 1px solid red;
 }
 
-.section__title-work {
+.portfolio__title {
   margin-top: .75em;
   margin-bottom: 2em;
   margin-left: 1em;
@@ -27,14 +27,23 @@
   grid-template-rows: repeat(4, 7px);
   align-items: center;
   justify-items: center;
-  border: 1px solid #ffffff90;
   border-radius: 3px;
-  // cursor: pointer;
-  background-color: #00000090;
+  cursor: pointer;
 }
 
 .grid-sqr {
   width: 5px;
   height: 5px;
-  border: 1px solid #ffffff90;
+}
+
+.grid-icon-container,
+.grid-sqr {
+  border: 2px solid $kuzo-sherbert;
+}
+
+.dark-mode {
+  .grid-icon-container,
+  .grid-sqr {
+    border: 2px solid $kuzo-purp;
+  }
 }

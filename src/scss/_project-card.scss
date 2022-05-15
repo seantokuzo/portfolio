@@ -1,4 +1,4 @@
-.work-card {
+.project-card {
   width: 65%;
   max-width: 500px;
 
@@ -7,6 +7,8 @@
   border: 4px solid black;
   border-radius: 5px;
 
+  text-align: center;
+
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto minmax(auto, 200px) auto;
@@ -14,68 +16,57 @@
     "title"
     "img"
     "text";
-
   transition: transform 500ms ease-in-out;
   transform: translateX(0px);
 }
 
-.work-card-hidden {
-  position: fixed;
+.project-card__title {
+  grid-area: title;
+  padding: .5em 0;
 }
 
-.work-card-hidden-left {
-  transform: translateX(-1000px);
-  transition: transform 500ms ease-in-out;
-}
-
-.work-card-hidden-right {
-  transform: translateX(1000px);
-  transition: transform 500ms ease-in-out;
-}
-
-.word-card-link-title {
+.project-card__link {
   text-decoration: none;
   color: inherit;
 }
 
-.work-card-title {
-  grid-area: title;
-  padding: .5em 0;
-  text-align: center;
+.project-card-link {
+  background-color: var(--clr-accent);
 }
 
-.word-card-img-container {
+.project-card__img-container {
   grid-area: img;
-  background-color: var(--clr-accent);
+  background-color: $kuzo-sherbert;
   min-height: 300px;
-
+  
   border-radius: 5px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   object-fit: cover;
   overflow: hidden;
+  @include transition-ease;
 }
 
-.work-card-link {
-  background-color: var(--clr-accent);
+.dark-mode .project-card__img-container {
+  background-color: $kuzo-purp;
 }
 
-.work-card-img {
+.project-card__img {
   max-width: 100%;
   transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
     opacity 250ms linear;
 }
 
-.work-card-link:focus {
+.project-card-link:focus {
   position: relative;
   z-index: 2;
 }
 
-.work-card-img:hover,
-.work-card-link:focus .work-card-img {
+.project-card__img:hover,
+.project-card-link:focus .project-card-img {
   transform: scale(1.1);
   opacity: .9;
 }
@@ -94,4 +85,8 @@
   max-width: 80%;
   text-align: center;
   margin: 0 auto;
+}
+
+.project-card__stack-icon {
+  width: 1.5rem;
 }

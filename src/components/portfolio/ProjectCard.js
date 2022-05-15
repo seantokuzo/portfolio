@@ -1,4 +1,5 @@
 import React from 'react'
+import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 
 export default function ProjectCard({ currentProject }) {
@@ -6,13 +7,31 @@ export default function ProjectCard({ currentProject }) {
 
   return (
     <div className="project-card">
-      <img
-        src={`../../assets/img/project-img/${img}.png`}
-        alt={`${name} project preview`}
-      />
-      <h2 className="project-card__title">{name}</h2>
-      <p className="project-card__tagline">{tagline}</p>
-      <a href={link} target="_blank" referrer="noreferrer" />
+      <h1 className="project-card__title section__title">{name}</h1>
+      <div className="project-card__img-container">
+        <img
+          className="project-card__img"
+          src={`/images/project-img/${img}`}
+          alt={`${name} project preview`}
+        />
+      </div>
+      <p className="project-card__tagline section__text">{tagline}</p>
+      <a
+        className="project-card__link"
+        href={link}
+        target="_blank"
+        referrer="noreferrer"
+      >Demo</a>
+      <div className="project-card__stack-div">
+        {stack.map((icon) => (
+          <img
+            key={nanoid()}
+            src={`/images/stack-icons/${icon}-icon.svg`}
+            className="project-card__stack-icon"
+            alt={`${icon} icon`}
+          />
+        ))}
+      </div>
     </div>
   )
 }

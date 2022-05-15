@@ -10,10 +10,17 @@ export default function Portfolio(props) {
     setGridMode((prev) => !prev)
   }
 
+  const carouselBtn = (
+    <div className="carousel-icon-container" onClick={toggleGridMode}>
+      <i className="fa-solid fa-caret-left"></i>
+      <i className="fa-solid fa-caret-right"></i>
+    </div>
+  )
+
   const myWorkContent = (
     <>
       <div className="work-toggles-container">
-        <GridIcon toggleGridMode={toggleGridMode} />
+        {gridMode ? carouselBtn : <GridIcon toggleGridMode={toggleGridMode} />}
       </div>
       {gridMode ? <ProjectGrid /> : <ProjectCarousel />}
     </>
@@ -21,7 +28,7 @@ export default function Portfolio(props) {
 
   return (
     <section className="section portfolio">
-      <h1 className="section-title section__title-work">MyWork</h1>
+      <h1 className="section__title portfolio__title">MyWork</h1>
       {myWorkContent}
     </section>
   )

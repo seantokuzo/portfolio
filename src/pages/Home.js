@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
 import HeaderTitle from '../components/HomeTitle'
 
-export default function Home() {
+export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = 'hello there'
   const line2a = "i'm "
   const line2b = 'sean tokuzo simpson'
@@ -74,6 +74,17 @@ export default function Home() {
     </>
   )
 
+  const playLink = logoActive ? (
+    <Link to="/portfolio">
+      <i className="fa-solid fa-angles-right section__next home__next"></i>
+    </Link>
+  ) : (
+    <i
+      class="fa-solid fa-caret-right section__next home__next"
+      onClick={toggleLogoActive}
+    ></i>
+  )
+
   return (
     <section className="home section" ref={home}>
       <div className="home__title-container">
@@ -86,9 +97,7 @@ export default function Home() {
       </div>
       <div className="home__subtitle-container">
         <h3 className="home__subtitle-welcome section__subtitle">Welcome</h3>
-        <Link to="/portfolio">
-          <i className="fa-solid fa-angles-right section__next home__next"></i>
-        </Link>
+        {playLink}
       </div>
       {/* <HeaderTitle /> */}
     </section>

@@ -2,10 +2,11 @@
 @import 'globals';
 @import 'header';
 @import 'page-home';
-@import 'page-about';
 @import 'page-portfolio';
-@import 'page-contact';
+@import 'project-carousel';
 @import 'project-card';
+@import 'page-about';
+@import 'page-contact';
 @import 'particles';
 
 html {
@@ -18,7 +19,7 @@ body {
   height: 100vh;
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
-  cursor: none;
+  // cursor: none;
 }
 
 .dark-mode {
@@ -29,7 +30,7 @@ body {
 a {
   color: $kuzo-sherbert;
   text-decoration: none;
-  cursor: none;
+  cursor: pointer;
 }
 
 .dark-mode a {
@@ -51,18 +52,18 @@ a {
   border-color: $kuzo-purp;
 }
 
-.mouse {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #00000060;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1000;
-}
+// .mouse {
+//   width: 50px;
+//   height: 50px;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   background-color: #00000060;
+//   border-radius: 50%;
+//   pointer-events: none;
+//   z-index: 1000;
+// }
 
-.dark-mode .mouse {
-  background-color: #ffffff60;
-}
+// .dark-mode .mouse {
+//   background-color: #ffffff60;
+// }
