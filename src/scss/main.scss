@@ -20,6 +20,8 @@ body {
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
   line-height: 1;
   // cursor: none;
+
+  @include transition-ease;
 }
 
 .dark-mode {
@@ -43,7 +45,8 @@ a {
   border-bottom: 5px solid;
   border-color: $kuzo-sherbert;
 
-  @include page-container;
+  min-height: 100vh;
+  // @include page-container;
   @include transition-ease;
 }
 

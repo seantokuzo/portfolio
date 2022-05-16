@@ -54,7 +54,7 @@ const projects = [
     link: 'https://seantokuzo.github.io/DER-PC3000/',
     github: 'https://github.com/seantokuzo/DER-PC3000',
     tagline:
-      "This is the DER-PC3000, a mini drum machine pre-programmed with a tiny library of sounds and a few audio controls. Feel free to play around and don't worry, your browser will remember your kit and settings!",
+      'A mini drum machine with a tiny library of sounds and a few audio controls.',
     stack: ['react', 'css3', 'ableton']
   },
   {
@@ -73,8 +73,7 @@ const projects = [
     img: 'trivial-trivia-800sqr.png',
     link: 'https://trivial-trivia-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/TrivialTrivia',
-    tagline:
-      "How much trivial knowledge do you possess? Probably more than me, but that's not sayin' much. Test your useless knowledge with Trivial Trivial",
+    tagline: 'A trivia game to test your trivial knowledge',
     stack: ['react', 'css3']
   },
   {
@@ -84,7 +83,7 @@ const projects = [
     link: 'https://seantokuzo.github.io/Blackjack/',
     github: 'https://github.com/seantokuzo/Blackjack',
     tagline:
-      'A simple blackjack game made with vanilla JS. Play against an automated opponent. App powered by the Deck of Cards API',
+      'A simple blackjack game powered by the Deck of Cards API. Play against an automated opponent',
     stack: ['html5', 'css3', 'javascript']
   }
 ]

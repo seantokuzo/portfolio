@@ -1,13 +1,28 @@
 import React, { useState } from 'react'
+// import { gsap } from 'gsap'
 import ProjectCard from './ProjectCard'
 import projects from '../../data/projects'
 
 export default function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(0)
+  // const [cardSlide, setCardSlide] = useState('no')
+  // console.log(cardSlide)
+  // const tl = gsap.timeline()
 
   function toggleCarousel(str) {
-    if (str === 'prev' && currentProject === 0) {
-      setCurrentProject(projects.length)
+    // setCardSlide(str)
+    if (str === 'prev') {
+      if (currentProject === 0) {
+        return setCurrentProject(projects.length - 1)
+      }
+      return setCurrentProject((prev) => prev - 1)
+    }
+
+    if (str === 'next') {
+      if (currentProject === projects.length - 1) {
+        return setCurrentProject(0)
+      }
+      return setCurrentProject((prev) => prev + 1)
     }
   }
 

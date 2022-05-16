@@ -36,7 +36,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 24px;
   width: 10px;
   border-radius: 3px;
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   cursor: pointer;
   margin-top: -10px;
   /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
@@ -51,7 +51,7 @@ input[type=range]::-moz-range-thumb {
   height: 24px;
   width: 10px;
   border-radius: 3px;
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   cursor: pointer;
 }
 
@@ -62,9 +62,9 @@ input[type=range]::-ms-thumb {
   height: 24px;
   width: 10px;
   border-radius: 3px;
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   cursor: pointer;
-  box-shadow: 1px 1px 0px 0px var(--pad-dark);
+  box-shadow: 1px 1px 0px 0px $color-dark;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -72,13 +72,13 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
 }
 
 input[type=range]::-moz-range-track {
@@ -86,7 +86,7 @@ input[type=range]::-moz-range-track {
   height: 5px;
   cursor: pointer;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
@@ -102,23 +102,56 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
 }
 
 input[type=range]::-ms-fill-upper {
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: $kuzo-purp;
+  background: $kuzo-sherbert;
+}
+
+.dark-mode {
+  input[type=range]::-webkit-slider-thumb {
+      background: $kuzo-purp;
+  }
+  input[type=range]::-moz-range-thumb {
+    background: $kuzo-purp
+  }
+  input[type=range]::-ms-thumb {
+    background: $kuzo-purp
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: $kuzo-purp
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: $kuzo-purp
+  }
+  input[type=range]::-moz-range-track {
+    background: $kuzo-purp
+  }
+  input[type=range]::-ms-fill-lower {
+    background: $kuzo-purp
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: $kuzo-purp
+  }
+  input[type=range]::-ms-fill-upper {
+    background: $kuzo-purp
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: $kuzo-purp
+  }
 }

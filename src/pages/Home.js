@@ -6,7 +6,6 @@ import HeaderTitle from '../components/HomeTitle'
 
 export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = "hello there, i'm"
-  // const line2a = "i'm "
   const line2b = 'sean tokuzo simpson'
   const line3 = 'front end developer'
   const home = useRef()
@@ -50,15 +49,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
       ))}
     </>
   )
-  // const line2aEl = (
-  //   <>
-  //     {line2a.split('').map((str) => (
-  //       <span key={nanoid()} className="home__span">
-  //         {str}
-  //       </span>
-  //     ))}
-  //   </>
-  // )
+
   const line2bEl = (
     <>
       {line2b.split('').map((str) => (
@@ -89,19 +80,29 @@ export default function Home({ logoActive, toggleLogoActive }) {
     ></i>
   )
 
+  // const sampleBtn = (
+  //   <div className="sample-btn-out">
+  //     <div className="sample-btn-in">
+  //       <i id="break-increment" className="fa-solid fa-angle-up btn-icon"></i>
+  //     </div>
+  //   </div>
+  // )
+
   return (
     <section className="home section" ref={home}>
       <div className="home__title-container">
         <h1 className="home__title section__title">{line1El}</h1>
         {/* <h1 className="home__title section__title">{line2aEl}</h1> */}
-        <h1 className="home__title home__title-name section__title">{line2bEl}</h1>
+        <h1 className="home__title home__title-name section__title">
+          {line2bEl}
+        </h1>
         <h1 className="home__title section__title">{line3El}</h1>
       </div>
       <div className="home__subtitle-container">
-        <h3 className="home__subtitle-welcome section__subtitle">Welcome</h3>
+        <h3 className="home__subtitle-welcome section__subtitle">WELCOME</h3>
         {playLink}
       </div>
-      {/* <HeaderTitle /> */}
+      {/* {logoActive && sampleBtn} */}
     </section>
   )
 }
