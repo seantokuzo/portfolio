@@ -13,7 +13,6 @@ import ichiAudio from './assets/audio/ichi-loop.m4a'
 export default function App() {
   const [logoActive, setLogoActive] = useState(false)
   const [volume, setVolume] = useState(0.1)
-  const [hiPassFreq, setHiPassFreq] = useState(10000)
   const volumeInputEl = useRef()
 
   useEffect(() => {

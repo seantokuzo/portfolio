@@ -24,6 +24,13 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
   justify-content: $justify;
 }
 
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }

@@ -27,7 +27,6 @@ export default function Portfolio(props) {
   const myWorkContent = (
     <>
       <div className="portfolio__container">
-        {gridMode ? carouselBtn : gridIcon}
         {gridMode ? <ProjectGrid /> : <ProjectCarousel />}
       </div>
     </>
@@ -35,7 +34,10 @@ export default function Portfolio(props) {
 
   return (
     <section className="section portfolio">
-      <h1 className="section__title portfolio__title">MyWork</h1>
+      <div className="portfolio__title-icon-div">
+        <h1 className="section__title portfolio__title">MyWork</h1>
+        {gridMode ? carouselBtn : gridIcon}
+      </div>
       {myWorkContent}
     </section>
   )
