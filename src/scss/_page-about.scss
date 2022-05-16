@@ -1,22 +1,32 @@
 .about {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+  padding: 1rem 2rem 2rem;
+
+  letter-spacing: 1.1px;
+  text-align: center;
 
   &__blurb-div {
-    @include flex(row, center, center);
-
+    @include flex(column, center, center);
   }
-
+  
   &__blurb-img {
     max-width: 200px;
-    border-radius: 2px;
+    border-radius: 3px;
   }
-
+  
   &__blurb-text-div {
-    max-width: 500px;
-    margin-left: 2rem;
+    width: 85%;
+    max-width: 450px;
+    margin: .75rem 0 0;
   }
-
+  
   &__blurb-text {
-    margin: 1rem 0;
+    margin: .75rem 0;
+    font-size: smaller;
+    line-height: 1.25em;
   }
 
   &__links-div {
@@ -26,29 +36,27 @@
   }
 
   &__subtitle-container {
-    margin: 3rem 2rem 0;
+    
   }
 }
 
 .section__toolbox {
-  margin: 5em auto;
-  max-width: 600px;
+  width: 85%;
+  max-width: 450px;
 
-  /* border: 1px solid red; */
+  margin: 1rem auto;
+  padding: 1rem 0;
+
+  border-top: 2px solid;
+  border-bottom: 2px solid;
 }
 
 .toolbox-div {
-  /* max-width: 300px; */
-
   margin: 1rem auto 0;
   padding: 0 25px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  @include flex(row, center, space-evenly);
   flex-wrap: wrap;
-
-  /* border: 1px solid red; */
 }
 
 .section__title-toolbox {
@@ -66,16 +74,18 @@
   }
 }
 
+$about-stack-icon: 35px;
+
 .stack-icon {
-  width: 45px;
-  margin: .85rem;
+  width: $about-stack-icon;
+  margin: .5rem;
   
 }
 
 // .next-icon,
 .special-icon {
-  width: 42px;
-  height: 42px;
+  width: $about-stack-icon;
+  height: $about-stack-icon;
   padding: 2px;
   background-color: $color-light;
   border-radius: 2px;

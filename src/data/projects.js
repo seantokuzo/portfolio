@@ -75,17 +75,17 @@ const projects = [
     github: 'https://github.com/seantokuzo/TrivialTrivia',
     tagline: 'A trivia game to test your trivial knowledge',
     stack: ['react', 'css3']
-  },
-  {
-    id: 9,
-    name: 'Blackjack',
-    img: 'blackjack-800sqr.png',
-    link: 'https://seantokuzo.github.io/Blackjack/',
-    github: 'https://github.com/seantokuzo/Blackjack',
-    tagline:
-      'A simple blackjack game powered by the Deck of Cards API. Play against an automated opponent',
-    stack: ['html5', 'css3', 'javascript']
   }
+  // {
+  //   id: 9,
+  //   name: 'Blackjack',
+  //   img: 'blackjack-800sqr.png',
+  //   link: 'https://seantokuzo.github.io/Blackjack/',
+  //   github: 'https://github.com/seantokuzo/Blackjack',
+  //   tagline:
+  //     'A simple blackjack game powered by the Deck of Cards API. Play against an automated opponent',
+  //   stack: ['html5', 'css3', 'javascript']
+  // }
 ]
 
 export default projects

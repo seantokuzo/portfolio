@@ -1,14 +1,21 @@
 .project-carousel {
   // @include absolute-center;
-  @include flex(row, center, center);
+  @include flex(column, center, center);
   margin: 1rem 0 5rem;
   width: 100%;
 }
 
-.carousel-toggle {
-  width: 2.5em;
-  height: 2.5em;
+.carousel-toggle-div {
+  @include flex(row, center, center);
+  margin: 2rem 0 0;
+}
 
+.carousel-toggle {
+  width: 3.5em;
+  height: 3.5em;
+
+  color: $kuzo-sherbert;
+  background-color: transparent;
   border: 4px solid;
   border-color: $kuzo-sherbert;
   border-radius: 50%;
@@ -19,20 +26,34 @@
 
   cursor: pointer;
   transition: transform 500ms ease-in-out;
+
+  &-left {
+    margin-right: 1rem;
+  }
+  
+  &-right {
+    margin-left: 1rem;
+  }
 }
 
 .carousel-toggle:hover,
 .carousel-toggle:focus {
-  transform: scale(1.1);
-  color: var(--clr-accent);
+  transform: scale(1.05);
+  color: lighter($kuzo-sherbert, 20%);
 }
 
 .carousel-toggle-icon {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .dark-mode {
   .carousel-toggle {
+    color: $kuzo-purp;
     border-color: $kuzo-purp;
+    
+    &:hover,
+    &:focus {
+      color: lighter($kuzo-purp, 20%);
+    }
   }
 }

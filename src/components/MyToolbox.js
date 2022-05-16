@@ -2,23 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
-// import html5Icon from '../assets/img/stack-icons/html5-icon.svg'
-// import css3Icon from '../assets/img/stack-icons/css3-icon.svg'
-// import javascriptIcon from '../assets/img/stack-icons/javascript-icon.svg'
-// import reactIcon from '../assets/img/stack-icons/react-icon.svg'
-// import reactRouterIcon from '../assets/img/stack-icons/react-router-icon.svg'
-// import sassIcon from '../assets/img/stack-icons/sass-icon.svg'
-// import nodeIcon from '../assets/img/stack-icons/nodejs-icon.svg'
-// import mongoIcon from '../assets/img/stack-icons/mongodb-icon.svg'
-// import gitIcon from '../assets/img/stack-icons/git-icon.svg'
-// import gsapIcon from '../assets/img/stack-icons/gsap-icon.svg'
-// import postmanIcon from '../assets/img/stack-icons/postman-icon.svg'
-// // import nextjsIcon from '../assets/img/stack-icons/nextjs-icon.svg'
-// // import typescriptIcon from '../assets/img/stack-icons/typescript-icon.svg'
-// // import tailwindIcon from '../assets/img/stack-icons/tailwindcss-icon.svg'
-// import photoshopIcon from '../assets/img/stack-icons/photoshop-icon.svg'
-// import illustratorIcon from '../assets/img/stack-icons/illustrator-icon.svg'
-// import abletonIcon from '../assets/img/stack-icons/ableton-icon.svg'
 
 export default function MyToolbox() {
   const toolbox = useRef()
@@ -60,7 +43,7 @@ export default function MyToolbox() {
   }
 
   const myStack = (
-    <section className="section__toolbox" ref={toolbox}>
+    <div className="section__toolbox" ref={toolbox}>
       <h2 className="section__title section__title-toolbox">My Toolbox</h2>
       <div className="toolbox-div">
         {createIcon(
@@ -86,25 +69,25 @@ export default function MyToolbox() {
           true
         )}
         {createIcon('https://sass-lang.com/', 'sass-icon.svg', 'Sass')}
-        {createIcon('https://nodejs.org/', 'nodejs-icon.svg', 'Node.js')}
-        {createIcon('https://www.mongodb.com/', 'mongodb-icon.svg', 'MongoDB')}
-        {createIcon('https://www.postman.com/', 'postman-icon.svg', 'Postman')}
-        {createIcon('https://git-scm.com/', 'git-icon.svg', 'Git')}
         {createIcon(
           'https://greensock.com/',
           'gsap-icon.svg',
           'Green Sock Animation Platform'
         )}
+        {createIcon('https://nodejs.org/', 'nodejs-icon.svg', 'Node.js')}
+        {createIcon('https://www.mongodb.com/', 'mongodb-icon.svg', 'MongoDB')}
+        {createIcon('https://www.postman.com/', 'postman-icon.svg', 'Postman')}
+        {createIcon('https://git-scm.com/', 'git-icon.svg', 'Git')}
         {createIcon(
           'https://www.adobe.com/products/photoshop.html',
           'photoshop-icon.svg',
           'Adobe Photoshop'
         )}
-        {createIcon(
+        {/* {createIcon(
           'https://www.adobe.com/products/illustrator.html',
           'illustrator-icon.svg',
           'Adobe Illustrator'
-        )}
+        )} */}
         {createIcon(
           'https://www.ableton.com/',
           'ableton-icon.svg',
@@ -112,7 +95,7 @@ export default function MyToolbox() {
           true
         )}
       </div>
-    </section>
+    </div>
   )
 
   return <>{myStack}</>

@@ -18,6 +18,7 @@ body {
   background: $color-light;
   color: $kuzo-sherbert;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
+  letter-spacing: .75px;
   line-height: 1;
   // cursor: none;
 
@@ -41,12 +42,11 @@ a {
 
 
 .app {
-  border-right: 5px solid;
-  border-bottom: 5px solid;
-  border-color: $kuzo-sherbert;
+  // border-right: 5px solid;
+  // border-bottom: 5px solid;
+  // border-color: $kuzo-sherbert;
+  // min-height: 100vh;
 
-  min-height: 100vh;
-  // @include page-container;
   @include transition-ease;
 }
 

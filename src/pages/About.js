@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import MyToolbox from '../components/MyToolbox'
 import meHiking from '../img/me/me-hiking.jpg'
+import meGuitar from '../img/me/me-guitar.png'
 
 export default function About() {
   const blurb = (
@@ -14,12 +15,17 @@ export default function About() {
       />
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">
-          I'm Sean, self taught web developer from Los Angeles, California.
+          I'm Sean, web developer from Los Angeles, California.
         </h5>
         <h5 className="about__blurb-text section__text">
-          I love developing with React, styling with Sass and my new obsession
-          is building and testing APIs with Node, MongoDB and Postman. Currently
-          learning Next.js.
+          I love developing web apps with React and styling with Sass.
+        </h5>
+        <h5 className="about__blurb-text section__text">
+          My new obsession is building and testing APIs with Node, MongoDB and
+          Postman.
+        </h5>
+        <h5 className="about__blurb-text section__text">
+          Currently learning Next.js.
         </h5>
       </div>
     </div>
@@ -29,19 +35,20 @@ export default function About() {
     <div className="about__blurb-div" id="extended-about">
       <img
         className="about__blurb-img"
-        src={meHiking}
+        src={meGuitar}
         alt="Sean hiking in Hawai'i"
       />
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">
-          I'm Sean, a self taught web developer from Los Angeles, California.
-          Before teaching myself to code (and before the 'rona) I was an audio
-          engineer and golf caddy for my dad on the PGA Champions Tour.
+          Before teaching myself to code I worked as an audio engineer.
         </h5>
         <h5 className="about__blurb-text section__text">
-          I love developing with React, styling with Sass and my new obsession
-          is building and testing APIs with Node, MongoDB and Postman. Currently
-          learning Next.js.
+          After working in a large commercial studio for years, I started
+          freelancing.
+        </h5>
+        <h5 className="about__blurb-text section__text">
+          Over the last 6 years I've had the opportunity to work on a variety of
+          projects, from music to voiceovers to film.
         </h5>
       </div>
     </div>
@@ -49,15 +56,15 @@ export default function About() {
 
   const aboutLinks = (
     <div className="about__links-div">
-      <div className="about__subtitle-container">
+      {/* <div className="about__subtitle-container">
         <h3 className="about__subtitle section-subtitle">More me</h3>
         <a href="#extended-about">
           <i className="fa-solid fa-angles-down section__next home__next"></i>
         </a>
-      </div>
+      </div> */}
       <div className="about__subtitle-container">
-        <h3 className="about__subtitle section-subtitle">My work</h3>
-        <Link to="/portfolio">
+        <h3 className="about__subtitle section-subtitle">Contact Me</h3>
+        <Link to="/contact">
           <i className="fa-solid fa-angles-right section__next home__next"></i>
         </Link>
       </div>
@@ -67,8 +74,8 @@ export default function About() {
   return (
     <section className="about section">
       {blurb}
-      {aboutLinks}
       <MyToolbox />
+      {aboutLinks}
       {extendedAbout}
     </section>
   )
