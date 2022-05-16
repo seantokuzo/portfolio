@@ -51,7 +51,7 @@ export default function MyToolbox() {
         <div className="stack-icon-div">
           <img
             className={!special ? 'stack-icon' : 'stack-icon special-icon'}
-            src={`/images/stack-icons/${img}`}
+            src={`img/stack-icons/${img}`}
             alt={`${name} icon`}
           />
         </div>

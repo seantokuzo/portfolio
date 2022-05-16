@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ProjectCarousel from '../components/portfolio/ProjectCarousel'
 import ProjectGrid from '../components/portfolio/ProjectGrid'
 
-export default function Portfolio(props) {
+export default function Portfolio() {
   const [gridMode, setGridMode] = useState(false)
 
   function toggleGridMode() {

@@ -4,8 +4,8 @@ import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
-import kuzoDayIcon from '../../assets/img/luna/kuzo-nobck-hiRes.png'
-import kuzoNightIcon from '../../assets/img/luna/kuzo-nobck-purp.png'
+import kuzoDayIcon from '../../img/luna/kuzo-nobck-hiRes.png'
+import kuzoNightIcon from '../../img/luna/kuzo-nobck-purp.png'
 
 export default function Logo({ logoActive, toggleLogoActive }) {
   const { darkMode } = useContext(ThemeContext)

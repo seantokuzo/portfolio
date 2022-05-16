@@ -5,7 +5,8 @@
   padding: .5rem 1rem;
   margin: 0 1rem;
 
-  border: 4px solid black;
+  border: 4px solid;
+  border-color: $kuzo-sherbert;
   border-radius: 5px;
 
   background-color: $color-light;
@@ -25,6 +26,7 @@
 
 .dark-mode .project-card {
   background-color: transparent;
+  border-color: black;
 }
 
 .project-card__title {

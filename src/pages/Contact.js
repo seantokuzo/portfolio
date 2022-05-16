@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { ThemeContext } from '../context/ThemeContext'
-import dayBg from '../assets/img/ctm/cb-day.png'
-import nightBg from '../assets/img/ctm/cb-night.png'
+import dayBg from '../img/ctm/cb-day.png'
+import nightBg from '../img/ctm/cb-night.png'
 
 export default function Contact() {
   const { darkMode } = useContext(ThemeContext)

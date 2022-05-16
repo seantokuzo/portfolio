@@ -8,7 +8,6 @@ import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import Particles from './components/Particles'
 import './scss/main.scss'
-import ichiAudio from './assets/audio/ichi-loop.m4a'
 
 export default function App() {
   const [logoActive, setLogoActive] = useState(false)
@@ -82,7 +81,12 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <audio src={ichiAudio} loop={true} id="bg-audio" />
+      <audio
+        src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-audio/ichi-loop.m4a"
+        loop={true}
+        id="bg-audio"
+        preload="auto"
+      />
     </div>
   )
 }

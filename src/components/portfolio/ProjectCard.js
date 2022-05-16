@@ -11,7 +11,7 @@ export default function ProjectCard({ currentProject }) {
       <div className="project-card__img-container">
         <img
           className="project-card__img"
-          src={`/images/project-img/${img}`}
+          src={`img/project-img/${img}`}
           alt={`${name} project preview`}
         />
       </div>
@@ -48,7 +48,7 @@ export default function ProjectCard({ currentProject }) {
         {stack.map((icon) => (
           <img
             key={nanoid()}
-            src={`/images/stack-icons/${icon}-icon.svg`}
+            src={`/img/stack-icons/${icon}-icon.svg`}
             className={
               icon === 'react-router' || icon === 'ableton'
                 ? 'project-card__stack-icon special-pj-icon'

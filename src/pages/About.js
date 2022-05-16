@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import MyToolbox from '../components/MyToolbox'
-import meHiking from '../assets/img/me/me-hiking.jpg'
+import meHiking from '../img/me/me-hiking.jpg'
 
 export default function About() {
   const blurb = (
