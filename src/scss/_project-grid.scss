@@ -1,0 +1,51 @@
+.project-grid {
+  width: 100%;
+  max-width: 450px;
+  margin: 1rem 0 0;
+
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+}
+
+.project-grid__img-container {
+  grid-area: img;
+  background-color: $kuzo-sherbert;
+
+
+  max-width: 150px;
+  max-height: 150px;
+  // max-width: 300px;
+
+  margin: 0;
+  border-radius: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  object-fit: cover;
+  overflow: hidden;
+  @include transition-ease;
+}
+
+.project-grid__img {
+  width: 100%;
+  transition: transform 500ms cubic-bezier(.5, 0, .5, 1),
+    opacity 250ms linear;
+}
+
+.project-grid__img:hover,
+.project-card-img {
+  transform: scale(1.1);
+  opacity: .9;
+}
+
+.project-grid__link {
+  text-decoration: none;
+}
+
+.dark-mode {
+  .project-grid__img-container {
+    background-color: $kuzo-purp;
+  }
+}

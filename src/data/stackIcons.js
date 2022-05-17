@@ -76,13 +76,13 @@ const stackIcons = [
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/ableton-icon.svg',
     name: 'Ableton Live',
     special: true
+  },
+  {
+    link: 'https://pugjs.org/api/getting-started.html',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/pug-icon.svg',
+    name: 'Pug',
+    special: false
   }
-  // {
-  //   link: 'https://pugjs.org/api/getting-started.html',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/pug-icon.svg',
-  //   name: 'Pug',
-  //   special: false
-  // },
   // {
   //   link: 'https://nextjs.org/',
   //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/nextjs-icon.svg',

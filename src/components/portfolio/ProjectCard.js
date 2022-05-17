@@ -1,6 +1,7 @@
 import React from 'react'
 import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
+import stackIcons from '../../data/stackIcons'
 
 export default function ProjectCard({ currentProject }) {
   const { name, tagline, img, link, github, stack } = projects[currentProject]
@@ -12,7 +13,6 @@ export default function ProjectCard({ currentProject }) {
         <img
           className="project-card__img"
           src={img}
-          // src={`img/project-img/${img}`}
           alt={`${name} project preview`}
         />
       </div>
@@ -46,18 +46,21 @@ export default function ProjectCard({ currentProject }) {
         Made with:
       </p>
       <div className="project-card__stack-div">
-        {stack.map((icon) => (
-          <img
-            key={nanoid()}
-            src={`/img/stack-icons/${icon}-icon.svg`}
-            className={
-              icon === 'react-router' || icon === 'ableton'
-                ? 'project-card__stack-icon special-pj-icon'
-                : 'project-card__stack-icon'
-            }
-            alt={`${icon} icon`}
-          />
-        ))}
+        {stack.map((icon) => {
+          const thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+          return (
+            <img
+              key={nanoid()}
+              src={thisIcon.img}
+              className={
+                icon === 'React Router' || icon === 'Ableton Live'
+                  ? 'project-card__stack-icon special-pj-icon'
+                  : 'project-card__stack-icon'
+              }
+              alt={`${icon} icon`}
+            />
+          )
+        })}
       </div>
     </div>
   )

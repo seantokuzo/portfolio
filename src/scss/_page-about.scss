@@ -8,8 +8,10 @@
   letter-spacing: 1.1px;
   text-align: center;
 
+  
   &__title {
     margin: 0;
+
   }
 
   &__nav {
@@ -20,12 +22,13 @@
   &__nav-link {
     padding: 4px 7px;
     border: 2px solid;
+
   }
   
   &__blurb-div {
+    @include flex(column, center, center);
     width: 100%;
     min-height: 50vh;
-    @include flex(column, center, center);
     border: 2px solid;
     padding: 2rem .5rem 1rem;
   }
@@ -74,12 +77,15 @@
 .about__nav-link-active {
   font-weight: bolder;
   border: 2px solid;
+  border-color: $kuzo-sherbert;
   color: $color-light;
   background-color: $kuzo-sherbert;
+
 }
 
 .dark-mode {
   .about__nav-link-active {
+    border-color: $color-dark;
     color: $color-dark;
     background-color: $kuzo-purp;
   }
@@ -108,7 +114,6 @@
 }
 
 .stack-icon-div {
-  @include transition-ease;
   opacity: .85;
 
   &:hover {

@@ -8,7 +8,7 @@ const projects = [
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
     link: 'https://bobby-shmurdle.netlify.app/',
     github: 'https://github.com/seantokuzo/bobby-shmurdle',
-    stack: ['react', 'css3']
+    stack: ['React', 'CSS3']
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     link: 'https://study-timer-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A fullstack mock e-commerce site for a tour company',
-    stack: ['nodejs', 'mongodb', 'pug', 'postman']
+    stack: ['Node.js', 'MongoDB', 'Pug', 'Postman']
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     link: 'https://study-timer-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A nintendo themed study & break session timer.',
-    stack: ['react', 'css3']
+    stack: ['React', 'CSS3']
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const projects = [
     github: 'https://github.com/seantokuzo/MovieWatchlist',
     tagline:
       'Build your own movie watchlist. Powered by The Movie Database API',
-    stack: ['react', 'css3']
+    stack: ['React', 'CSS3']
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const projects = [
     link: 'https://www.seantokuzo.dev/',
     github: 'https://github.com/seantokuzo/portfolio',
     tagline: 'My portfolio on my portfolio?! Woooah, my brain',
-    stack: ['react', 'react-router', 'sass', 'gsap']
+    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform']
   },
   {
     id: 6,
@@ -55,7 +55,7 @@ const projects = [
     github: 'https://github.com/seantokuzo/DER-PC3000',
     tagline:
       'A mini drum machine with a tiny library of sounds and a few audio controls.',
-    stack: ['react', 'css3', 'ableton']
+    stack: ['React', 'CSS3', 'Ableton Live']
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const projects = [
     github: 'https://github.com/seantokuzo/Calculator',
     tagline:
       'A simple Javascript calculator with different color themes. Do some maths!',
-    stack: ['react', 'css3']
+    stack: ['React', 'CSS3']
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const projects = [
     link: 'https://trivial-trivia-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/TrivialTrivia',
     tagline: 'A trivia game to test your trivial knowledge',
-    stack: ['react', 'css3']
+    stack: ['React', 'CSS3']
   }
   // {
   //   id: 9,
@@ -84,7 +84,7 @@ const projects = [
   //   github: 'https://github.com/seantokuzo/Blackjack',
   //   tagline:
   //     'A simple blackjack game powered by the Deck of Cards API. Play against an automated opponent',
-  //   stack: ['html5', 'css3', 'javascript']
+  //   stack: ['html5', 'CSS3', 'javascript']
   // }
 ]
 
