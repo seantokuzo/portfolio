@@ -18,6 +18,16 @@
     font-weight: 400;
     line-height: 1.05em;
   }
+
+  &__next {
+    background-color: $color-light;
+  }
+}
+
+.dark-mode {
+  .section__next {
+    background-color: $color-dark;
+  }
 }
 
 .underline {

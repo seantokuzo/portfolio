@@ -11,7 +11,8 @@ export default function ProjectCard({ currentProject }) {
       <div className="project-card__img-container">
         <img
           className="project-card__img"
-          src={`img/project-img/${img}`}
+          src={img}
+          // src={`img/project-img/${img}`}
           alt={`${name} project preview`}
         />
       </div>

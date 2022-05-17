@@ -45,7 +45,7 @@
   // max-width: 300px;
   
   margin: .5rem auto 0;
-  border-radius: 5px;
+  border-radius: 2px;
   
   display: flex;
   align-items: center;
@@ -56,8 +56,15 @@
   @include transition-ease;
 }
 
-.dark-mode .project-card__img-container {
-  background-color: $kuzo-purp;
+.dark-mode {
+  .project-card {
+    border-color: $kuzo-purp;
+    background-color: $color-dark;
+  }
+
+  .project-card__img-container {
+    background-color: $kuzo-purp;
+  }
 }
 
 .project-card__img {
@@ -76,6 +83,7 @@
   cursor: pointer;
   max-width: 95%;
   margin: 0 auto;
+  min-height: 3rem;
 }
 
 .project-card__links-title {
@@ -107,6 +115,10 @@
 .project-card__stack-title {
   margin: .75rem 0 .5rem;
   width: 100%;
+}
+
+.project-card__stack-div {
+  margin-bottom: 1rem;
 }
 
 .project-card__stack-icon {

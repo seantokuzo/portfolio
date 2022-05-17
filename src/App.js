@@ -4,8 +4,12 @@ import { gsap } from 'gsap'
 import Header from './components/header/Header'
 import Home from './pages/Home'
 import About from './pages/About'
+import Dev from './pages/about-subpages/Dev'
+import Audio from './pages/about-subpages/Audio'
+import Caddy from './pages/about-subpages/Caddy'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
+import WhereArtThou from './pages/WhereArtThou'
 import Particles from './components/Particles'
 import './scss/main.scss'
 
@@ -77,9 +81,14 @@ export default function App() {
             <Home logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
           }
         />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="about" element={<About />}>
+          <Route path="dev" element={<Dev />} />
+          <Route path="audio" element={<Audio />} />
+          <Route path="caddy" element={<Caddy />} />
+        </Route>
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<WhereArtThou />} />
       </Routes>
       <audio
         src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-audio/ichi-loop.m4a"

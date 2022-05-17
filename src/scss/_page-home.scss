@@ -56,9 +56,10 @@
     border-color: $kuzo-sherbert;
     font-size: 1.75em;
     box-shadow: $bs-black;
+    cursor: pointer;
     
     &:hover {
-      cursor: pointer;
+      transform: scale(1.1);
     }
   }
 }

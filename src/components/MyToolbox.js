@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
+import stackIcons from '../data/stackIcons'
 
 export default function MyToolbox() {
   const toolbox = useRef()
@@ -23,10 +24,10 @@ export default function MyToolbox() {
     })
   }, [])
 
-  function createIcon(url, img, name, special) {
+  function createIcon(link, img, name, special) {
     return (
       <a
-        href={url}
+        href={link}
         target="_blank"
         rel="noreferrer"
         className="stack-icon-link"
@@ -34,7 +35,7 @@ export default function MyToolbox() {
         <div className="stack-icon-div">
           <img
             className={!special ? 'stack-icon' : 'stack-icon special-icon'}
-            src={`img/stack-icons/${img}`}
+            src={img}
             alt={`${name} icon`}
           />
         </div>
@@ -46,7 +47,11 @@ export default function MyToolbox() {
     <div className="section__toolbox" ref={toolbox}>
       <h2 className="section__title section__title-toolbox">My Toolbox</h2>
       <div className="toolbox-div">
-        {createIcon(
+        {stackIcons.map((icon) => {
+          const { link, img, name, special } = icon
+          return createIcon(link, img, name, special)
+        })}
+        {/* {createIcon(
           'https://developer.mozilla.org/en-US/docs/Glossary/HTML5',
           'html5-icon.svg',
           'HTML5'
@@ -83,17 +88,12 @@ export default function MyToolbox() {
           'photoshop-icon.svg',
           'Adobe Photoshop'
         )}
-        {/* {createIcon(
-          'https://www.adobe.com/products/illustrator.html',
-          'illustrator-icon.svg',
-          'Adobe Illustrator'
-        )} */}
         {createIcon(
           'https://www.ableton.com/',
           'ableton-icon.svg',
           'Ableton Live',
           true
-        )}
+        )} */}
       </div>
     </div>
   )
