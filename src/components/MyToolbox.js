@@ -31,6 +31,7 @@ export default function MyToolbox() {
         target="_blank"
         rel="noreferrer"
         className="stack-icon-link"
+        key={name}
       >
         <div className="stack-icon-div">
           <img

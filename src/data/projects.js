@@ -11,6 +11,25 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
+    id: 5,
+    name: 'My Portfolio',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
+    link: 'https://www.seantokuzo.dev/',
+    github: 'https://github.com/seantokuzo/portfolio',
+    tagline: 'My portfolio on my portfolio?! Woooah, my brain',
+    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform']
+  },
+  {
+    id: 4,
+    name: 'Movie Watchlist',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr.png',
+    link: 'https://seantokuzo.github.io/MovieWatchlist/',
+    github: 'https://github.com/seantokuzo/MovieWatchlist',
+    tagline:
+      'Build your own movie watchlist. Powered by The Movie Database API',
+    stack: ['React', 'CSS3']
+  },
+  {
     id: 2,
     name: 'Natours',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
@@ -29,35 +48,6 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
-    id: 4,
-    name: 'Movie Watchlist',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr.png',
-    link: 'https://seantokuzo.github.io/MovieWatchlist/',
-    github: 'https://github.com/seantokuzo/MovieWatchlist',
-    tagline:
-      'Build your own movie watchlist. Powered by The Movie Database API',
-    stack: ['React', 'CSS3']
-  },
-  {
-    id: 5,
-    name: 'My Portfolio',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
-    link: 'https://www.seantokuzo.dev/',
-    github: 'https://github.com/seantokuzo/portfolio',
-    tagline: 'My portfolio on my portfolio?! Woooah, my brain',
-    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform']
-  },
-  {
-    id: 6,
-    name: 'Drum Machine',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
-    link: 'https://seantokuzo.github.io/DER-PC3000/',
-    github: 'https://github.com/seantokuzo/DER-PC3000',
-    tagline:
-      'A mini drum machine with a tiny library of sounds and a few audio controls.',
-    stack: ['React', 'CSS3', 'Ableton Live']
-  },
-  {
     id: 7,
     name: 'Le Calculator',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
@@ -66,6 +56,16 @@ const projects = [
     tagline:
       'A simple Javascript calculator with different color themes. Do some maths!',
     stack: ['React', 'CSS3']
+  },
+  {
+    id: 6,
+    name: 'Drum Machine',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
+    link: 'https://seantokuzo.github.io/DER-PC3000/',
+    github: 'https://github.com/seantokuzo/DER-PC3000',
+    tagline:
+    'A mini drum machine with a tiny library of sounds and a few audio controls.',
+    stack: ['React', 'CSS3', 'Ableton Live']
   },
   {
     id: 8,

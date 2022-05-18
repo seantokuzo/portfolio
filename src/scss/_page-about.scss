@@ -34,7 +34,19 @@
   }
 
   &__starter-div {
+    width: 100%;
+    @include flex(column, center, center);
 
+  }
+  
+  &__starter-title {
+    margin: -2rem 0 2rem;
+    font-weight: bolder;
+  }
+  
+  &__starter-btn-div {
+    width: 100%;
+    @include flex(row, center, space-evenly);
   }
   
   &__blurb-img {
@@ -69,7 +81,7 @@
   }
 
   &__btn-text {
-    color: darken($kuzo-purp, 30);
+    color: darken($kuzo-sherbert, 30);
     font-weight: bolder;
   }
 }
@@ -89,6 +101,11 @@
     color: $color-dark;
     background-color: $kuzo-purp;
   }
+
+  .about__btn-text {
+    color: darken($kuzo-purp, 30);
+    font-weight: bolder;
+  }
 }
 
 .section__toolbox {
@@ -105,12 +122,6 @@
 
   @include flex(row, center, space-evenly);
   flex-wrap: wrap;
-}
-
-.section__title-toolbox {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  text-align: left;
 }
 
 .stack-icon-div {

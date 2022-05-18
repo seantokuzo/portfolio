@@ -33,12 +33,18 @@ export default function Header({ logoActive, toggleLogoActive }) {
   const listLinkFactory = (path, label) => (
     <li className="nav__list-item">
       <Link to={path}>
-        <h2 className={pathname === path ? 'nav__link underline' : 'nav__link'}>
+        <h2
+          className={
+            '/' + pathname.split('/')[1] === path ? 'nav__link underline' : 'nav__link'
+          }
+        >
           {label}
         </h2>
       </Link>
     </li>
   )
+
+console.log('/about'.split('/'))
 
   const navLinks = (
     <nav className="nav">

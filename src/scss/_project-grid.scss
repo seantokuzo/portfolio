@@ -1,7 +1,7 @@
 .project-grid {
   width: 100%;
-  max-width: 450px;
-  margin: 1rem 0 0;
+  max-width: 650px;
+  margin: 1rem 0 2rem;
 
   @include flex(row, center, center);
   flex-wrap: wrap;
@@ -12,16 +12,13 @@
   background-color: $kuzo-sherbert;
 
 
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 160px;
+  // max-height: 150px;
   // max-width: 300px;
 
   margin: 0;
-  border-radius: 2px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(column, center, center);
 
   object-fit: cover;
   overflow: hidden;
@@ -34,18 +31,90 @@
     opacity 250ms linear;
 }
 
-.project-grid__img:hover,
-.project-card-img {
-  transform: scale(1.1);
-  opacity: .9;
+.project-grid__link {
+  text-decoration: none;
+  border: none;
+  margin: 0;
+}
+
+.project-grid__details-div {
+  @include flex(column, center, center);
+  position: absolute;
+
+  padding: .5rem;
+  
+  color: $color-light;
+  background-color: rgba($kuzo-sherbert, .9);
+  opacity: 0;
+  @include transition-ease;
+}
+
+.project-grid__img-container:hover,
+.project-grid__img-container:focus,
+.project-grid__img-container:active {
+  .project-grid__img {
+      transform: scale(1.1);
+      opacity: .9;
+    }
+  
+  .project-grid__details-div {
+    opacity: 1;
+  }
+} 
+
+.project-grid__details-name {
+  font-size: .75em;
+}
+
+.project-grid__details-stack-text {
+  font-size: .5em;
+  margin-top: .25rem;
+}
+
+.project-grid__details-stack-div {
+  @include flex(row, center, center);
+  margin-top: .34rem;
+}
+
+.project-grid__stack-icon {
+  width: .75rem;
+  margin: 0 5px;
+}
+
+.special-grid-icon {
+  height: .75rem;
+  background-color: $color-light;
+}
+
+.project-grid__links-div {
+  width: 100%;
+  margin-top: .5rem;
+  @include flex(row, center, space-evenly);
+  @include transition-ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .project-grid__link {
-  text-decoration: none;
+  color: $color-light;
+  @include flex(column, center, center);
+  font-size: .25em;
+  margin: 0 5px;
 }
 
 .dark-mode {
   .project-grid__img-container {
     background-color: $kuzo-purp;
+  }
+  
+  .project-grid__details-div {
+    color: $kuzo-purp;
+    background-color: rgba($color-dark, .9);
+  }
+  
+  .project-grid__links-div {
+    color: $kuzo-purp;
   }
 }

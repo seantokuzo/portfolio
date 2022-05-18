@@ -41,6 +41,14 @@
   cursor: pointer;
 }
 
+.carousel-icon-container {
+  @include flex(row, center, center);
+  padding: 6px 5.5px;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: .85em;
+}
+
 .grid-sqr {
   width: 3.5px;
   height: 3.5px;

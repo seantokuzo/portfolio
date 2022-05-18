@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
-// import { gsap } from 'gsap'
 import ProjectCard from './ProjectCard'
 import projects from '../../data/projects'
 
 export default function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(0)
   // const [cardSlide, setCardSlide] = useState('no')
-  // console.log(cardSlide)
-  // const tl = gsap.timeline()
 
   function toggleCarouselNext() {
     if (currentProject === projects.length - 1) {
@@ -26,19 +23,19 @@ export default function ProjectCarousel() {
   return (
     <div className="project-carousel">
       <ProjectCard currentProject={currentProject} />
-      <div className='carousel-toggle-div'>
-      <button
-        className="carousel-toggle carousel-toggle-left"
-        onClick={toggleCarouselPrev}
-      >
-        <i className="fa-solid fa-chevron-left carousel-toggle-icon"></i>
-      </button>
-      <button
-        className="carousel-toggle carousel-toggle-right"
-        onClick={toggleCarouselNext}
-      >
-        <i className="fa-solid fa-chevron-right carousel-toggle-icon"></i>
-      </button>
+      <div className="carousel-toggle-div">
+        <button
+          className="carousel-toggle carousel-toggle-left"
+          onClick={toggleCarouselPrev}
+        >
+          <i className="fa-solid fa-chevron-left carousel-toggle-icon"></i>
+        </button>
+        <button
+          className="carousel-toggle carousel-toggle-right"
+          onClick={toggleCarouselNext}
+        >
+          <i className="fa-solid fa-chevron-right carousel-toggle-icon"></i>
+        </button>
       </div>
     </div>
   )

@@ -21,7 +21,7 @@
     "title"
     "img"
     "text";
-  transition: transform 500ms ease-in-out;
+  @include transition-ease;
   transform: translateX(0px);
 }
 
@@ -48,7 +48,6 @@
   
   object-fit: cover;
   overflow: hidden;
-  @include transition-ease;
 }
 
 .project-card__img {
