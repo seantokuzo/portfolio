@@ -14,7 +14,7 @@ export default function Audio() {
           Before teaching myself to code I worked as an audio engineer.
         </h5>
         <h5 className="about__blurb-text section__text">
-          After working in a large commercial studio for years, I started
+          After working in a commercial studio for years, I started
           freelancing.
         </h5>
         <h5 className="about__blurb-text section__text">

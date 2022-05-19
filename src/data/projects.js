@@ -11,7 +11,7 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
-    id: 5,
+    id: 2,
     name: 'My Portfolio',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
     link: 'https://www.seantokuzo.dev/',
@@ -20,7 +20,7 @@ const projects = [
     stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform']
   },
   {
-    id: 4,
+    id: 3,
     name: 'Movie Watchlist',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr.png',
     link: 'https://seantokuzo.github.io/MovieWatchlist/',
@@ -30,7 +30,7 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
-    id: 2,
+    id: 4,
     name: 'Natours',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
     link: 'https://natours-seantokuzo.herokuapp.com/',
@@ -39,7 +39,7 @@ const projects = [
     stack: ['Node.js', 'MongoDB', 'Pug', 'Postman']
   },
   {
-    id: 3,
+    id: 5,
     name: 'Study Timer',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/study-timer-800sqr.png',
     link: 'https://study-timer-seantokuzo.netlify.app/',
@@ -48,7 +48,7 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
-    id: 7,
+    id: 6,
     name: 'Le Calculator',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
     link: 'https://seantokuzo.github.io/Calculator/',
@@ -58,7 +58,7 @@ const projects = [
     stack: ['React', 'CSS3']
   },
   {
-    id: 6,
+    id: 7,
     name: 'Drum Machine',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
     link: 'https://seantokuzo.github.io/DER-PC3000/',

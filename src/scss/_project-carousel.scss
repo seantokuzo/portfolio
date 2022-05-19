@@ -1,8 +1,25 @@
-.project-carousel {
+.carousel {
   // @include absolute-center;
   @include flex(column, center, center);
-  margin: 1rem 0 5rem;
+  margin: .5rem 0;
   width: 100%;
+
+  &__cards-container {
+    @include flex(row, center, center);
+    overflow: hidden;
+    width: 100%;
+
+    border: 1px solid red;
+  }
+
+  &__card-container {
+    visibility: hidden;
+
+
+    &--active {
+      visibility: visible;
+    }
+  }
 }
 
 .carousel-toggle-div {

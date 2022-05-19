@@ -4,8 +4,8 @@ import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
 
-export default function ProjectCard({ currentProject }) {
-  const { name, tagline, img, link, github, stack } = projects[currentProject]
+export default function ProjectCard({ project, currentProject }) {
+  const { id, name, tagline, img, link, github, stack } = project
 
   const projectCard = useRef()
   const q = gsap.utils.selector(projectCard)
@@ -20,7 +20,14 @@ export default function ProjectCard({ currentProject }) {
   }, [])
 
   return (
-    <div className="project-card" ref={projectCard}>
+    <div
+      className={
+        id === currentProject
+          ? 'project-card project-card--active'
+          : 'project-card'
+      }
+      ref={projectCard}
+    >
       <h3 className="project-card__title section__subtitle meow">{name}</h3>
       <div className="project-card__img-container meow">
         <img
