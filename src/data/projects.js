@@ -33,7 +33,7 @@ const projects = [
     id: 2,
     name: 'Natours',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
-    link: 'https://natours-seantokuzo.herokuapp.com/me',
+    link: 'https://natours-seantokuzo.herokuapp.com/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A fullstack mock e-commerce site for a tour company',
     stack: ['Node.js', 'MongoDB', 'Pug', 'Postman']
