@@ -33,7 +33,7 @@ const projects = [
     id: 2,
     name: 'Natours',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
-    link: 'https://study-timer-seantokuzo.netlify.app/',
+    link: 'https://natours-seantokuzo.herokuapp.com/me',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A fullstack mock e-commerce site for a tour company',
     stack: ['Node.js', 'MongoDB', 'Pug', 'Postman']
@@ -64,7 +64,7 @@ const projects = [
     link: 'https://seantokuzo.github.io/DER-PC3000/',
     github: 'https://github.com/seantokuzo/DER-PC3000',
     tagline:
-    'A mini drum machine with a tiny library of sounds and a few audio controls.',
+      'A mini drum machine with a tiny library of sounds and a few audio controls.',
     stack: ['React', 'CSS3', 'Ableton Live']
   },
   {
