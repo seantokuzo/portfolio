@@ -4,8 +4,11 @@ import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
 
-export default function ProjectCard({ project, currentProject }) {
+export default function ProjectCard({ project, currentProject, cardSlide }) {
   const { id, name, tagline, img, link, github, stack } = project
+
+  const transX = (id - currentProject) * 100 - 50
+  console.log(name, transX)
 
   const projectCard = useRef()
   const q = gsap.utils.selector(projectCard)
@@ -14,8 +17,8 @@ export default function ProjectCard({ project, currentProject }) {
   useEffect(() => {
     tl.from(q('.meow'), {
       opacity: 0,
-      x: -20,
-      stagger: 0.2
+      y: -10,
+      stagger: 0.1
     })
   }, [])
 
@@ -23,10 +26,11 @@ export default function ProjectCard({ project, currentProject }) {
     <div
       className={
         id === currentProject
-          ? 'project-card project-card--active'
-          : 'project-card'
+          ? 'project-card'
+          : 'project-card project-card--hidden'
       }
       ref={projectCard}
+      style={{ transform: `translateX(${transX}%)` }}
     >
       <h3 className="project-card__title section__subtitle meow">{name}</h3>
       <div className="project-card__img-container meow">

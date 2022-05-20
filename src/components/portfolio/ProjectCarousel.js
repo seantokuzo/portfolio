@@ -4,11 +4,20 @@ import projects from '../../data/projects'
 import { nanoid } from 'nanoid'
 
 export default function ProjectCarousel() {
+  const ANIME_TIME = 3000
   const [currentProject, setCurrentProject] = useState(1)
   console.log(currentProject)
-  // const [cardSlide, setCardSlide] = useState('no')
+  const [cardSlide, setCardSlide] = useState('no')
+
+  const animationHelper = (type, time) => {
+    setTimeout(() => {
+      setCardSlide(type)
+    }, time)
+    setCardSlide('no')
+  }
 
   function toggleCarouselNext() {
+    animationHelper('next', ANIME_TIME)
     if (currentProject === projects.length) {
       return setCurrentProject(1)
     }
@@ -16,6 +25,7 @@ export default function ProjectCarousel() {
   }
 
   function toggleCarouselPrev() {
+    animationHelper('prev', ANIME_TIME)
     if (currentProject === 1) {
       return setCurrentProject(projects.length)
     }
@@ -25,18 +35,12 @@ export default function ProjectCarousel() {
   const allProjects = (
     <div className="carousel__cards-container">
       {projects.map((project) => (
-        <div
-          className={
-            project.id === currentProject
-              ? 'carousel__card-container carousel__card-container--active'
-              : project.id < currentProject
-              ? 'carousel__card-container carousel__card-container--hidden carousel__card-container--hidden-left'
-              : 'carousel__card-container carousel__card-container--hidden carousel__card-container--hidden-right'
-          }
+        <ProjectCard
+          project={project}
+          currentProject={currentProject}
+          cardSlide={cardSlide}
           key={nanoid()}
-        >
-          <ProjectCard project={project} currentProject={currentProject} />
-        </div>
+        />
       ))}
     </div>
   )

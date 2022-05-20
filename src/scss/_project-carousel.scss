@@ -3,28 +3,22 @@
   @include flex(column, center, center);
   margin: .5rem 0;
   width: 100%;
+  overflow: hidden;
 
   &__cards-container {
     @include flex(row, center, center);
-    overflow: hidden;
     width: 100%;
-
-    border: 1px solid red;
-  }
-
-  &__card-container {
-    visibility: hidden;
-
-
-    &--active {
-      visibility: visible;
-    }
+    // border: 1px solid red;
   }
 }
 
 .carousel-toggle-div {
   @include flex(row, center, center);
   margin: 1rem 0 0;
+  // position: absolute;
+  // top: 90%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
 .carousel-toggle {
