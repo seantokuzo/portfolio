@@ -65,24 +65,15 @@
     line-height: 1.25em;
   }
 
-  &__section-links-div {
-    @include flex(row, center, space-evenly);
-    width: 100%;
-    margin: 1rem auto;
-  }
-
-  &__section-link {
-    font-weight: lighter;
-    min-width: 115px;
-
-    &-icon {
-
-    }
-  }
-
   &__btn-text {
     color: darken($kuzo-sherbert, 30);
     font-weight: bolder;
+  }
+
+  &__subpage-btn-div {
+    @include flex(row, center, space-evenly);
+    margin: 1rem 0;
+    width: 80%;
   }
 }
 
@@ -95,19 +86,6 @@
 
 }
 
-.dark-mode {
-  .about__nav-link-active {
-    border-color: $color-dark;
-    color: $color-dark;
-    background-color: $kuzo-purp;
-  }
-
-  .about__btn-text {
-    color: darken($kuzo-purp, 30);
-    font-weight: bolder;
-  }
-}
-
 .section__toolbox {
   width: 100%;
   max-width: 450px;
@@ -117,7 +95,7 @@
 }
 
 .toolbox-div {
-  margin: 1rem auto 0;
+  margin: 1rem auto;
   padding: 0 25px;
 
   @include flex(row, center, space-evenly);
@@ -148,4 +126,64 @@ $about-stack-icon: 35px;
   padding: 2px;
   background-color: $color-light;
   border-radius: 2px;
+}
+
+.sample-btn-out {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.7);
+  background-color: darken($kuzo-sherbert, 30%);
+
+
+  &:active {
+    .sample-btn-in {
+      width: 47px;
+      height: 47px;
+      color: darken($kuzo-sherbert, 50);
+    }
+  }
+}
+
+.sample-btn-in {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $kuzo-sherbert;
+}
+
+.dark-mode {
+  .about {
+    &__nav-link-active {
+      border-color: $color-dark;
+      color: $color-dark;
+      background-color: $kuzo-purp;
+    }
+
+    &__btn-text {
+      color: darken($kuzo-purp, 30);
+      font-weight: bolder;
+    }
+  }
+
+  .sample-btn-out {
+    background-color: darken($kuzo-purp, 30%);
+
+    &:active {
+      .sample-btn-in {
+        background-color: darken($kuzo-purp, 5%);
+      }
+    }
+  }
+
+  .sample-btn-in {
+    background-color: $kuzo-purp;
+  }
 }

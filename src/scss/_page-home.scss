@@ -64,28 +64,6 @@
   }
 }
 
-.sample-btn-out {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.7);
-  background-color: darken($kuzo-sherbert, 20%);
-}
-
-.sample-btn-in {
-  width: 45px;
-  height: 45px;
-
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $kuzo-sherbert;
-}
-
 .dark-mode {
   .home__span-name {
     color: $color-dark;
@@ -94,13 +72,5 @@
 
   .home__next {
     border-color: $kuzo-purp;
-  }
-
-  .sample-btn-out {
-    background-color: darken($kuzo-purp, 20%);
-  }
-
-  .sample-btn-in {
-    background-color: $kuzo-purp;
   }
 }

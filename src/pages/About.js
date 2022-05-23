@@ -1,42 +1,84 @@
 import React, { useEffect, useRef } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
+import { buttonFactory } from '../utils/factoryFunctions'
 
 export default function About() {
   const { pathname } = useLocation()
+  console.log(pathname)
   const about = useRef()
   const q = gsap.utils.selector(about)
+  const tl = gsap.timeline()
 
   useEffect(() => {
-    const tl = gsap.timeline()
-    tl.from(q('.about--initial'), {
-      opacity: 0,
-      ease: 'power2.out',
-      duration: .5
+    tl.from(q('.about__blurb-div'), {
+      rotateY: 90,
+      width: 0,
+      duration: 0.5
     })
-    tl.from(q('.sample-btn-out'), {
-      opacity: 0,
-      y: -100,
-      ease: 'bounce.out',
-      stagger: 0.5
-    })
-    tl.from(q('.about__starter-title'), {
-      opacity: 0,
-      y: -50
-    })
-  }, [])
+    if (pathname === '/about') {
+      tl.from(q('.about--initial'), {
+        opacity: 0,
+        ease: 'power2.out',
+        duration: 0.5
+      })
+      tl.from(q('.sample-btn-out'), {
+        opacity: 0,
+        y: -100,
+        ease: 'bounce.out',
+        stagger: 0.5
+      })
+      tl.from(q('.about__starter-title'), {
+        opacity: 0,
+        y: -50
+      })
+    } else {
+      tl.from(q('.about__blurb-img'), {
+        opacity: 0,
+        y: -10,
+        scale: 0.75,
+        duration: 0.75
+      })
+      tl.from(q('.about__blurb-text'), {
+        opacity: 0,
+        y: -20,
+        delay: -0.5,
+        stagger: 0.15
+      })
+      if (pathname === '/about/dev') {
+        tl.from(q('.section__title-toolbox'), {
+          opacity: 0,
+          y: -10,
+          duration: 0.25
+        })
+        tl.from(q('.stack-icon-link'), {
+          opacity: 0,
+          y: 10,
+          delay: -0.25,
+          stagger: 0.1
+        })
+      }
+      tl.from(q('.sample-btn-out'), {
+        opacity: 0,
+        y: -50,
+        ease: 'bounce.out',
+        stagger: 0.25,
+        delay: pathname === '/about/dev' ? -1 : -0.25
+      })
+    }
+  }, [pathname])
 
-  const buttonFactory = (text) => {
-    return (
-      <Link to={`/about/${text}`}>
-        <div className={`sample-btn-out`}>
-          <div className="sample-btn-in">
-            <p className="about__btn-text">{text.slice(0, 1)}</p>
-          </div>
-        </div>
-      </Link>
-    )
-  }
+  // const buttonFactory = (text) => {
+  //   return (
+  //     <Link to={`/about/${text}`}>
+  //       <div className={`sample-btn-out`}>
+  //         <div className="sample-btn-in">
+  //           <p className="about__btn-text">{text.slice(0, 1)}</p>
+  //         </div>
+  //       </div>
+  //     </Link>
+  //   )
+  // }
 
   const aboutLinkFactory = (subPath) => (
     <Link to={`/about/${subPath}`}>

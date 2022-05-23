@@ -1,6 +1,6 @@
 import React from 'react'
 import MyToolbox from '../../components/MyToolbox'
-import AboutLinks from '../../components/AboutLinks'
+import { buttonFactory } from '../../utils/factoryFunctions'
 import meHiking from '../../img/me/me-hiking.jpg'
 
 export default function Dev() {
@@ -27,7 +27,10 @@ export default function Dev() {
         </h5>
       </div>
       <MyToolbox />
-      <AboutLinks />
+      <div className="about__subpage-btn-div">
+        {buttonFactory('audio')}
+        {buttonFactory('caddy')}
+      </div>
     </div>
   )
 

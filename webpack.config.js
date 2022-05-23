@@ -10,13 +10,14 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    host: '0.0.0.0',
+    host: 'local-ip',
     port: 8080,
     allowedHosts: 'auto',
     client: {
       logging: 'none'
     },
     open: true,
+    https: false,
     historyApiFallback: true
   },
   module: {

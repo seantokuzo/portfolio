@@ -6,17 +6,8 @@ import stackIcons from '../data/stackIcons'
 
 export default function MyToolbox() {
   const toolbox = useRef()
-  const q = gsap.utils.selector(toolbox)
-  var tlAbout = gsap.timeline()
 
   useEffect(() => {
-    tlAbout.from(q('.stack-icon-link'), {
-      opacity: 0,
-      duration: 1,
-      y: 10,
-      stagger: 0.15
-    })
-
     Draggable.create('.stack-icon', {
       type: 'x,y',
       bounds: document.querySelector('.section__toolbox'),

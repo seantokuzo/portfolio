@@ -1,4 +1,5 @@
 import React from 'react'
+import { buttonFactory } from '../../utils/factoryFunctions'
 import meGuitar from '../../img/me/me-guitar.png'
 
 export default function Audio() {
@@ -14,13 +15,16 @@ export default function Audio() {
           Before teaching myself to code I worked as an audio engineer.
         </h5>
         <h5 className="about__blurb-text section__text">
-          After working in a commercial studio for years, I started
-          freelancing.
+          After working in a commercial studio for years, I started freelancing.
         </h5>
         <h5 className="about__blurb-text section__text">
           Over the last 6 years I've had the opportunity to work on a variety of
           projects, from music to voiceovers to film.
         </h5>
+      </div>
+      <div className="about__subpage-btn-div">
+        {buttonFactory('dev')}
+        {buttonFactory('caddy')}
       </div>
     </div>
   )
