@@ -1,15 +1,22 @@
 .carousel {
-  // @include absolute-center;
   @include flex(column, center, center);
   margin: .5rem 0;
   width: 100%;
-  overflow: hidden;
-
-  &__cards-container {
-    @include flex(row, center, center);
-    width: 100%;
-    // border: 1px solid red;
-  }
+  // overflow: hidden;
+  
+  // &__cards-container {
+  //   @include flex(row, center, center);
+  //   width: 100%;
+  //   border: 1px solid red;
+  // }
+  
+  // &__item {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  //   padding: 0 1rem;
+  // }
 }
 
 .carousel-toggle-div {

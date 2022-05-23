@@ -4,11 +4,8 @@ import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
 
-export default function ProjectCard({ project, currentProject, cardSlide }) {
-  const { id, name, tagline, img, link, github, stack } = project
-
-  const transX = (id - currentProject) * 100 - 50
-  console.log(name, transX)
+export default function ProjectCard({ project }) {
+  const { name, tagline, img, link, github, stack } = project
 
   const projectCard = useRef()
   const q = gsap.utils.selector(projectCard)
@@ -20,25 +17,30 @@ export default function ProjectCard({ project, currentProject, cardSlide }) {
       y: -10,
       stagger: 0.1
     })
+    tl.from(q('.bark'), {
+      opacity: 0,
+      y: -10,
+      scale: 1.5,
+      stagger: 0.1
+    })
   }, [])
 
   return (
-    <div
-      className={
-        id === currentProject
-          ? 'project-card'
-          : 'project-card project-card--hidden'
-      }
-      ref={projectCard}
-      style={{ transform: `translateX(${transX}%)` }}
-    >
+    <div className={'project-card'} ref={projectCard}>
       <h3 className="project-card__title section__subtitle meow">{name}</h3>
       <div className="project-card__img-container meow">
-        <img
-          className="project-card__img"
-          src={img}
-          alt={`${name} project preview`}
-        />
+        <a
+          className="project-card__img-link"
+          href={link}
+          target="_blank"
+          referrer="noreferrer"
+        >
+          <img
+            className="project-card__img"
+            src={img}
+            alt={`${name} project preview`}
+          />
+        </a>
       </div>
       <p className="project-card__tagline project-card__text section__text meow">
         {tagline}
@@ -78,8 +80,8 @@ export default function ProjectCard({ project, currentProject, cardSlide }) {
               src={thisIcon.img}
               className={
                 icon === 'React Router' || icon === 'Ableton Live'
-                  ? 'project-card__stack-icon special-pj-icon'
-                  : 'project-card__stack-icon'
+                  ? 'project-card__stack-icon special-pj-icon bark'
+                  : 'project-card__stack-icon bark'
               }
               alt={`${icon} icon`}
             />

@@ -1,6 +1,6 @@
 .project-grid {
   width: 100%;
-  max-width: 650px;
+  max-width: 1000px;
   margin: 1rem 0 2rem;
 
   @include flex(row, center, center);
@@ -11,8 +11,8 @@
   grid-area: img;
   background-color: $kuzo-sherbert;
 
-
-  max-width: 160px;
+  width: 45%;
+  max-width: 400px;
   // max-height: 150px;
   // max-width: 300px;
 
