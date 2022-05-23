@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { useLocation } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
@@ -21,9 +22,10 @@ export default function ProjectCard({ project }) {
       opacity: 0,
       y: -10,
       scale: 1.5,
-      stagger: 0.1
+      stagger: 0.1,
+      delay: -0.35
     })
-  }, [])
+  }, [project])
 
   return (
     <div className={'project-card'} ref={projectCard}>

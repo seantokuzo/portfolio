@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonFactory } from '../utils/factoryFunctions'
+import { buttonFactory } from '../utils/buttonFactory'
 import meCaddy from '../img/me/me-caddy.png'
 
 export default function AboutCaddy() {
@@ -12,11 +12,13 @@ export default function AboutCaddy() {
       />
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">
-          Freelancing gave me the opportunity to also caddy for my dad, who
-          played professional golf on the PGA and Champions Tours.
+          Freelancing gave me the opportunity to also caddy for my dad on the
+          Champions Tours.
         </h5>
         <h5 className="about__blurb-text section__text">
-          I got to caddy for his last years playing, traveling all over
+          I'm incredibly lucky and grateful that I got to travel around the world, hang
+          out with my dad, help him compete in professional golf tournaments and meet
+          cool people for work!
         </h5>
         <h5 className="about__blurb-text section__text"></h5>
       </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { buttonFactory } from '../utils/factoryFunctions'
+import { buttonFactory } from '../utils/buttonFactory'
 import meGuitar from '../img/me/me-guitar.png'
 
 export default function AboutAudio() {

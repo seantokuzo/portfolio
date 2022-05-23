@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { gsap } from 'gsap'
-import { buttonFactory } from '../utils/factoryFunctions'
+import { buttonFactory } from '../utils/buttonFactory'
 
 export default function About() {
   const { pathname } = useLocation()

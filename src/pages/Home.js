@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
-import HeaderTitle from '../components/HomeTitle'
 
 export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = "hello there, i'm"
@@ -19,7 +18,9 @@ export default function Home({ logoActive, toggleLogoActive }) {
     })
     tl.from(q('.home__span-name'), {
       opacity: 0,
-      stagger: 0.075
+      y: -10,
+      stagger: 0.075,
+      delay: -0.5
     })
     tl.from(q('.home__span-fed'), {
       y: 10,
