@@ -11,16 +11,11 @@ export default function About() {
   const tl = gsap.timeline()
 
   useEffect(() => {
-    tl.from(q('.about__blurb-div'), {
-      rotateY: 90,
-      width: 0,
-      duration: 0.5
-    })
     if (pathname === '/about') {
       tl.from(q('.about--initial'), {
         opacity: 0,
-        ease: 'power2.out',
-        duration: 0.5
+        duration: 0.15,
+        delay: -1
       })
       tl.from(q('.sample-btn-out'), {
         opacity: 0,
@@ -68,18 +63,6 @@ export default function About() {
     }
   }, [pathname])
 
-  // const buttonFactory = (text) => {
-  //   return (
-  //     <Link to={`/about/${text}`}>
-  //       <div className={`sample-btn-out`}>
-  //         <div className="sample-btn-in">
-  //           <p className="about__btn-text">{text.slice(0, 1)}</p>
-  //         </div>
-  //       </div>
-  //     </Link>
-  //   )
-  // }
-
   const aboutLinkFactory = (subPath) => (
     <Link to={`/about/${subPath}`}>
       <h3
@@ -97,7 +80,7 @@ export default function About() {
   const aboutStarter = (
     <div className="about__blurb-div about__starter-div about--initial">
       <h3 className="section__subtitle about__starter-title">
-        Dont press the buttons!!!
+        Pick a button, any button
       </h3>
       <div className="about__starter-btn-div">
         {buttonFactory('dev')}

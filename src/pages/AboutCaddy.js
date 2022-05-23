@@ -1,8 +1,8 @@
 import React from 'react'
-import { buttonFactory } from '../../utils/factoryFunctions'
-import meCaddy from '../../img/me/me-caddy.png'
+import { buttonFactory } from '../utils/factoryFunctions'
+import meCaddy from '../img/me/me-caddy.png'
 
-export default function Caddy() {
+export default function AboutCaddy() {
   const caddy = (
     <div className="about__blurb-div" id="extended-about">
       <img

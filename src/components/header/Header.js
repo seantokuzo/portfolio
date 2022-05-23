@@ -44,8 +44,6 @@ export default function Header({ logoActive, toggleLogoActive }) {
     </li>
   )
 
-console.log('/about'.split('/'))
-
   const navLinks = (
     <nav className="nav">
       <ul className="nav__list" ref={navList}>

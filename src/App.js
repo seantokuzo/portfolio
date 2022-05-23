@@ -4,11 +4,12 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/header/Header'
 import Home from './pages/Home'
 import About from './pages/About'
-import Dev from './pages/about-subpages/Dev'
-import Audio from './pages/about-subpages/Audio'
-import Caddy from './pages/about-subpages/Caddy'
+import AboutDev from './pages/AboutDev'
+import AboutAudio from './pages/AboutAudio'
+import AboutCaddy from './pages/AboutCaddy'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
+import ContactThankYou from './pages/ContactThankYou'
 import WhereArtThou from './pages/WhereArtThou'
 import Particles from './components/Particles'
 import './scss/main.scss'
@@ -83,11 +84,13 @@ export default function App() {
         />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="about" element={<About />}>
-          <Route path="dev" element={<Dev />} />
-          <Route path="audio" element={<Audio />} />
-          <Route path="caddy" element={<Caddy />} />
+          <Route path="dev" element={<AboutDev />} />
+          <Route path="audio" element={<AboutAudio />} />
+          <Route path="caddy" element={<AboutCaddy />} />
         </Route>
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<Contact />}>
+          <Route path="thankyou" element={<ContactThankYou />} />
+        </Route>
         <Route path="*" element={<WhereArtThou />} />
       </Routes>
       {/* <audio

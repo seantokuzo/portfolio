@@ -1,0 +1,54 @@
+.where-art-thou {
+  @include absolute-center;
+  width: 100%;
+
+  &__title {
+    margin: 0;
+  }
+  
+  &__gif {
+    margin: 2rem 0 0;
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  &__subtitle {
+    margin: 2rem 0 1rem;
+  }
+
+  &__btn-out {
+    width: 75px;
+    height: 75px;
+    .where-art-thou__btn-in {
+      &:active {
+        width: 71px;
+        height: 71px;
+
+        .where-art-thou__btn-icon {
+          font-size: 1.65em;
+        }
+      }
+    }
+  }
+  
+  &__btn-in {
+    width: 68px;
+    height: 68px;
+    
+  }
+
+  &__btn-icon {
+    color: $kuzo-sherbert;
+    font-size: 1.75em;
+    margin-right: .05em;
+  }
+}
+
+.dark-mode {
+  .where-art-thou {
+    &__btn-icon {
+      color: darken($kuzo-purp, 40);
+    }
+  }
+}

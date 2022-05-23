@@ -7,7 +7,7 @@ function ThemeContextProvider(props) {
   ).matches
   const [darkMode, setDarkMode] = useState(prefersDarkMode)
   // const [darkMode, setDarkMode] = useState(false)
-  console.log(darkMode)
+  // console.log(darkMode)
 
   //DARKMODE SET BACKGROUND COLOR
   useEffect(() => {

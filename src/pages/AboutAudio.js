@@ -1,8 +1,8 @@
 import React from 'react'
-import { buttonFactory } from '../../utils/factoryFunctions'
-import meGuitar from '../../img/me/me-guitar.png'
+import { buttonFactory } from '../utils/factoryFunctions'
+import meGuitar from '../img/me/me-guitar.png'
 
-export default function Audio() {
+export default function AboutAudio() {
   const audio = (
     <div className="about__blurb-div" id="extended-about">
       <img

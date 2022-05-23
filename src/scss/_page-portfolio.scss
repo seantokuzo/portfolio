@@ -1,25 +1,23 @@
 .portfolio {
   width: 100%;
   margin: .5rem 0 0;
-}
-
-.portfolio__container {
-  width: 100%;
-
-  padding: 0 .5rem;
   
-  @include flex(column, center, center);
-}
-
-.portfolio__title-icon-div {
-  @include flex(row, center, center);
-  width: 100%;
-
-  margin-bottom: 1em;
-}
-
-.portfolio__title {
-  margin: 0;
+  &__container {
+    width: 100%;
+    
+    @include flex(column, center, center);
+  }
+  
+  &__title-icon-div {
+    @include flex(row, center, center);
+    width: 100%;
+  
+    margin-bottom: 1em;
+  }
+  
+  &__title {
+    margin: 0;
+  }
 }
 
 .grid-icon-container,

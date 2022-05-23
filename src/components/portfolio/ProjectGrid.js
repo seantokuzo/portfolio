@@ -27,7 +27,7 @@ export default function ProjectGrid() {
                 src={thisIcon.img}
                 className={
                   icon === 'React Router' || icon === 'Ableton Live'
-                    ? 'project-grid__stack-icon special-grid-icon'
+                    ? 'project-grid__stack-icon project-grid__special-icon'
                     : 'project-grid__stack-icon'
                 }
                 alt={`${icon} icon`}

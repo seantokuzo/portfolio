@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid'
 
 export default function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(1)
-  console.log(currentProject)
+  // console.log(currentProject)
 
   function toggleCarouselNext() {
     if (currentProject === projects.length) {

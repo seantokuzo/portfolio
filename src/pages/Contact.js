@@ -1,5 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect, useRef } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { ThemeContext } from '../context/ThemeContext'
+import { gsap } from 'gsap'
 import dayBg from '../img/ctm/cb-day.png'
 import nightBg from '../img/ctm/cb-night.png'
 
@@ -8,57 +10,91 @@ export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  console.log(name, email, message)
+
+  const { pathname } = useLocation()
+
+  const contactEl = useRef()
+  const q = gsap.utils.selector(contactEl)
+  const tl = gsap.timeline()
+
+
+  // useEffect(() => {
+  //   if (pathname === '/contact') {
+  //     tl.from(q('contact-anim'), {
+  //       opacity: 0,
+  //       y: -10,
+  //       stagger: 2,
+  //       ease: 'power1.in'
+  //     })
+  //   }
+  // }, [pathname])
 
   const bgImg = darkMode ? nightBg : dayBg
+
+  const contactForm = (
+    <form
+      className="contact__form contact-anim"
+      action="https://formsubmit.co/38042c1553ef5f2587e7306e98faf815"
+      method="POST"
+    >
+      <h3 className="section__subtitle contact__title contact-anim">
+        send me a message
+      </h3>
+      <label className="contact__form-label contact-anim">
+        name
+        <input
+          className="contact__input contact__form-el"
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          max={40}
+          min={1}
+          placeholder="bart simpson"
+          name="name"
+          required
+        />
+      </label>
+      <label className="contact__form-label contact-anim">
+        email
+        <input
+          className="contact__input contact__form-el"
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          placeholder="bart@simpson.com"
+          name="email"
+          required
+        />
+      </label>
+      <label className="contact__form-label contact-anim">
+        message
+        <textarea
+          className="contact__text-area contact__form-el"
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="this portfolio stinks"
+          name="message"
+          minLength={10}
+          maxLength={400}
+          required
+        />
+      </label>
+      <button type="submit" className="contact__submit contact-anim">
+        send message
+      </button>
+      <input
+        type="hidden"
+        name="_next"
+        value="http://192.168.1.24:8080/contact/thankyou"
+      ></input>
+    </form>
+  )
 
   return (
     <section
       className="contact section"
       style={{ backgroundImage: `url(${bgImg})` }}
+      ref={contactEl}
     >
-      <form className="contact__form">
-        <h3 className="section__subtitle contact__title">send me a message</h3>
-        <label className="contact__form-label">
-          name
-          <input
-            className="contact__input contact__form-el"
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-            max={40}
-            min={1}
-            placeholder="sean john johnsean"
-            name="name"
-            required
-          />
-        </label>
-        <label className="contact__form-label">
-          email
-          <input
-            className="contact__input contact__form-el"
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-            placeholder="s_johnsean@whytho.com"
-            name="email"
-            required
-          />
-        </label>
-        <label className="contact__form-label">
-          message
-          <textarea
-            className="contact__text-area contact__form-el"
-            onChange={(e) => setMessage(e.target.value)}
-            placeholder="just thought you should know, this portfolio stinks"
-            name="message"
-            min={10}
-            max={400}
-            required
-          />
-        </label>
-        <button type="submit" className="contact__submit">
-          send message
-        </button>
-      </form>
+      {pathname === '/contact' && contactForm}
+      <Outlet name={name} />
     </section>
   )
 }

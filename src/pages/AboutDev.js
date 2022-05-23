@@ -1,9 +1,9 @@
 import React from 'react'
-import MyToolbox from '../../components/MyToolbox'
-import { buttonFactory } from '../../utils/factoryFunctions'
-import meHiking from '../../img/me/me-hiking.jpg'
+import MyToolbox from '../components/MyToolbox'
+import { buttonFactory } from '../utils/factoryFunctions'
+import meHiking from '../img/me/me-hiking.jpg'
 
-export default function Dev() {
+export default function AboutDev() {
   const dev = (
     <div className="about__blurb-div">
       <img
