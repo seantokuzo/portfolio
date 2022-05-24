@@ -54,7 +54,7 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
 }
 
 @mixin media-md {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 744px) {
     @content;
   }
 }

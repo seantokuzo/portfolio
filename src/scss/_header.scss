@@ -30,11 +30,6 @@
     
     &-item {
       margin: 0 4px;
-      // cursor: pointer;
-
-      &:hover {
-
-      }
     }
   }
 
@@ -59,7 +54,6 @@
   border: 2px solid;
   border-color: $kuzo-sherbert;
   border-radius: 50%;
-  // cursor: pointer;
   width: 38px;
   height: 38px;
   overflow: hidden;
@@ -79,20 +73,14 @@
 
 .toggle-sun {
   color: $kuzo-sherbert;
-  /* margin-top: 10px; */
   transition: transform 500ms ease-out;
   transform: translateY(-17px);
 }
 
 .toggle-moon {
   color: $kuzo-purp;
-  /* margin-bottom: 10px; */
   transition: transform 500ms ease-out;
   transform: translateY(-25px);
-}
-
-.toggle-on .toggle-btn {
-  // border-color: $kuzo-sherbert;
 }
 
 .toggle-on .toggle-sun {
@@ -101,6 +89,26 @@
 
 .toggle-on .toggle-moon {
   transform: translateY(6px);
+}
+
+@include media-xs {
+  .nav {
+    &__link {
+      font-size: .5em;
+    }
+  }
+}
+
+@include media-md {
+  .nav {
+    &__list-item {
+      margin: 0 .5rem;
+    }
+
+    &__link {
+      font-size: 1em;
+    }
+  }
 }
 
 @keyframes spin {
