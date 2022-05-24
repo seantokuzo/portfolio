@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/header/Header'
 import Home from './pages/Home'
+import Footer from './components/Footer'
 import About from './pages/About'
 import AboutDev from './pages/AboutDev'
 import AboutAudio from './pages/AboutAudio'
@@ -99,6 +100,7 @@ export default function App() {
         id="bg-audio"
         preload="auto"
       /> */}
+      <Footer />
     </div>
   )
 }

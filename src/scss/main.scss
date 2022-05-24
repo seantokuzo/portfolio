@@ -1,6 +1,7 @@
 @import 'config';
 @import 'globals';
 @import 'header';
+@import 'footer';
 @import 'page-home';
 @import 'page-portfolio';
 @import 'project-carousel';
@@ -17,25 +18,24 @@ html {
 }
 
 body {
-  background: $color-light;
   color: $kuzo-sherbert;
+  background: $color-light;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
   letter-spacing: .75px;
   line-height: 1;
-  // cursor: none;
 
-  @include transition-ease;
 }
 
 .dark-mode {
-  background: $color-dark;
   color: $kuzo-purp;
+  background: $color-dark;
 }
 
 a {
   color: $kuzo-sherbert;
   text-decoration: none;
   cursor: pointer;
+  @include transition-ease;
 }
 
 .dark-mode a {

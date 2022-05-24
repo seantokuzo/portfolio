@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+
+  padding: .5rem 1rem;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  background-color: $color-light;
+  
+  @include flex(row, center, space-between);
+  z-index: 9999;
+  
+  &__text {
+    font-size: x-small;
+  }
+
+  &__links {
+  }
+  
+  &__link-icon {
+    font-size: 1.5em;
+    margin: 0 .5rem;
+  }
+}
+
+.dark-mode {
+  .footer {
+    background-color: $color-dark;
+  }
+}
