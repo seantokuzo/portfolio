@@ -13,12 +13,11 @@ export default function AboutCaddy() {
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">
           Freelancing gave me the opportunity to also caddy for my dad on the
-          Champions Tours.
+          PGA Champions Tour.
         </h5>
         <h5 className="about__blurb-text section__text">
-          I'm incredibly lucky and grateful that I got to travel around the world, hang
-          out with my dad, help him compete in professional golf tournaments and meet
-          cool people for work!
+          I got to travel around the world, hang out with my dad, and help him
+          compete in professional golf tournaments for work!
         </h5>
         <h5 className="about__blurb-text section__text"></h5>
       </div>

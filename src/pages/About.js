@@ -14,8 +14,7 @@ export default function About() {
     if (pathname === '/about') {
       tl.from(q('.about--initial'), {
         opacity: 0,
-        duration: 0.15,
-        delay: -1
+        duration: 0.15
       })
       tl.from(q('.sample-btn-out'), {
         opacity: 0,

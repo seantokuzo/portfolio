@@ -17,7 +17,6 @@ export default function Contact() {
   const q = gsap.utils.selector(contactEl)
   const tl = gsap.timeline()
 
-
   // useEffect(() => {
   //   if (pathname === '/contact') {
   //     tl.from(q('contact-anim'), {
@@ -82,7 +81,7 @@ export default function Contact() {
       <input
         type="hidden"
         name="_next"
-        value="http://192.168.1.24:8080/contact/thankyou"
+        value="https://seantokuzo.dev/contact/thankyou"
       ></input>
     </form>
   )

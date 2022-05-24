@@ -1,31 +1,36 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
 
 export default function Home({ logoActive, toggleLogoActive }) {
+  const { darkMode } = useContext(ThemeContext)
+  // console.log(darkMode)
   const line1 = "hello there, i'm"
-  const line2b = 'sean tokuzo simpson'
+  const line2 = 'sean tokuzo simpson'
   const line3 = 'front end developer'
   const home = useRef()
   const q = gsap.utils.selector(home)
+  const tl = gsap.timeline()
 
   useEffect(() => {
-    var tl = gsap.timeline()
     tl.from(q('.home__span'), {
       opacity: 0,
-      stagger: 0.075
+      stagger: 0.05,
+      delay: 0.25
     })
     tl.from(q('.home__span-name'), {
       opacity: 0,
-      y: -10,
-      stagger: 0.075,
-      delay: -0.5
+      rotateY: '180deg',
+      stagger: 0.06,
+      delay: -0.06
     })
     tl.from(q('.home__span-fed'), {
       y: 10,
       opacity: 0,
-      stagger: 0.4
+      stagger: 0.3,
+      delay: -0.1
     })
     tl.from(q('.home__subtitle-welcome'), {
       opacity: 0,
@@ -53,7 +58,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
 
   const line2bEl = (
     <>
-      {line2b.split('').map((str) => (
+      {line2.split('').map((str) => (
         <span key={nanoid()} className="home__span-name">
           {str}
         </span>
@@ -72,7 +77,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
 
   const playLink = logoActive ? (
     <Link to="/portfolio">
-      <i className="fa-solid fa-angles-right section__next home__next"></i>
+      <i className="fa-solid fa-chevron-right section__next home__next"></i>
     </Link>
   ) : (
     <i

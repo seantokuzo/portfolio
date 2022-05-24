@@ -39,6 +39,10 @@
   &__details-div {
     @include flex(column, center, center);
     position: absolute;
+    // max-width: 300px;
+    // width: 100%;
+    // max-height: 300px;
+    // height: 100%;
   
     padding: .5rem;
     

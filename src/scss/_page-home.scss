@@ -30,6 +30,7 @@
 
 
   &__span-name {
+    display: inline-block;
     font-weight: bolder;
     color: $color-light;
     background-color: $kuzo-sherbert;
@@ -37,7 +38,7 @@
     padding: 1px;
     margin: 0 -1px;
 
-    @include transition-ease;
+    // @include transition-ease;
   }
 
   &__span-fed {

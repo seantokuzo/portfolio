@@ -28,7 +28,7 @@
   &__blurb-div {
     @include flex(column, center, center);
     width: 100%;
-    min-height: 50vh;
+    // min-height: 50vh;
     border: 2px solid;
     padding: 2rem .5rem 1rem;
   }
@@ -36,12 +36,14 @@
   &__starter-div {
     width: 100%;
     @include flex(column, center, center);
+    padding: 6rem .15rem 5rem;
 
   }
   
   &__starter-title {
     margin: -2rem 0 2rem;
     font-weight: bolder;
+    // font-size: 1em;
   }
   
   &__starter-btn-div {
