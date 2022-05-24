@@ -36,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.(wav|mp3|mp4|m4a)$/i,
-        use: 'file-loader?name=./assets/audio/[name].[ext]'
+        use: 'file-loader?name=./audio/[name].[ext]'
       }
     ]
   },
