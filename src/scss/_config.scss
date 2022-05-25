@@ -47,14 +47,21 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
   height: 100%;
 }
 
-@mixin media-sm {
-  @media screen and (max-width: 428px) {
+
+@mixin media-xs {
+  @media screen and (max-width: 320px) {
     @content;
   }
 }
 
-@mixin media-xs {
-  @media screen and (max-width: 320px) {
+@mixin media-sm {
+  @media screen and (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin media-rg {
+  @media screen and (min-width: 428px) {
     @content;
   }
 }

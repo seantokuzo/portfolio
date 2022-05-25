@@ -2,13 +2,10 @@
   @include flex(row, center, space-between);
   width: 100%;
   
-  padding: .5rem .75rem;
-  
   z-index: 10;
   
   &__logo {
     border-radius: 50%;
-    width: 60px;
   }
 
   &__right-div {
@@ -18,21 +15,15 @@
 
 .nav {
   @include flex(row, center, center);
-  margin-right: 5px;
 
   &__list {
     @include flex(row, center, center);
     @include transition-ease;
 
     list-style: none;
-    
-    &-item {
-      margin: 0 4px;
-    }
   }
 
   &__link {
-    font-size: 1em;
     font-weight: 300;
     @include transition-ease;
 
@@ -49,11 +40,10 @@
 .toggle-btn {
   background: $color-light;
   border: 0;
-  border: 2px solid;
+  border-width: 2px;
+  border-style: solid;
   border-color: $kuzo-sherbert;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
   overflow: hidden;
   box-shadow: $bs-black;
   transform: scale(.75);
@@ -65,28 +55,17 @@
 }
 
 .toggle-icon {
-  font-size: 29px;
   display: block;
 }
 
 .toggle-sun {
   color: $kuzo-sherbert;
   transition: transform 500ms ease-out;
-  transform: translateY(-22px);
 }
 
 .toggle-moon {
   color: $kuzo-purp;
   transition: transform 500ms ease-out;
-  transform: translateY(-40px);
-}
-
-.toggle-on .toggle-sun {
-  transform: translateY(13px);
-}
-
-.toggle-on .toggle-moon {
-  transform: translateY(6px);
 }
 
 /* ***************************** */
@@ -169,6 +148,51 @@
     }
 }
 
+@include media-rg {
+  .header {
+    padding: .5rem .75rem;
+    &__logo {
+      width: 60px;
+    }
+  }
+
+  .nav {
+    margin-right: 5px;
+    &__list {
+      &-item {
+        margin: 0 4px;
+      }
+    }
+    &__link {
+      font-size: 1em;
+    }
+  }
+  .toggle-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .toggle-icon {
+    font-size: 29px;
+  }
+
+  .toggle-sun {
+    transform: translateY(-22px);
+  }
+
+  .toggle-moon {
+    transform: translateY(-40px);
+  }
+
+  .toggle-on .toggle-sun {
+    transform: translateY(13px);
+  }
+
+  .toggle-on .toggle-moon {
+    transform: translateY(6px);
+  }
+}
+
 @include media-md {
   .header {
     &__logo {
@@ -229,6 +253,7 @@
     }
   }
   .toggle-btn {
+    border-width: 3px;
     width: 56px;
     height: 56px;
   }
@@ -238,7 +263,7 @@
   }
 
   .toggle-sun {
-    transform: translateY(-27px);
+    transform: translateY(-28px);
   }
 
   .toggle-moon {
@@ -250,7 +275,7 @@
   }
 
   .toggle-on .toggle-moon {
-    transform: translateY(8px);
+    transform: translateY(7px);
   }
 }
 
@@ -274,6 +299,7 @@
   }
 
   .toggle-btn {
+    border-width: 4px;
     width: 65px;
     height: 65px;
   }
@@ -283,7 +309,7 @@
   }
 
   .toggle-sun {
-    transform: translateY(-29px);
+    transform: translateY(-31px);
   }
 
   .toggle-moon {
@@ -295,7 +321,7 @@
   }
 
   .toggle-on .toggle-moon {
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
 }
 

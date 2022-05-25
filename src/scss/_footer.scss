@@ -29,8 +29,34 @@
   }
 }
 
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
   .footer {
     background-color: $color-dark;
   }
+}
+
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-sm {
+  
+}
+
+@include media-xs {
+
+}
+
+@include media-md {
+
+}
+
+@include media-lg {
+
+}
+
+@include media-xl {
+
 }
