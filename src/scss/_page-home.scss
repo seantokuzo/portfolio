@@ -32,7 +32,7 @@
     border-radius: 50%;
     border-style: solid;
     border-color: $kuzo-sherbert;
-    box-shadow: $bs-black;
+    @include box-shadow($color-dark);
     cursor: pointer;
 
     &:hover {

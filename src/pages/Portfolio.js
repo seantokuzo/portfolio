@@ -55,7 +55,13 @@ export default function Portfolio() {
 
   const myWorkContent = (
     <>
-      <div className="portfolio__container">
+      <div
+        className={
+          gridMode
+            ? 'portfolio__container portfolio__container-grid'
+            : 'portfolio__container portfolio__container-carousel'
+        }
+      >
         {gridMode ? <ProjectGrid /> : <ProjectCarousel />}
       </div>
     </>

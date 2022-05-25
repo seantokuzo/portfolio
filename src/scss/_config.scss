@@ -4,10 +4,17 @@ $color-grey: #414141;
 $kuzo-sherbert: #ffad61;
 $kuzo-purp: #b077ba;
 
-$bs-black: 0.25em 0.25em 0.75em #00000040,
-0.125em 0.125em 0.25em #00000026;
-$bs-purp: 0.25em 0.25em 0.75em #b077ba40,
-0.125em 0.125em 0.25em #b077ba26;
+$bs-val1: 0.3;
+$bs-val2: 0.15;
+
+$bs-light: 0.25em 0.25em 0.75em rgba($color-light, $bs-val1),
+0.125em 0.125em 0.25em rgba($color-light, $bs-val2);
+$bs-dark: 0.25em 0.25em 0.75em rgba($color-dark, $bs-val1),
+0.125em 0.125em 0.25em rgba($color-dark, $bs-val2);
+$bs-purp: 0.25em 0.25em 0.75em rgba($kuzo-purp, $bs-val1),
+0.125em 0.125em 0.25em rgba($kuzo-purp, $bs-val2);
+$bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
+0.125em 0.125em 0.25em rgba($kuzo-sherbert, $bs-val2);
 
 * {
   box-sizing: border-box;
@@ -22,15 +29,19 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
   justify-content: $justify;
 }
 
-@mixin absolute-center {
+@mixin absolute-center($transY: -50%) {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, $transY);
 }
 
 @mixin transition-ease {
   transition: all 350ms ease-in-out ;
+}
+
+@mixin box-shadow($type: $bs-dark) {
+  box-shadow: $type;
 }
 
 @mixin page-container {
@@ -39,7 +50,6 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
   height: 100%;
 }
 
-
 @mixin media-xs {
   @media screen and (min-width: 1px) {
     @content;
@@ -47,7 +57,13 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
 }
 
 @mixin media-sm {
-  @media screen and (min-width: 340px) {
+  @media screen and (min-width: 340px) and (min-height: 551px) {
+    @content;
+  }
+}
+
+@mixin media-sm-short {
+  @media screen and (min-width: 360px) and (max-width: 400px) and (max-height: 550px) {
     @content;
   }
 }

@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  margin: 0;
   color: $kuzo-sherbert;
   background: $color-light;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
@@ -42,4 +43,6 @@ a {
 
 h1, h2, h3, h4, h5, p {margin: 0;}
 
-// .app {}
+.app {
+  margin: 0;
+}

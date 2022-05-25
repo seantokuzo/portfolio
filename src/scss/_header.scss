@@ -33,9 +33,9 @@
   }
 }
 
-/* ************************************ */
-/* ***   SUN MOON DARMODE TOGGLER   *** */
-/* ************************************ */
+/* ********************************* */
+/* *** SUN MOON DARKMODE TOGGLER *** */
+/* ********************************* */
 .toggle-btn {
   background: $color-light;
   border: 0;
@@ -44,8 +44,8 @@
   border-color: $kuzo-sherbert;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: $bs-black;
   transform: scale(.75);
+  @include box-shadow($bs-dark);
 }
 
 .dark-mode {
@@ -152,7 +152,7 @@
   }
 
   .toggle-on .toggle-moon {
-    transform: translateY(6px);
+    transform: translateY(5.5px);
   }
 }
 

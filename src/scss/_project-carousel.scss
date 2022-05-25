@@ -30,16 +30,15 @@
 /* ************************* */
 @include media-xs {
   .carousel {
-      margin: .5rem 0;
   
       &__toggle-div {
-        margin: 1rem 0 0;
+        margin: .75rem 0 0;
       }
   
       &__toggle {
         width: 3em;
         height: 3em;
-        border-width: 4px;
+        border-width: 3px;
   
         &-left {
           margin-right: 1rem;

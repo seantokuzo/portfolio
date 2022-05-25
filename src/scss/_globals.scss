@@ -49,6 +49,22 @@
   }
 }
 
+@include media-sm-short {
+  .section {
+    &__title {
+      font-size: 1.45em;
+    }
+  
+    &__subtitle {
+      font-size: 1.1em;
+    }
+  
+    &__text {
+      font-size: .75em;
+    }
+  }
+}
+
 @include media-sm {
   .section {
     &__title {

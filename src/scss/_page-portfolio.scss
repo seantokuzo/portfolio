@@ -3,7 +3,12 @@
   
   &__container {
     width: 100%;
-    @include flex(column, center, center);
+    &-carousel {
+      @include absolute-center;
+    }
+    &-grid {
+      @include flex(column, center, center);
+    }
   }
   
   &__title-icon-div {
@@ -56,6 +61,11 @@
 @include media-xs {
   .portfolio {
     margin: 0;
+    &__container {
+      &-carousel {
+        @include absolute-center(-42%);
+      }
+    }
 
     &__title-icon-div {
       margin-bottom: .5em;
@@ -94,44 +104,71 @@
 }
 
 @include media-sm {
-  // .portfolio {
-  //   margin: 0;
+  .portfolio {
+    margin: 0;
 
-  //   &__title-icon-div {
-  //     margin-bottom: .5em;
-  //   }
+    &__container {
+      width: 100%;
+  
+      &-carousel {
+        @include absolute-center;
+      }
+    }
 
-  //   &__title {
-  //     margin: 0 1rem;
-  //   }
+    &__title-icon-div {
+      margin-bottom: .5em;
+    }
 
-  //   &__icon-grid {
-  //     padding: 3px;
+    &__title {
+      margin: 0 1rem;
+    }
 
-  //     grid-template-columns: repeat(4, 5px);
-  //     grid-template-rows: repeat(4, 5px);
-  //     border-radius: 2px;
-  //   }
+    &__icon-grid {
+      padding: 4px;
 
-  //   &__icon-carousel {
-  //     padding: 6px 5.5px;
-  //     border: 1px solid;
-  //     border-radius: 2px;
-  //     font-size: .85em;
-  //     border-width: 1px;
-  //   }
+      grid-template-columns: repeat(4, 5px);
+      grid-template-rows: repeat(4, 5px);
+      border-radius: 2px;
+    }
 
-  //   &__icon-grid-sqr {
-  //     width: 3.5px;
-  //     height: 3.5px;
-  //   }
+    &__icon-carousel {
+      padding: 6px 5.5px;
+      border: 1px solid;
+      border-radius: 2px;
+      font-size: .85em;
+      border-width: 1px;
+    }
 
-  //   &__icon-grid,
-  //   &__icon-grid-sqr {
-  //     border-width: 1px;
-  //   }
-  // }
+    &__icon-grid-sqr {
+      width: 3px;
+      height: 3px;
+      background-color: $kuzo-sherbert;
+    }
+    
+    &__icon-grid,
+    &__icon-grid-sqr {
+      border-width: 1px;
+    }
+  }
+  .dark-mode {
+    .portfolio {
+      &__icon-grid-sqr {
+        background-color: $kuzo-purp;
+      }
+    }
+  }
 }
+
+// @include media-sm-short {
+//   .portfolio {
+//     margin: 0;
+//     &__container {
+//       &-carousel {
+//         @include absolute-center(-47%);
+//       }
+//     }
+//   }
+// }
 
 @include media-rg {}
 
