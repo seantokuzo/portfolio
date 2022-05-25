@@ -47,6 +47,12 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
   height: 100%;
 }
 
+@mixin media-sm {
+  @media screen and (max-width: 428px) {
+    @content;
+  }
+}
+
 @mixin media-xs {
   @media screen and (max-width: 320px) {
     @content;

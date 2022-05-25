@@ -3,14 +3,12 @@
   width: 100%;
   
   padding: .5rem .75rem;
-
-  letter-spacing: .25px;
   
   z-index: 10;
   
   &__logo {
     border-radius: 50%;
-    width: 50px;
+    width: 60px;
   }
 
   &__right-div {
@@ -34,7 +32,7 @@
   }
 
   &__link {
-    font-size: .7em;
+    font-size: 1em;
     font-weight: 300;
     @include transition-ease;
 
@@ -54,8 +52,8 @@
   border: 2px solid;
   border-color: $kuzo-sherbert;
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 45px;
+  height: 45px;
   overflow: hidden;
   box-shadow: $bs-black;
   transform: scale(.75);
@@ -67,20 +65,20 @@
 }
 
 .toggle-icon {
-  font-size: 23px;
+  font-size: 29px;
   display: block;
 }
 
 .toggle-sun {
   color: $kuzo-sherbert;
   transition: transform 500ms ease-out;
-  transform: translateY(-17px);
+  transform: translateY(-22px);
 }
 
 .toggle-moon {
   color: $kuzo-purp;
   transition: transform 500ms ease-out;
-  transform: translateY(-25px);
+  transform: translateY(-40px);
 }
 
 .toggle-on .toggle-sun {
@@ -91,26 +89,219 @@
   transform: translateY(6px);
 }
 
+/* ***************************** */
+/* ***     MEDIA QUERIES     *** */
+/* ***************************** */
+@include media-sm {
+  .header {
+    padding: .5rem .65rem;
+    letter-spacing: .25px;
+    &__logo {
+      width: 40px;
+    }
+  }
+
+  .nav {
+    margin-right: 2px;
+    &__list-item {
+      margin: 0 3px;
+    }
+
+    &__link {
+      font-size: .75em;
+    }
+  }
+  .toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .toggle-icon {
+    font-size: 23px;
+  }
+  .toggle-sun {
+    transform: translateY(-17px);
+  }
+  .toggle-moon {
+    transform: translateY(-25px);
+  }
+  .toggle-on .toggle-sun {
+    transform: translateY(13px);
+  }
+  .toggle-on .toggle-moon {
+    transform: translateY(6px);
+  }
+}
+
 @include media-xs {
+  .header {
+    &__logo {
+      width: 35px;
+    }
+  }
   .nav {
     &__link {
       font-size: .5em;
     }
   }
+    .toggle-btn {
+      width: 31px;
+      height: 31px;
+    }
+  
+    .toggle-icon {
+      font-size: 19px;
+    }
+  
+    .toggle-sun {
+      transform: translateY(-15px);
+    }
+  
+    .toggle-moon {
+      transform: translateY(-22px);
+    }
+  
+    .toggle-on .toggle-sun {
+      transform: translateY(13px);
+    }
+  
+    .toggle-on .toggle-moon {
+      transform: translateY(4px);
+    }
 }
 
 @include media-md {
+  .header {
+    &__logo {
+      width: 75px;
+    }
+  }
   .nav {
     &__list-item {
       margin: 0 .5rem;
     }
 
     &__link {
-      font-size: 1em;
+      font-size: 1.25em;
     }
+  }
+  .toggle-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .toggle-icon {
+    font-size: 32px;
+  }
+
+  .toggle-sun {
+    transform: translateY(-25px);
+  }
+
+  .toggle-moon {
+    transform: translateY(-35px);
+  }
+
+  .toggle-on .toggle-sun {
+    transform: translateY(13px);
+  }
+
+  .toggle-on .toggle-moon {
+    transform: translateY(7px);
   }
 }
 
+@include media-lg {
+  .header {
+    padding: .75rem 1rem;
+
+    &__logo {
+      width: 85px;
+    }
+  }
+
+  .nav {
+    &__list-item {
+      margin: 0 .5rem;
+    }
+
+    &__link {
+      font-size: 1.5em;
+    }
+  }
+  .toggle-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .toggle-icon {
+    font-size: 35px;
+  }
+
+  .toggle-sun {
+    transform: translateY(-27px);
+  }
+
+  .toggle-moon {
+    transform: translateY(-35px);
+  }
+
+  .toggle-on .toggle-sun {
+    transform: translateY(18px);
+  }
+
+  .toggle-on .toggle-moon {
+    transform: translateY(8px);
+  }
+}
+
+@include media-xl {
+  .header {
+    padding: 1rem 1.5rem;
+
+    &__logo {
+      width: 100px;
+    }
+  }
+
+  .nav {
+    &__list-item {
+      margin: 0 .75rem;
+    }
+
+    &__link {
+      font-size: 1.75em;
+    }
+  }
+
+  .toggle-btn {
+    width: 65px;
+    height: 65px;
+  }
+
+  .toggle-icon {
+    font-size: 40px;
+  }
+
+  .toggle-sun {
+    transform: translateY(-29px);
+  }
+
+  .toggle-moon {
+    transform: translateY(-40px);
+  }
+
+  .toggle-on .toggle-sun {
+    transform: translateY(23px);
+  }
+
+  .toggle-on .toggle-moon {
+    transform: translateY(10px);
+  }
+}
+
+/* ******************************* */
+/* ***   ANIMATION KEYFRAMES   *** */
+/* ******************************* */
 @keyframes spin {
   0% {
     transform: rotate(0);
