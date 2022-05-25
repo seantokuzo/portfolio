@@ -1,77 +1,237 @@
 .home {
-  // @include flex(column, center, center);
   width: 100%;
-  // height: 90%;
+
+  padding: 0 1rem;
+
   position: absolute;
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
 
-  padding: 0 1rem;
-  
-  &__title-container {
-    margin: 0 auto 1rem;
-  }
-
-  &__title {
-    margin-top: .5rem;
+  &__title:first-child {
+    margin-top: 0;
   }
 
   &__subtitle-container {
     text-align: center;
   }
 
-  &__subtitle-welcome {
-  }
-  
-  &__title-title {
-    font-weight: bolder;
-  }
-
-
   &__span-name {
     display: inline-block;
     font-weight: bolder;
     color: $color-light;
     background-color: $kuzo-sherbert;
-    line-height: calc(1rem+5px);
-    padding: 1px;
-    margin: 0 -1px;
-
-    // @include transition-ease;
   }
 
   &__span-fed {
     display: inline-block;
-    margin-right: .75rem;
   }
 
   &__next {
     @include flex(column, center, center);
-    margin: 1rem auto 0;
-    width: 3rem;
-    height: 3rem;
-  
     border-radius: 50%;
-    border: 3px solid;
+    border-style: solid;
     border-color: $kuzo-sherbert;
-    font-size: 1.75em;
     box-shadow: $bs-black;
     cursor: pointer;
-    
+
     &:hover {
       transform: scale(1.1);
     }
   }
 }
 
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
-  .home__span-name {
-    color: $color-dark;
-    background-color: $kuzo-purp;
+  .home {
+    &__span-name {
+      color: $color-dark;
+      background-color: $kuzo-purp;
+    }
+  
+    &__next {
+      border-color: $kuzo-purp;
+    }
   }
+}
 
-  .home__next {
-    border-color: $kuzo-purp;
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {
+  .home {
+    &__title-container {
+      margin: 0 auto .75rem;
+    }
+
+    &__title {
+      margin-top: .25rem;
+    }
+
+    &__span-name {
+      padding: 3px 1px;
+      margin: 0 -.5px;
+    }
+
+    &__span-fed {
+      margin-right: .35rem;
+    }
+
+    &__next {
+      margin: .75rem auto 0;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-width: 2px;
+      font-size: 1.6em;
+
+      &-link {
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+@include media-sm {
+  .home {
+    &__title-container {
+      margin: 0 auto 1rem;
+    }
+
+    &__title {
+      margin-top: .3rem;
+    }
+
+    &__span-name {
+      padding: 5px 1px;
+    }
+
+    &__span-fed {
+      margin-right: .4rem;
+    }
+
+    &__next {
+      margin: 1rem auto 0;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.9em;
+
+      &-link {
+        font-size: 1.4em;
+      }
+    }
+  }
+}
+
+@include media-rg {
+  .home {
+    &__title-container {
+      margin: 0 auto 1.25rem;
+    }
+
+    &__title {
+      margin-top: .4rem;
+    }
+
+    &__span-fed {
+      margin-right: .45rem;
+    }
+
+    &__next {
+      margin: 1.25rem auto 0;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-width: 2.5px;
+      font-size: 2.25em;
+
+      &-link {
+        font-size: 1.7em;
+      }
+    }
+  }
+}
+
+@include media-md {
+  .home {
+    &__title-container {
+      margin: 0 auto 1.75rem;
+    }
+
+    &__title {
+      margin-top: .5rem;
+    }
+
+    &__span-fed {
+      margin-right: .55rem;
+    }
+
+    &__next {
+      margin: 1.75rem auto 0;
+      width: 4.35rem;
+      height: 4.35rem;
+      border-width: 3px;
+      font-size: 3em;
+
+      &-link {
+        font-size: 2.15em;
+      }
+    }
+  }
+}
+
+@include media-lg {
+  .home {
+    &__title-container {
+      margin: 0 auto 2rem;
+    }
+
+    &__span-fed {
+      margin-right: .55rem;
+    }
+
+    &__next {
+      margin: 2rem auto 0;
+      width: 5rem;
+      height: 5rem;
+      border-width: 4px;
+      font-size: 3.5em;
+
+      &-link {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@include media-xl {
+  .home {
+    &__title-container {
+      margin: 0 auto 2.25rem;
+    }
+
+    &__title {
+      margin-top: .6rem;
+    }
+
+    &__span-name {
+      padding: 6px 1.05px;
+    }
+
+    &__span-fed {
+      margin-right: .75rem;
+    }
+
+    &__next {
+      margin: 2.25rem auto 0;
+      width: 6rem;
+      height: 6rem;
+      
+      font-size: 4.25em;
+
+      &-link {
+        font-size: 2.8em;
+      }
+    }
   }
 }

@@ -11,6 +11,13 @@
   
   @include flex(row, flex-end, space-between);
   z-index: 9999;
+
+  &__link-icon {
+    // @include transition-ease;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
 }
 
 /* ************************* */

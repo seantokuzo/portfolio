@@ -57,9 +57,27 @@
   border: 1px solid $kuzo-sherbert;
 }
 
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
   .grid-icon-container,
   .grid-sqr {
     border: 1px solid $kuzo-purp;
   }
 }
+
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {}
+
+@include media-sm {}
+
+@include media-rg {}
+
+@include media-md {}
+
+@include media-lg {}
+
+@include media-xl {}

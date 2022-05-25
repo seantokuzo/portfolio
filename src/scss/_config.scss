@@ -1,16 +1,8 @@
-$color-light: #ffffff;
+$color-light: #fffbf9;
 $color-dark: #0F0E0E;
 $color-grey: #414141;
 $kuzo-sherbert: #ffad61;
-
-// OG PURP
-// $kuzo-purp: #b077ba;
-
-// DARKER PURP
 $kuzo-purp: #b077ba;
-
-// $kuzo-orange: #ff5d43;
-// $kuzo-pink: #c2237d;
 
 $bs-black: 0.25em 0.25em 0.75em #00000040,
 0.125em 0.125em 0.25em #00000026;
@@ -55,7 +47,7 @@ $bs-purp: 0.25em 0.25em 0.75em #b077ba40,
 }
 
 @mixin media-sm {
-  @media screen and (min-width: 321px) {
+  @media screen and (min-width: 340px) {
     @content;
   }
 }

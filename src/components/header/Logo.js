@@ -13,18 +13,18 @@ export default function Logo({ logoActive, toggleLogoActive }) {
   const logo = useRef()
   const q = gsap.utils.selector(logo)
 
-  useEffect(() => {
-    gsap.from(q('.header__logo'), {
-      opacity: 0,
-      y: '-20px',
-      duration: 1,
-      delay: pathname === '/' ? 5 : 0
-    })
+  // useEffect(() => {
+  //   gsap.from(q('.header__logo'), {
+  //     opacity: 0,
+  //     y: '-20px',
+  //     duration: 1,
+  //     delay: pathname === '/' ? 5 : 0
+  //   })
 
-    Draggable.create('.header__logo-div', {
-      type: 'rotation'
-    })
-  }, [])
+  //   Draggable.create('.header__logo-div', {
+  //     type: 'rotation'
+  //   })
+  // }, [])
 
   const dynamicLogo = darkMode ? kuzoNightIcon : kuzoDayIcon
 

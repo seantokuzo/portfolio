@@ -25,21 +25,21 @@ body {
   line-height: 1;
 }
 
-.dark-mode {
-  color: $kuzo-purp;
-  background: $color-dark;
-}
-
 a {
   color: $kuzo-sherbert;
   text-decoration: none;
   cursor: pointer;
 }
 
-.dark-mode a {
+.dark-mode {
   color: $kuzo-purp;
+  background: $color-dark;
+
+  a {
+    color: $kuzo-purp;
+  }
 }
 
+h1, h2, h3, h4, h5, p {margin: 0;}
 
-.app {
-}
+// .app {}

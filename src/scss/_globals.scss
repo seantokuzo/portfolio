@@ -35,17 +35,47 @@
 @include media-xs {
   .section {
     &__title {
-        font-size: 1.25em;
-      }
-    
-      &__subtitle {
-        font-size: 1em;
-      }
-    
-      &__text {
-        font-size: .75em;
-        line-height: 1.05em;
-      }
+      font-size: 1.1em;
+    }
+  
+    &__subtitle {
+      font-size: .9em;
+    }
+  
+    &__text {
+      font-size: .65em;
+      // line-height: 1.05em;
+    }
+  }
+}
+
+@include media-sm {
+  .section {
+    &__title {
+      font-size: 1.45em;
+    }
+  
+    &__subtitle {
+      font-size: 1.1em;
+    }
+  
+    &__text {
+      font-size: .75em;
+    }
+  }
+}
+
+@include media-rg {
+  .section {
+    &__title {
+      font-size: 1.8em;
+    }
+    &__subtitle {
+      font-size: 1.4em;
+    }
+    &__text {
+      font-size: 1.05em;
+    }
   }
 }
 
@@ -54,11 +84,9 @@
     &__title {
       font-size: 2.5em;
     }
-  
     &__subtitle {
-      font-size: 2em;
+      font-size: 2.1em;
     }
-  
     &__text {
       font-size: 1.5em;
     }

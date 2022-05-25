@@ -49,9 +49,11 @@
   transform: scale(.75);
 }
 
-.dark-mode .toggle-btn {
-  border-color: $kuzo-purp;
-  background: $color-dark;
+.dark-mode {
+  .toggle-btn {
+    border-color: $kuzo-purp;
+    background: $color-dark;
+  }
 }
 
 .toggle-icon {
