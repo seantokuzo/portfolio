@@ -49,7 +49,7 @@ export default function ProjectCard({ project }) {
       </p>
       <div className="project-card__links meow">
         <p className="project-card__links-title project-card__text section__text">
-          Check it out here:
+          Check it out:
         </p>
         <div className="project-card__links-div">
           <a

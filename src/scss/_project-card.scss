@@ -114,16 +114,12 @@
 
     &__img-container {
       width: 85px;
-      height: 80px;
+      height: 85px;
       
       margin: .5rem auto 0;
       
       border-radius: 2px;
       border-width: 2px;
-    }
-
-    &__text {
-      font-size: .6em;
     }
     
     &__tagline {
@@ -164,39 +160,41 @@
 
 @include media-sm-short {
   .project-card {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto auto;
+
     &__title {
       padding: .5rem 0;
     }
 
     &__img-container {
-      width: 150px;
-      height: 150px;
-
+      width: 160px;
+      height: 160px;
       margin: .5rem auto 0;
 
       border-radius: 2px;
       border-width: 2px;
     }
 
-    &__text {}
-
-    &__tagline {}
-
-    &__links {
-
-      &-link {
-        &-icon {}
-
-        &-text {}
-      }
+    &__tagline {
+      max-width: 92%;
+      margin: 1rem auto 0;
+      min-height: 2.75rem;
     }
 
-    &__stack {
-      &-title {}
-
-      &-icons {
+    &__links {
+      margin: .5rem 0 .5rem;
+      &-div {
+        @include flex(column, center, space-evenly);
+      }
+      &-link {
+        margin: .25rem 0 0;
         &-icon {
-          &-special {}
+          font-size: 1.25em;
+        }
+
+        &-text {
+          font-size: .75em;
         }
       }
     }
