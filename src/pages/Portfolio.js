@@ -27,18 +27,18 @@ export default function Portfolio() {
 
   const gridIcon = (
     <div
-      className="grid-icon-container portfolio__icon"
+      className="portfolio__icon-grid portfolio__icon"
       onClick={toggleGridMode}
     >
       {new Array(16).fill('').map((s, i) => (
-        <div className="grid-sqr" key={`grid-sqr${i}`}></div>
+        <div className="portfolio__icon-grid-sqr" key={`grid-sqr${i}`}></div>
       ))}
     </div>
   )
 
   const carouselBtn = (
     <div
-      className="carousel-icon-container portfolio__icon"
+      className="portfolio__icon-carousel portfolio__icon"
       onClick={toggleGridMode}
     >
       <i className="fa-solid fa-caret-left"></i>
