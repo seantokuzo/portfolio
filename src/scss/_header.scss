@@ -71,55 +71,17 @@
 /* ***************************** */
 /* ***     MEDIA QUERIES     *** */
 /* ***************************** */
-@include media-sm {
-  .header {
-    padding: .5rem .65rem;
-    letter-spacing: .25px;
-    &__logo {
-      width: 40px;
-    }
-  }
-
-  .nav {
-    margin-right: 2px;
-    &__list-item {
-      margin: 0 3px;
-    }
-
-    &__link {
-      font-size: .75em;
-    }
-  }
-  .toggle-btn {
-    width: 38px;
-    height: 38px;
-  }
-  .toggle-icon {
-    font-size: 23px;
-  }
-  .toggle-sun {
-    transform: translateY(-17px);
-  }
-  .toggle-moon {
-    transform: translateY(-25px);
-  }
-  .toggle-on .toggle-sun {
-    transform: translateY(13px);
-  }
-  .toggle-on .toggle-moon {
-    transform: translateY(6px);
-  }
-}
-
 @include media-xs {
   .header {
+    padding: .35rem .5rem;
     &__logo {
       width: 35px;
     }
   }
   .nav {
     &__link {
-      font-size: .5em;
+      font-size: .6em;
+      margin: 0 4px;
     }
   }
     .toggle-btn {
@@ -148,23 +110,65 @@
     }
 }
 
+@include media-sm {
+  .header {
+    padding: .5rem .65rem;
+    letter-spacing: .25px;
+
+    &__logo {
+      width: 40px;
+    }
+  }
+
+  .nav {
+    margin-right: 2px;
+    
+    &__link {
+      font-size: .75em;
+      margin: 0 3px;
+    }
+  }
+
+  .toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .toggle-icon {
+    font-size: 23px;
+  }
+
+  .toggle-sun {
+    transform: translateY(-17px);
+  }
+
+  .toggle-moon {
+    transform: translateY(-25px);
+  }
+
+  .toggle-on .toggle-sun {
+    transform: translateY(13px);
+  }
+
+  .toggle-on .toggle-moon {
+    transform: translateY(6px);
+  }
+}
+
 @include media-rg {
   .header {
-    padding: .5rem .75rem;
+    padding: .65rem .75rem;
     &__logo {
       width: 60px;
     }
   }
 
   .nav {
-    margin-right: 5px;
-    &__list {
-      &-item {
-        margin: 0 4px;
-      }
-    }
+    margin-right: 3px;
+
     &__link {
-      font-size: 1em;
+      margin: 0 4px;
+      font-size: .85em;
     }
   }
   .toggle-btn {
@@ -195,16 +199,15 @@
 
 @include media-md {
   .header {
+    padding: .75rem .95rem;
     &__logo {
       width: 75px;
     }
   }
   .nav {
-    &__list-item {
-      margin: 0 .5rem;
-    }
-
+    
     &__link {
+      margin: 0 5px;
       font-size: 1.25em;
     }
   }
@@ -236,7 +239,7 @@
 
 @include media-lg {
   .header {
-    padding: .75rem 1rem;
+    padding: 1rem 1.5rem;
 
     &__logo {
       width: 85px;
@@ -244,12 +247,9 @@
   }
 
   .nav {
-    &__list-item {
-      margin: 0 .5rem;
-    }
-
     &__link {
       font-size: 1.5em;
+      margin: 0 .85rem;
     }
   }
   .toggle-btn {
@@ -281,19 +281,15 @@
 
 @include media-xl {
   .header {
-    padding: 1rem 1.5rem;
-
+    padding: 1.5rem;
     &__logo {
       width: 100px;
     }
   }
 
   .nav {
-    &__list-item {
-      margin: 0 .75rem;
-    }
-
     &__link {
+      margin: 0 1rem;
       font-size: 1.75em;
     }
   }

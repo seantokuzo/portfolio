@@ -8,7 +8,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
   const { darkMode } = useContext(ThemeContext)
   // console.log(darkMode)
   const line1 = "hello there, i'm"
-  const line2 = 'sean tokuzo simpson'
+  const line2 = 'sean.tokuzo.simpson'
   const line3 = 'front end developer'
   const home = useRef()
   const q = gsap.utils.selector(home)

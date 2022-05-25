@@ -9,24 +9,8 @@
 
   background-color: $color-light;
   
-  @include flex(row, center, space-between);
+  @include flex(row, flex-end, space-between);
   z-index: 9999;
-  
-  &__text {
-    font-size: x-small;
-  }
-
-  &__links {
-  }
-  
-  &__link-icon {
-    font-size: 1.5em;
-    margin: 0 .5rem;
-  }
-
-  &__copy {
-    font-size: larger;
-  }
 }
 
 /* ************************* */
@@ -41,22 +25,95 @@
 /* ************************* */
 /* ***   MEDIA QUERIES   *** */
 /* ************************* */
-@include media-sm {
-  
-}
 
 @include media-xs {
+  .footer {
+    padding: .5rem .75rem;
+      &__text {
+        font-size: .5em;
+      }
+      &__link-icon {
+        font-size: 1.2em;
+        margin: 0 .45rem;
+      }
+      &__copy {
+        font-size: 1.1em;
+      }
+  }
+}
 
+@include media-sm {
+  .footer {
+    padding: .65rem .85rem;
+
+    &__text {
+      font-size: .55em;
+    }
+
+    &__link-icon {
+      font-size: 1.4em;
+      margin: 0 .5rem;
+    }
+  }
+}
+
+@include media-rg {
+  .footer {
+    padding: .75rem 1rem;
+  
+    &__text {
+      font-size: .65em;
+    }
+  
+    &__link-icon {
+      font-size: 1.6em;
+      margin: 0 .65rem;
+    }
+  }
 }
 
 @include media-md {
-
+  .footer {
+    padding: .75rem 1rem;
+  
+    &__text {
+      font-size: .65em;
+    }
+  
+    &__link-icon {
+      font-size: 1.6em;
+      margin: 0 .65rem;
+    }
+  }
 }
 
 @include media-lg {
-
+  .footer {
+    padding: 1rem 1.5rem;
+  
+    &__text {
+      font-size: .85em;
+    }
+  
+    &__link-icon {
+      font-size: 2em;
+      margin: 0 1rem;
+    }
+  }
 }
 
 @include media-xl {
+  .footer {
+    padding: 1.5rem;
+  
+    &__text {
+      font-size: 1em;
+    }
+  
+    &__link-icon {
+      font-size: 2.5em;
+      margin: 0 1.25rem;
+    }
+  }
 
 }

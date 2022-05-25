@@ -29,6 +29,9 @@
   }
 }
 
+/* ***************************** */
+/* ***     MEDIA QUERIES     *** */
+/* ***************************** */
 @include media-xs {
   .section {
     &__title {
@@ -58,25 +61,23 @@
   
     &__text {
       font-size: 1.5em;
-      line-height: 1.05em;
     }
   }
 }
 
 @include media-lg {
   .section {
-    // &__title {
-    //   font-size: 2.5em;
-    // }
+    &__title {
+      font-size: 3em;
+    }
   
-    // &__subtitle {
-    //   font-size: 2em;
-    // }
+    &__subtitle {
+      font-size: 2.5em;
+    }
   
-    // &__text {
-    //   font-size: 1.5em;
-    //   line-height: 1.05em;
-    // }
+    &__text {
+      font-size: 2em;
+    }
   }
 }
 
@@ -92,7 +93,6 @@
   
     &__text {
       font-size: 2.5em;
-      line-height: 1.05em;
     }
   }
 }
