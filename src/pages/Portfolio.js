@@ -21,6 +21,13 @@ export default function Portfolio() {
     })
   }, [])
 
+  useEffect(() => {
+    gsap.from(q('.portfolio__icon'), {
+      rotateY: '180deg',
+      duration: 0.25
+    })
+  }, [gridMode])
+
   function toggleGridMode() {
     setGridMode((prev) => !prev)
   }
@@ -57,6 +64,9 @@ export default function Portfolio() {
   return (
     <section className="section portfolio" ref={portfolio}>
       <div className="portfolio__title-icon-div">
+        <div className="portfolio__title-empty-div">
+          {gridMode ? carouselBtn : gridIcon}
+        </div>
         <h1 className="section__title portfolio__title">MyWork</h1>
         {gridMode ? carouselBtn : gridIcon}
       </div>

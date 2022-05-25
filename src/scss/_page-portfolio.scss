@@ -1,59 +1,38 @@
 .portfolio {
   width: 100%;
-  margin: .5rem 0 0;
   
   &__container {
     width: 100%;
-    
     @include flex(column, center, center);
   }
   
   &__title-icon-div {
-    @include flex(row, center, center);
     width: 100%;
-  
-    margin-bottom: 1em;
-  }
-  
-  &__title {
-    margin: 0;
+    @include flex(row, center, center);
   }
 
-  &__icon-grid,
-  &__icon-carousel {
-    position: absolute;
-    right: 1rem;
+  &__title-empty-div {
+    opacity: 0;
   }
-  
+
   &__icon-grid {
     width: fit-content;
-    padding: 3px;
-  
+    
     display: grid;
-    grid-template-columns: repeat(4, 5px);
-    grid-template-rows: repeat(4, 5px);
     align-items: center;
     justify-items: center;
-    border-radius: 3px;
     cursor: pointer;
   }
   
   &__icon-carousel {
     @include flex(row, center, center);
-    padding: 6px 5.5px;
-    border: 1px solid;
-    border-radius: 3px;
-    font-size: .85em;
-  }
-  
-  &__icon-grid-sqr {
-    width: 3.5px;
-    height: 3.5px;
+    border-style: solid;
   }
   
   &__icon-grid,
   &__icon-grid-sqr {
-    border: 1px solid $kuzo-sherbert;
+    border-style: solid;
+    border-color: $kuzo-sherbert;
   }
 }
 
@@ -76,66 +55,83 @@
 /* ************************* */
 @include media-xs {
   .portfolio {
-    width: 100%;
-    margin: .5rem 0 0;
-
-    &__container {
-      width: 100%;
-
-      @include flex(column, center, center);
-    }
+    margin: 0;
 
     &__title-icon-div {
-      @include flex(row, center, center);
-      width: 100%;
-
-      margin-bottom: 1em;
+      margin-bottom: .5em;
     }
 
     &__title {
-      margin: 0;
-    }
-
-    &__icon-grid,
-    &__icon-carousel {
-      position: absolute;
-      right: 1rem;
+      margin: 0 1rem;
     }
 
     &__icon-grid {
-      width: fit-content;
       padding: 3px;
 
-      display: grid;
-      grid-template-columns: repeat(4, 5px);
-      grid-template-rows: repeat(4, 5px);
-      align-items: center;
-      justify-items: center;
-      border-radius: 3px;
-      cursor: pointer;
+      grid-template-columns: repeat(4, 4px);
+      grid-template-rows: repeat(4, 4px);
+      border-radius: 2px;
     }
 
     &__icon-carousel {
-      @include flex(row, center, center);
       padding: 6px 5.5px;
       border: 1px solid;
-      border-radius: 3px;
-      font-size: .85em;
+      border-radius: 2px;
+      font-size: .65em;
+      border-width: 1px;
     }
 
     &__icon-grid-sqr {
-      width: 3.5px;
-      height: 3.5px;
+      width: 2px;
+      height: 2px;
     }
 
     &__icon-grid,
     &__icon-grid-sqr {
-      border: 1px solid $kuzo-sherbert;
+      border-width: 1px;
     }
   }
 }
 
-@include media-sm {}
+@include media-sm {
+  // .portfolio {
+  //   margin: 0;
+
+  //   &__title-icon-div {
+  //     margin-bottom: .5em;
+  //   }
+
+  //   &__title {
+  //     margin: 0 1rem;
+  //   }
+
+  //   &__icon-grid {
+  //     padding: 3px;
+
+  //     grid-template-columns: repeat(4, 5px);
+  //     grid-template-rows: repeat(4, 5px);
+  //     border-radius: 2px;
+  //   }
+
+  //   &__icon-carousel {
+  //     padding: 6px 5.5px;
+  //     border: 1px solid;
+  //     border-radius: 2px;
+  //     font-size: .85em;
+  //     border-width: 1px;
+  //   }
+
+  //   &__icon-grid-sqr {
+  //     width: 3.5px;
+  //     height: 3.5px;
+  //   }
+
+  //   &__icon-grid,
+  //   &__icon-grid-sqr {
+  //     border-width: 1px;
+  //   }
+  // }
+}
 
 @include media-rg {}
 

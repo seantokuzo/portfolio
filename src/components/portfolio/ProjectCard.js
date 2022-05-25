@@ -47,48 +47,52 @@ export default function ProjectCard({ project }) {
       <p className="project-card__tagline project-card__text section__text meow">
         {tagline}
       </p>
-      <p className="project-card__links-title project-card__text section__text meow">
-        Check it out here:
-      </p>
-      <div className="project-card__links-div project-card__text meow">
-        <a
-          className="project-card__link"
-          href={link}
-          target="_blank"
-          referrer="noreferrer"
-        >
-          <i className="fa-solid fa-arrow-up-right-from-square project-card__link-icon"></i>
-          Website
-        </a>
-        <a
-          className="project-card__link"
-          href={github}
-          target="_blank"
-          referrer="noreferrer"
-        >
-          <i className="fa-brands fa-github project-card__link-icon"></i>
-          Github
-        </a>
+      <div className="project-card__links meow">
+        <p className="project-card__links-title project-card__text section__text">
+          Check it out here:
+        </p>
+        <div className="project-card__links-div">
+          <a
+            className="project-card__links-link"
+            href={link}
+            target="_blank"
+            referrer="noreferrer"
+          >
+            <i className="fa-solid fa-arrow-up-right-from-square project-card__links-link-icon"></i>
+            <span className="project-card__links-link-text">Website</span>
+          </a>
+          <a
+            className="project-card__links-link"
+            href={github}
+            target="_blank"
+            referrer="noreferrer"
+          >
+            <i className="fa-brands fa-github project-card__links-link-icon"></i>
+            <span className="project-card__links-link-text">Github</span>
+          </a>
+        </div>
       </div>
-      <p className="project-card__stack-title project-card__text section__text meow">
-        Made with:
-      </p>
-      <div className="project-card__stack-div meow">
-        {stack.map((icon) => {
-          const thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
-          return (
-            <img
-              key={nanoid()}
-              src={thisIcon.img}
-              className={
-                icon === 'React Router' || icon === 'Ableton Live'
-                  ? 'project-card__stack-icon special-pj-icon bark'
-                  : 'project-card__stack-icon bark'
-              }
-              alt={`${icon} icon`}
-            />
-          )
-        })}
+      <div className="project-card__stack meow">
+        <p className="project-card__stack-title project-card__text section__text meow">
+          Made with:
+        </p>
+        <div className="project-card__stack-icons">
+          {stack.map((icon) => {
+            const thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+            return (
+              <img
+                key={nanoid()}
+                src={thisIcon.img}
+                className={
+                  icon === 'React Router' || icon === 'Ableton Live'
+                    ? 'project-card__stack-icons-icon project-card__stack-icons-icon-special bark'
+                    : 'project-card__stack-icons-icon bark'
+                }
+                alt={`${icon} icon`}
+              />
+            )
+          })}
+        </div>
       </div>
     </div>
   )

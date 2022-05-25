@@ -13,7 +13,7 @@
   z-index: 9999;
 
   &__link-icon {
-    // @include transition-ease;
+    @include transition-ease;
     &:hover {
       transform: scale(1.15);
     }

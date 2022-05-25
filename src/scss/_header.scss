@@ -18,7 +18,6 @@
 
   &__list {
     @include flex(row, center, center);
-    @include transition-ease;
 
     list-style: none;
   }

@@ -1,78 +1,85 @@
 .carousel {
-  @include flex(column, center, center);
-  margin: .5rem 0;
   width: 100%;
-  // overflow: hidden;
-  
-  // &__cards-container {
-  //   @include flex(row, center, center);
-  //   width: 100%;
-  //   border: 1px solid red;
-  // }
-  
-  // &__item {
-  //   display: inline-flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   width: 100%;
-  //   padding: 0 1rem;
-  // }
-}
+  @include flex(column, center, center);
 
-.carousel-toggle-div {
-  @include flex(row, center, center);
-  margin: 1rem 0 0;
-  // position: absolute;
-  // top: 90%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-}
-
-.carousel-toggle {
-  width: 3.5em;
-  height: 3.5em;
-
-  color: $kuzo-sherbert;
-  background-color: $color-light;
-  border: 4px solid;
-  border-color: $kuzo-sherbert;
-  border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-  @include transition-ease;
-
-  &-left {
-    margin-right: 1rem;
+  &__toggle-div {
+    @include flex(row, center, center);
   }
   
-  &-right {
-    margin-left: 1rem;
-  }
-}
-
-.carousel-toggle:hover,
-.carousel-toggle:focus {
-  transform: scale(1.05);
-  color: lighter($kuzo-sherbert, 20%);
-}
-
-.carousel-toggle-icon {
-  font-size: 1.5em;
-}
-
-.dark-mode {
-  .carousel-toggle {
-    color: $kuzo-purp;
-    border-color: $kuzo-purp;
-    background-color: $color-dark;
+  &__toggle {
+    color: $kuzo-sherbert;
+    background-color: $color-light;
+    border-color: $kuzo-sherbert;
+    border-style: solid;
+    border-radius: 50%;
     
-    &:hover,
-    &:focus {
-      color: lighter($kuzo-purp, 20%);
+    cursor: pointer;
+    
+    @include flex(row, center, center);
+    @include transition-ease;
+  }
+  
+  &__toggle:hover,
+  &__toggle:focus {
+    transform: scale(1.1);
+  }
+}
+
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {
+  .carousel {
+      margin: .5rem 0;
+  
+      &__toggle-div {
+        margin: 1rem 0 0;
+      }
+  
+      &__toggle {
+        width: 3em;
+        height: 3em;
+        border-width: 4px;
+  
+        &-left {
+          margin-right: 1rem;
+        }
+  
+        &-right {
+          margin-left: 1rem;
+        }
+      }
+  
+      &__toggle-icon {
+        font-size: 1em;
+      }
+    }
+}
+
+@include media-sm {}
+
+@include media-rg {}
+
+@include media-md {}
+
+@include media-lg {}
+
+@include media-xl {}
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
+.dark-mode {
+  .carousel {
+    &__toggle {
+      color: $kuzo-purp;
+      border-color: $kuzo-purp;
+      background-color: $color-dark;
+      
+      &:hover,
+      &:focus {
+        color: lighter($kuzo-purp, 20%);
+      }
     }
   }
 }
