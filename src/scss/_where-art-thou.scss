@@ -45,6 +45,30 @@
   }
 }
 
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {}
+
+@include media-sm {}
+
+@include media-sm-short {}
+
+@include media-rg {}
+
+@include media-md {}
+
+@include media-md-landscape {}
+
+@include media-lg {}
+
+@include media-lg-landscape {}
+
+@include media-xl {}
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
   .where-art-thou {
     &__btn-icon {

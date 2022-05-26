@@ -1,7 +1,7 @@
 .project-grid {
   width: 80%;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 1rem auto;
 
   @include flex(row, center, center);
   flex-wrap: wrap;
@@ -9,19 +9,24 @@
   &__img-container {
     grid-area: img;
     background-color: $kuzo-sherbert;
-  
     width: 45%;
     max-width: 350px;
-    // max-height: 150px;
-    // max-width: 300px;
-  
     margin: 0;
-  
     @include flex(column, center, center);
-  
     object-fit: cover;
     overflow: hidden;
     @include transition-ease;
+    &:hover,
+    &:focus,
+    &:active {
+      .project-grid__img {
+        transform: scale(1.1);
+        opacity: .9;
+      }
+      .project-grid__details {
+        opacity: 1;
+      }
+    }
   }
   
   &__img {
@@ -30,91 +35,229 @@
       opacity 250ms linear;
   }
   
-  &__link {
-    text-decoration: none;
-    border: none;
-    margin: 0;
-  }
-  
-  &__details-div {
+  &__details {
     @include flex(column, center, center);
     position: absolute;
-    // max-width: 300px;
-    // width: 100%;
-    // max-height: 300px;
-    // height: 100%;
-  
     padding: .5rem;
-    
     color: $color-light;
     background-color: rgba($kuzo-sherbert, .9);
     opacity: 0;
     @include transition-ease;
-  }
-  
-  &__img-container:hover,
-  &__img-container:focus,
-  &__img-container:active {
-    .project-grid__img {
-        transform: scale(1.1);
-        opacity: .9;
-      }
-    
-    .project-grid__details-div {
-      opacity: 1;
+    &-name {
+      font-size: .75em;
     }
-  } 
-  
-  &__details-name {
-    font-size: .75em;
+    &-stack-text {
+      font-size: .5em;
+      margin-top: .25rem;
+    }
+    &-stack {
+      @include flex(row, center, center);
+      margin-top: .34rem;
+      &-icon {
+        width: .75rem;
+        margin: 0 5px;
+        &-special {
+          height: .75rem;
+          background-color: $color-light;
+        }
+      }
+    }
   }
   
-  &__details-stack-text {
-    font-size: .5em;
-    margin-top: .25rem;
-  }
-  
-  &__details-stack-div {
-    @include flex(row, center, center);
-    margin-top: .34rem;
-  }
-  
-  &__stack-icon {
-    width: .75rem;
-    margin: 0 5px;
-  }
-  
-  &__special-icon {
-    height: .75rem;
-    background-color: $color-light;
-  }
-  
-  &__links-div {
+  &__links {
     width: 100%;
     margin-top: .5rem;
     @include flex(row, center, space-evenly);
     @include transition-ease;
-    
     &:hover {
       transform: scale(1.1);
     }
-  }
-  
-  &__link {
-    color: $color-light;
-    @include flex(column, center, center);
-    font-size: .25em;
-    margin: 0 5px;
+    &-link {
+      text-decoration: none;
+      border: none;
+      color: $color-light;
+      @include flex(column, center, center);
+      font-size: .25em;
+      margin: 0 5px;
+    }
   }
 }
 
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-sm {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-sm-short {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-rg {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-md {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-md-landscape {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-lg {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-lg-landscape {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+@include media-xl {
+  .project-grid {
+    &__img-container {
+
+    }
+
+    &__link {
+
+    }
+
+    &__details-div {
+
+    }
+
+
+  }
+}
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
   .project-grid {
     &__img-container {
       background-color: $kuzo-purp;
     }
     
-    &__details-div {
+    &__details {
       color: $kuzo-purp;
       background-color: rgba($color-dark, .9);
     }

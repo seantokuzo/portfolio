@@ -80,6 +80,12 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
   }
 }
 
+@mixin media-md-landscape {
+  @media screen and (orientation: landscape) and (min-width: 744px){
+    @content;
+  }
+}
+
 @mixin media-lg {
   @media screen and (min-width: 1024px) {
     @content;
