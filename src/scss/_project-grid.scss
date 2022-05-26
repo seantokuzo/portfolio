@@ -1,20 +1,15 @@
 .project-grid {
-  width: 80%;
-  max-width: 1400px;
-  margin: 1rem auto;
-
   @include flex(row, center, center);
   flex-wrap: wrap;
+  max-width: 1400px;
   
   &__img-container {
-    grid-area: img;
     background-color: $kuzo-sherbert;
-    width: 45%;
-    max-width: 350px;
-    margin: 0;
     @include flex(column, center, center);
     object-fit: cover;
     overflow: hidden;
+    border-style: solid;
+    border-radius: 2px;
     @include transition-ease;
     &:hover,
     &:focus,
@@ -38,26 +33,17 @@
   &__details {
     @include flex(column, center, center);
     position: absolute;
-    padding: .5rem;
     color: $color-light;
     background-color: rgba($kuzo-sherbert, .9);
     opacity: 0;
     @include transition-ease;
-    &-name {
-      font-size: .75em;
-    }
     &-stack-text {
-      font-size: .5em;
-      margin-top: .25rem;
+      font-size: smaller;
     }
     &-stack {
       @include flex(row, center, center);
-      margin-top: .34rem;
       &-icon {
-        width: .75rem;
-        margin: 0 5px;
         &-special {
-          height: .75rem;
           background-color: $color-light;
         }
       }
@@ -65,20 +51,19 @@
   }
   
   &__links {
-    width: 100%;
-    margin-top: .5rem;
     @include flex(row, center, space-evenly);
-    @include transition-ease;
-    &:hover {
-      transform: scale(1.1);
-    }
     &-link {
       text-decoration: none;
       border: none;
       color: $color-light;
       @include flex(column, center, center);
-      font-size: .25em;
-      margin: 0 5px;
+      @include transition-ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &-text {
+      font-size: .01em;
     }
   }
 }
@@ -88,25 +73,42 @@
 /* ************************* */
 @include media-xs {
   .project-grid {
+    width: 80%;
+    margin: 2% auto 15%;
     &__img-container {
-
-    }
-
-    &__link {
-
+      width: 90%;
+      max-width: 350px;
+      margin: .5rem;
+      border-width: 2px;
     }
 
     &__details {
-      &-name {}
-      &-stack-text {}
+      padding: .5rem;
+      &-name {
+        // font-size: .75em;
+      }
+      &-stack-text {
+        margin-top: .25rem;
+      }
       &-stack {
+        margin-top: .34rem;
         &-icon {
-            &-special {}
+          width: .75rem;
+          margin: 0 5px;
+            &-special {
+              height: .75rem;
+            }
         }
       }
     }
 
-
+    &__links {
+      width: 100%;
+      margin-top: .5rem;
+      &-link {
+        margin: 0 .75rem;
+      }
+    }
   }
 }
 

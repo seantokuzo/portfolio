@@ -61,21 +61,21 @@ export default function ProjectGrid() {
         <div className="project-grid__links">
           <a
             href={proj.link}
-            className="project-grid__links-link"
+            className="project-grid__links-link section__subtitle"
             target="_blank"
             referrer="no-referrer"
           >
             <i className="fa-solid fa-arrow-up-right-from-square project-card__links-icon"></i>
-            Website
+            <p className="project-card__links-text">Website</p>
           </a>
           <a
-            className="project-grid__links-link"
+            className="project-grid__links-link section__subtitle"
             href={proj.github}
             target="_blank"
             referrer="noreferrer"
           >
             <i className="fa-brands fa-github project-grid__links-icon"></i>
-            Github
+            <p className="project-card__links-text">Github</p>
           </a>
         </div>
       </div>
