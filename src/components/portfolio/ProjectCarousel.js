@@ -15,7 +15,7 @@ export default function ProjectCarousel() {
   useEffect(() => {
     if (carouselRef && slide !== 'no') {
       gsap.from(q('.project-card'), {
-        rotateY: '180deg',
+        rotateY: slide === 'next' ? '180deg' : '-180deg',
         duration: 0.4,
         x: slide === 'next' ? '100%' : '-100%'
       })
@@ -51,16 +51,40 @@ export default function ProjectCarousel() {
     cardSlideSetter('prev')
   }
 
+  function jumpToProject(projId) {
+    if (projId === currentProject) return cardSlideSetter('jiggle')
+    setCurrentProject(projId)
+    if (projId > currentProject) cardSlideSetter('next')
+    if (projId < currentProject) cardSlideSetter('prev')
+  }
+
+  const carouselToggleNumbers = (
+    <>
+      {projects.map((proj, i) => (
+        <p
+          className={
+            currentProject === i + 1
+              ? 'section__subtitle carousel__toggle-number carousel__toggle-number--current underline'
+              : 'section__subtitle carousel__toggle-number'
+          }
+          onClick={() => jumpToProject(i + 1)}
+        >
+          {i + 1}
+        </p>
+      ))}
+    </>
+  )
   return (
     <div className="carousel" ref={carouselRef}>
       <ProjectCard project={projects[currentProject - 1]} />
-      <div className="carousel__toggle-div">
+      <div className="carousel__toggles">
         <button
           className="carousel__toggle carousel__toggle-left"
           onClick={toggleCarouselPrev}
         >
           <i className="fa-solid fa-chevron-left carousel__toggle-icon"></i>
         </button>
+        {carouselToggleNumbers}
         <button
           className="carousel__toggle carousel__toggle-right"
           onClick={toggleCarouselNext}

@@ -40,6 +40,9 @@
     border-style: solid;
     border-color: $kuzo-sherbert;
   }
+  &__icon-grid-sqr {
+      background-color: $kuzo-sherbert;
+  }
 }
 
 
@@ -48,10 +51,13 @@
 /* ************************* */
 .dark-mode {
   .portfolio {
-
     &__icon-grid,
     &__icon-grid-sqr {
-      border: 1px solid $kuzo-purp;
+      border-style: solid;
+      border-color: $kuzo-purp;
+    }
+    &__icon-grid-sqr {
+      background-color: $kuzo-purp;
     }
   }
 }
@@ -143,19 +149,11 @@
     &__icon-grid-sqr {
       width: 3px;
       height: 3px;
-      background-color: $kuzo-sherbert;
     }
     
     &__icon-grid,
     &__icon-grid-sqr {
       border-width: 1px;
-    }
-  }
-  .dark-mode {
-    .portfolio {
-      &__icon-grid-sqr {
-        background-color: $kuzo-purp;
-      }
     }
   }
 }
@@ -187,19 +185,11 @@
     &__icon-grid-sqr {
       width: 3px;
       height: 3px;
-      background-color: $kuzo-sherbert;
     }
 
     &__icon-grid,
     &__icon-grid-sqr {
       border-width: 1px;
-    }
-  }
-  .dark-mode {
-    .portfolio {
-      &__icon-grid-sqr {
-        background-color: $kuzo-purp;
-      }
     }
   }
 }
@@ -233,8 +223,47 @@
     &__title-icon-div {
       margin: 0;
     }
+    &__icon-grid {
+      padding: 5px;
+
+      grid-template-columns: repeat(4, 6px);
+      grid-template-rows: repeat(4, 6px);
+      border-width: 2px;
+    }
+
+    &__icon-carousel {
+      padding: 7px;
+      border: 1px solid;
+      border-radius: 2px;
+      font-size: 1.2em;
+      border-width: 2px;
+    }
+
+    &__icon-grid-sqr {
+      width: 4px;
+      height: 4px;
+    }
+
+    &__icon-grid {
+     
+    }
+    
   }
 }
+
+// @include media-md-landscape {
+//   .portfolio {
+//     &__title-icon-div {
+//       margin: -1rem 0 0;
+//     }
+
+//     &__container {
+//       &-carousel {
+//         @include absolute-center(-42%);
+//       }
+//     }
+//   }
+// }
 
 @include media-lg {
   .portfolio {
@@ -255,19 +284,11 @@
     &__icon-grid-sqr {
       width: 4px;
       height: 4px;
-      background-color: transparent;
     }
     
     &__icon-carousel {
       padding: 9px;
       font-size: 1.15em;
-    }
-  }
-  .dark-mode {
-    .portfolio {
-      &__icon-grid-sqr {
-        background-color: transparent;
-      }
     }
   }
 }
@@ -292,11 +313,11 @@
         margin: 0;
       }
   
-      &__container {
-        &-carousel {
-          @include absolute-center(-46%);
-        }
-      }
+      // &__container {
+      //   &-carousel {
+      //     @include absolute-center(-42%);
+      //   }
+      // }
 
       &__icon-grid {
         padding: 8px;

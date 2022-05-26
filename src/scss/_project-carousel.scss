@@ -2,7 +2,7 @@
   width: 100%;
   @include flex(column, center, center);
 
-  &__toggle-div {
+  &__toggles {
     @include flex(row, center, center);
   }
   
@@ -16,8 +16,11 @@
     cursor: pointer;
     
     @include flex(row, center, center);
-    @include transition-ease;
     @include box-shadow($bs-dark);
+
+    &-number {
+      cursor: pointer;
+    }
   }
   
   &__toggle:hover,
@@ -31,24 +34,24 @@
 /* ************************* */
 @include media-xs {
   .carousel {
-    &__toggle-div {
+    &__toggles {
       margin: .75rem 0 0;
+      width: 80%;
+      max-width: 350px;
+      @include flex(row,center,space-between);
     }
-
     &__toggle {
       width: 3em;
       height: 3em;
       border-width: 3px;
-
       &-left {
-        margin-right: 1rem;
+        margin-right: .5rem;
       }
 
       &-right {
-        margin-left: 1rem;
+        margin-left: .5rem;
       }
     }
-
     &__toggle-icon {
       font-size: 1em;
     }
@@ -57,24 +60,20 @@
 
 @include media-sm-short {
   .carousel {
-    &__toggle-div {
+    &__toggles {
       margin: 1.5rem 0 0;
     }
-
     &__toggle {
       width: 3.5em;
       height: 3.5em;
       border-width: 3px;
-
       &-left {
-        margin-right: 1.25rem;
+        margin-right: .75rem;
       }
-
       &-right {
-        margin-left: 1.25rem;
+        margin-left: .75rem;
       }
     }
-
     &__toggle-icon {
       font-size: 1.5em;
     }
@@ -83,24 +82,22 @@
 
 @include media-sm {
   .carousel {
-    &__toggle-div {
+    &__toggles {
+      max-width: 350px;
       margin: 1.5rem 0 0;
     }
-
     &__toggle {
       width: 3.5em;
       height: 3.5em;
       border-width: 3px;
-
       &-left {
-        margin-right: 1.25rem;
+        margin-right: .75rem;
       }
-
+    
       &-right {
-        margin-left: 1.25rem;
+        margin-left: .75rem;
       }
     }
-
     &__toggle-icon {
       font-size: 1.5em;
     }
@@ -109,24 +106,14 @@
 
 @include media-rg {
   .carousel {
-    &__toggle-div {
+    &__toggles {
       margin: 1.5rem 0 0;
     }
-
     &__toggle {
       width: 4em;
       height: 4em;
       border-width: 3.5px;
-
-      &-left {
-        margin-right: 1.5rem;
-      }
-
-      &-right {
-        margin-left: 1.5rem;
-      }
     }
-
     &__toggle-icon {
       font-size: 1.75em;
     }
@@ -135,24 +122,15 @@
 
 @include media-md {
   .carousel {
-    &__toggle-div {
+    &__toggles {
+      max-width: 425px;
       margin: 1.85rem 0 0;
     }
-
     &__toggle {
       width: 4.5em;
       height: 4.5em;
       border-width: 4px;
-
-      &-left {
-        margin-right: 1.75rem;
-      }
-
-      &-right {
-        margin-left: 1.75rem;
-      }
     }
-
     &__toggle-icon {
       font-size: 2.1em;
     }
@@ -161,24 +139,21 @@
 
 @include media-lg {
   .carousel {
-    &__toggle-div {
+    &__toggles {
+      max-width: 500px;
       margin: 2rem 0 0;
     }
-
     &__toggle {
       width: 5em;
       height: 5em;
       border-width: 5px;
-
       &-left {
-        margin-right: 2rem;
+        margin-right: 1rem;
       }
-
       &-right {
-        margin-left: 2rem;
+        margin-left: 1rem;
       }
     }
-
     &__toggle-icon {
       font-size: 2.45em;
     }
@@ -187,7 +162,8 @@
 
 @include media-lg-landscape {
   .carousel {
-    &__toggle-div {
+    &__toggles {
+      max-width: 620px;
       margin: 1.75rem 0 0;
     }
   }
@@ -195,23 +171,20 @@
 
 @include media-xl {
   .carousel {
-      &__toggle-div {
+      &__toggles {
+        max-width: 700px;
         margin: 2.5rem 0 0;
       }
-  
       &__toggle {
         width: 5.75em;
         height: 5.75em;
-  
         &-left {
-          margin-right: 2.5rem;
+          margin-right: 1.5rem;
         }
-  
         &-right {
-          margin-left: 2.5rem;
+          margin-left: 1.5rem;
         }
       }
-  
       &__toggle-icon {
         font-size: 2.8em;
       }
