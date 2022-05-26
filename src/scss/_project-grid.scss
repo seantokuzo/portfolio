@@ -96,157 +96,35 @@
 
     }
 
-    &__details-div {
-
+    &__details {
+      &-name {}
+      &-stack-text {}
+      &-stack {
+        &-icon {
+            &-special {}
+        }
+      }
     }
 
 
   }
 }
 
-@include media-sm {
-  .project-grid {
-    &__img-container {
+@include media-sm {}
 
-    }
+@include media-sm-short {}
 
-    &__link {
+@include media-rg {}
 
-    }
+@include media-md {}
 
-    &__details-div {
+@include media-md-landscape {}
 
-    }
+@include media-lg {}
 
+@include media-lg-landscape {}
 
-  }
-}
-
-@include media-sm-short {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-rg {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-md {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-md-landscape {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-lg {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-lg-landscape {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
-
-@include media-xl {
-  .project-grid {
-    &__img-container {
-
-    }
-
-    &__link {
-
-    }
-
-    &__details-div {
-
-    }
-
-
-  }
-}
+@include media-xl {}
 
 /* ************************* */
 /* ***     DARK MODE     *** */

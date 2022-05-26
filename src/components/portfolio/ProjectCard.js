@@ -15,21 +15,21 @@ export default function ProjectCard({ project }) {
   useEffect(() => {
     tl.from(q('.thumb'), {
       opacity: 0,
-      x: 20,
-      duration: .25
+      scale: 0,
+      duration: 0.25
     })
     tl.from(q('.meow'), {
       opacity: 0,
       y: -10,
       stagger: 0.1,
-      delay: -0.15
+      delay: -0.35
     })
     tl.from(q('.bark'), {
       opacity: 0,
       y: -10,
       scale: 1.5,
-      stagger: 0.075,
-      delay: -0.65
+      stagger: 0.1,
+      delay: -0.85
     })
   }, [project])
 
@@ -79,7 +79,7 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
       <div className="project-card__stack meow">
-        <p className="project-card__stack-title project-card__text section__text meow">
+        <p className="project-card__stack-title project-card__text section__text bark">
           Made with:
         </p>
         <div className="project-card__stack-icons">

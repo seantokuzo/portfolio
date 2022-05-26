@@ -22,7 +22,7 @@
     object-fit: cover;
     overflow: hidden;
     border-style: solid;
-    // @include transition-ease;
+    @include transition-ease;
     &:hover {
       @include box-shadow($bs-dark);
     }

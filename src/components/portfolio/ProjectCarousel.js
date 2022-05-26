@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 import ProjectCard from './ProjectCard'
 import projects from '../../data/projects'
 // import { nanoid } from 'nanoid'
@@ -6,13 +7,28 @@ import projects from '../../data/projects'
 export default function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(1)
   const [disableBtns, setDisableBtns] = useState(false)
+  const [slide, setSlide] = useState('no')
   // console.log(currentProject)
+  const carouselRef = useRef()
+  const q = gsap.utils.selector(carouselRef)
 
-  const animationPause = () => {
+  useEffect(() => {
+    if (carouselRef && slide !== 'no') {
+      gsap.from(q('.project-card'), {
+        rotateY: '180deg',
+        duration: 0.4,
+        x: slide === 'next' ? '100%' : '-100%'
+      })
+    }
+  }, [currentProject])
+
+  const cardSlideSetter = (str) => {
     setDisableBtns(true)
+    setSlide(str)
     setTimeout(() => {
       setDisableBtns(false)
-    }, 1000)
+      setSlide('no')
+    }, 750)
   }
 
   function toggleCarouselNext() {
@@ -22,7 +38,7 @@ export default function ProjectCarousel() {
     } else {
       setCurrentProject((prev) => prev + 1)
     }
-    animationPause()
+    cardSlideSetter('next')
   }
 
   function toggleCarouselPrev() {
@@ -32,11 +48,11 @@ export default function ProjectCarousel() {
     } else {
       setCurrentProject((prev) => prev - 1)
     }
-    animationPause()
+    cardSlideSetter('prev')
   }
 
   return (
-    <div className="carousel">
+    <div className="carousel" ref={carouselRef}>
       <ProjectCard project={projects[currentProject - 1]} />
       <div className="carousel__toggle-div">
         <button
