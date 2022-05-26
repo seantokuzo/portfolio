@@ -12,7 +12,7 @@ export default function ProjectCarousel() {
     setDisableBtns(true)
     setTimeout(() => {
       setDisableBtns(false)
-    }, 1000)
+    }, 1250)
   }
 
   function toggleCarouselNext() {

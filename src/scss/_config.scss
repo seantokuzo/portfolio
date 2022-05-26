@@ -4,15 +4,15 @@ $color-grey: #414141;
 $kuzo-sherbert: #ffad61;
 $kuzo-purp: #b077ba;
 
-$bs-val1: 0.3;
+$bs-val1: 0.35;
 $bs-val2: 0.15;
 
 $bs-light: 0.25em 0.25em 0.75em rgba($color-light, $bs-val1),
 0.125em 0.125em 0.25em rgba($color-light, $bs-val2);
 $bs-dark: 0.25em 0.25em 0.75em rgba($color-dark, $bs-val1),
 0.125em 0.125em 0.25em rgba($color-dark, $bs-val2);
-$bs-purp: 0.25em 0.25em 0.75em rgba($kuzo-purp, $bs-val1),
-0.125em 0.125em 0.25em rgba($kuzo-purp, $bs-val2);
+$bs-purp: 0.25em 0.25em 0.9em rgba($kuzo-purp, $bs-val1),
+0.125em 0.125em 0.4em rgba($kuzo-purp, $bs-val2);
 $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
 0.125em 0.125em 0.25em rgba($kuzo-sherbert, $bs-val2);
 
@@ -36,8 +36,8 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
   transform: translate(-50%, $transY);
 }
 
-@mixin transition-ease {
-  transition: all 350ms ease-in-out ;
+@mixin transition-ease($time: 350ms) {
+  transition: all $time ease-in-out ;
 }
 
 @mixin box-shadow($type: $bs-dark) {
@@ -82,6 +82,12 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
 
 @mixin media-lg {
   @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-lg-landscape {
+  @media screen and (orientation: landscape) and (min-width: 1024px) {
     @content;
   }
 }

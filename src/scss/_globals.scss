@@ -1,6 +1,6 @@
 .section {
   @include flex(column, center, center);
-
+  
   &__title {
     font-family: 'Orbitron', 'Inter', sans-serif;
     font-size: 1.5em;
@@ -84,13 +84,13 @@
 @include media-rg {
   .section {
     &__title {
-      font-size: 1.8em;
+      font-size: 1.6em;
     }
     &__subtitle {
-      font-size: 1.4em;
+      font-size: 1.35em;
     }
     &__text {
-      font-size: 1.05em;
+      font-size: .85em;
     }
   }
 }
@@ -98,13 +98,13 @@
 @include media-md {
   .section {
     &__title {
-      font-size: 2.5em;
+      font-size: 2em;
     }
     &__subtitle {
-      font-size: 2.1em;
+      font-size: 1.6em;
     }
     &__text {
-      font-size: 1.5em;
+      font-size: .95em;
     }
   }
 }
@@ -112,15 +112,15 @@
 @include media-lg {
   .section {
     &__title {
-      font-size: 3em;
+      font-size: 2.35em;
     }
   
     &__subtitle {
-      font-size: 2.5em;
+      font-size: 1.85em;
     }
   
     &__text {
-      font-size: 2em;
+      font-size: 1.05em;
     }
   }
 }
@@ -128,15 +128,15 @@
 @include media-xl {
   .section {
     &__title {
-      font-size: 3.5em;
+      font-size: 2.75em;
     }
   
     &__subtitle {
-      font-size: 3em;
+      font-size: 2.1em;
     }
   
     &__text {
-      font-size: 2.5em;
+      font-size: 1.25em;
     }
   }
 }

@@ -17,6 +17,7 @@
     
     @include flex(row, center, center);
     @include transition-ease;
+    @include box-shadow($bs-dark);
   }
   
   &__toggle:hover,
@@ -30,40 +31,184 @@
 /* ************************* */
 @include media-xs {
   .carousel {
-  
+    &__toggle-div {
+      margin: .75rem 0 0;
+    }
+
+    &__toggle {
+      width: 3em;
+      height: 3em;
+      border-width: 3px;
+
+      &-left {
+        margin-right: 1rem;
+      }
+
+      &-right {
+        margin-left: 1rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 1em;
+    }
+  }
+}
+
+@include media-sm-short {
+  .carousel {
+    &__toggle-div {
+      margin: 1.5rem 0 0;
+    }
+
+    &__toggle {
+      width: 3.5em;
+      height: 3.5em;
+      border-width: 3px;
+
+      &-left {
+        margin-right: 1.25rem;
+      }
+
+      &-right {
+        margin-left: 1.25rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@include media-sm {
+  .carousel {
+    &__toggle-div {
+      margin: 1.5rem 0 0;
+    }
+
+    &__toggle {
+      width: 3.5em;
+      height: 3.5em;
+      border-width: 3px;
+
+      &-left {
+        margin-right: 1.25rem;
+      }
+
+      &-right {
+        margin-left: 1.25rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@include media-rg {
+  .carousel {
+    &__toggle-div {
+      margin: 1.5rem 0 0;
+    }
+
+    &__toggle {
+      width: 4em;
+      height: 4em;
+      border-width: 3.5px;
+
+      &-left {
+        margin-right: 1.5rem;
+      }
+
+      &-right {
+        margin-left: 1.5rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 1.75em;
+    }
+  }
+}
+
+@include media-md {
+  .carousel {
+    &__toggle-div {
+      margin: 1.85rem 0 0;
+    }
+
+    &__toggle {
+      width: 4.5em;
+      height: 4.5em;
+      border-width: 4px;
+
+      &-left {
+        margin-right: 1.75rem;
+      }
+
+      &-right {
+        margin-left: 1.75rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 2.1em;
+    }
+  }
+}
+
+@include media-lg {
+  .carousel {
+    &__toggle-div {
+      margin: 2rem 0 0;
+    }
+
+    &__toggle {
+      width: 5em;
+      height: 5em;
+      border-width: 5px;
+
+      &-left {
+        margin-right: 2rem;
+      }
+
+      &-right {
+        margin-left: 2rem;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: 2.45em;
+    }
+  }
+}
+
+@include media-xl {
+  .carousel {
       &__toggle-div {
-        margin: .75rem 0 0;
+        margin: 2.5rem 0 0;
       }
   
       &__toggle {
-        width: 3em;
-        height: 3em;
-        border-width: 3px;
+        width: 5.75em;
+        height: 5.75em;
   
         &-left {
-          margin-right: 1rem;
+          margin-right: 2.5rem;
         }
   
         &-right {
-          margin-left: 1rem;
+          margin-left: 2.5rem;
         }
       }
   
       &__toggle-icon {
-        font-size: 1em;
+        font-size: 2.8em;
       }
     }
 }
-
-@include media-sm {}
-
-@include media-rg {}
-
-@include media-md {}
-
-@include media-lg {}
-
-@include media-xl {}
 
 /* ************************* */
 /* ***     DARK MODE     *** */
@@ -78,6 +223,7 @@
       &:hover,
       &:focus {
         color: lighter($kuzo-purp, 20%);
+        @include box-shadow($bs-purp);
       }
     }
   }

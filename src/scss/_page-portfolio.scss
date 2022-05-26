@@ -12,6 +12,7 @@
   }
   
   &__title-icon-div {
+    margin: -.25rem 0 0;
     width: 100%;
     @include flex(row, center, center);
   }
@@ -63,7 +64,7 @@
     margin: 0;
     &__container {
       &-carousel {
-        @include absolute-center(-42%);
+        @include absolute-center(-44%);
       }
     }
 
@@ -111,7 +112,7 @@
       width: 100%;
   
       &-carousel {
-        @include absolute-center;
+        @include absolute-center(-45%);
       }
     }
 
@@ -159,21 +160,58 @@
   }
 }
 
-// @include media-sm-short {
-//   .portfolio {
-//     margin: 0;
-//     &__container {
-//       &-carousel {
-//         @include absolute-center(-47%);
-//       }
-//     }
-//   }
-// }
+@include media-sm-short {
+  .portfolio {
+    margin: 0;
+    &__container {
+      &-carousel {
+        @include absolute-center(-46%);
+      }
+    }
+  }
+}
 
-@include media-rg {}
+@include media-rg {
+  .portfolio {
+    &__container {
+      &-carousel {
+        @include absolute-center(-44%);
+      }
+    }
+  }
+}
 
-@include media-md {}
+@include media-md {
+  .portfolio {
+    &__container {
+      &-carousel {
+        @include absolute-center(-46%);
+      }
+    }
+    &__title-icon-div {
+      margin: 0;
+    }
+  }
+}
 
-@include media-lg {}
+@include media-lg {
+  .portfolio {
+    &__container {
+      &-carousel {
+        @include absolute-center(-48%);
+      }
+    }
+  }
+}
+
+@include media-lg-landscape {
+  .portfolio {
+      &__container {
+        &-carousel {
+          @include absolute-center(-40%);
+        }
+      }
+    }
+}
 
 @include media-xl {}

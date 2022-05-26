@@ -13,26 +13,30 @@ export default function ProjectCard({ project }) {
   const tl = gsap.timeline()
 
   useEffect(() => {
+    tl.from(q('.thumb'), {
+      opacity: 0,
+      duration: .75,
+    })
     tl.from(q('.meow'), {
       opacity: 0,
       y: -10,
-      stagger: 0.1
+      stagger: 0.15
     })
     tl.from(q('.bark'), {
       opacity: 0,
       y: -10,
       scale: 1.5,
       stagger: 0.1,
-      delay: -0.35
+      delay: -0.85
     })
   }, [project])
 
   return (
     <div className={'project-card'} ref={projectCard}>
       <h3 className="project-card__title section__subtitle meow">{name}</h3>
-      <div className="project-card__img-container meow">
+      <div className="project-card__img-container">
         <a
-          className="project-card__img-link"
+          className="project-card__img-link thumb"
           href={link}
           target="_blank"
           referrer="noreferrer"
