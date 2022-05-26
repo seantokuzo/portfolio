@@ -168,6 +168,39 @@
         @include absolute-center(-46%);
       }
     }
+    &__icon-grid {
+      padding: 4px;
+
+      grid-template-columns: repeat(4, 5px);
+      grid-template-rows: repeat(4, 5px);
+      border-radius: 2px;
+    }
+
+    &__icon-carousel {
+      padding: 6px 5.5px;
+      border: 1px solid;
+      border-radius: 2px;
+      font-size: .85em;
+      border-width: 1px;
+    }
+
+    &__icon-grid-sqr {
+      width: 3px;
+      height: 3px;
+      background-color: $kuzo-sherbert;
+    }
+
+    &__icon-grid,
+    &__icon-grid-sqr {
+      border-width: 1px;
+    }
+  }
+  .dark-mode {
+    .portfolio {
+      &__icon-grid-sqr {
+        background-color: $kuzo-purp;
+      }
+    }
   }
 }
 
@@ -177,6 +210,15 @@
       &-carousel {
         @include absolute-center(-44%);
       }
+    }
+    &__icon-grid {
+      padding: 5px;
+    }
+
+    &__icon-carousel {
+      padding: 7px;
+      border-radius: 2px;
+      font-size: .95em;
     }
   }
 }
@@ -199,6 +241,32 @@
     &__container {
       &-carousel {
         @include absolute-center(-48%);
+      }
+    }
+    &__icon{
+      margin-left: 1rem;
+    }
+    &__icon-grid {
+      padding: 6px;
+      grid-template-columns: repeat(4, 6px);
+      grid-template-rows: repeat(4, 6px);
+    }
+
+    &__icon-grid-sqr {
+      width: 4px;
+      height: 4px;
+      background-color: transparent;
+    }
+    
+    &__icon-carousel {
+      padding: 9px;
+      font-size: 1.15em;
+    }
+  }
+  .dark-mode {
+    .portfolio {
+      &__icon-grid-sqr {
+        background-color: transparent;
       }
     }
   }
@@ -228,6 +296,20 @@
         &-carousel {
           @include absolute-center(-46%);
         }
+      }
+
+      &__icon-grid {
+        padding: 8px;
+        grid-template-columns: repeat(4, 7px);
+        grid-template-rows: repeat(4, 7px);
+      }
+      &__icon-grid-sqr {
+        width: 5px;
+        height: 5px;
+      }
+      &__icon-carousel {
+        padding: 11px;
+        font-size: 1.35em;
       }
     }
 }

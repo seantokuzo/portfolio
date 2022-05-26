@@ -16,14 +16,13 @@ export default function ProjectCard({ project }) {
     tl.from(q('.thumb'), {
       opacity: 0,
       x: 20,
-      // scale: 0,
-      duration: .25,
+      duration: .25
     })
     tl.from(q('.meow'), {
       opacity: 0,
       y: -10,
       stagger: 0.1,
-      delay: -0.25
+      delay: -0.15
     })
     tl.from(q('.bark'), {
       opacity: 0,

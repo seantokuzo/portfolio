@@ -73,7 +73,7 @@ export default function Portfolio() {
         <div className="portfolio__title-empty-div">
           {gridMode ? carouselBtn : gridIcon}
         </div>
-        <h1 className="section__title portfolio__title">MyWork</h1>
+        <h1 className="section__title portfolio__title">My Work</h1>
         {gridMode ? carouselBtn : gridIcon}
       </div>
       {myWorkContent}
