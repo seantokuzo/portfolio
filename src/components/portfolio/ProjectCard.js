@@ -15,26 +15,29 @@ export default function ProjectCard({ project }) {
   useEffect(() => {
     tl.from(q('.thumb'), {
       opacity: 0,
-      duration: .75,
+      x: 20,
+      // scale: 0,
+      duration: .25,
     })
     tl.from(q('.meow'), {
       opacity: 0,
       y: -10,
-      stagger: 0.15
+      stagger: 0.1,
+      delay: -0.25
     })
     tl.from(q('.bark'), {
       opacity: 0,
       y: -10,
       scale: 1.5,
-      stagger: 0.1,
-      delay: -0.85
+      stagger: 0.075,
+      delay: -0.65
     })
   }, [project])
 
   return (
     <div className={'project-card'} ref={projectCard}>
       <h3 className="project-card__title section__subtitle meow">{name}</h3>
-      <div className="project-card__img-container">
+      <div className="project-card__img-container thumb">
         <a
           className="project-card__img-link thumb"
           href={link}
@@ -42,7 +45,7 @@ export default function ProjectCard({ project }) {
           referrer="noreferrer"
         >
           <img
-            className="project-card__img"
+            className="project-card__img thumb"
             src={img}
             alt={`${name} project preview`}
           />

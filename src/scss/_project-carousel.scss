@@ -185,6 +185,14 @@
   }
 }
 
+@include media-lg-landscape {
+  .carousel {
+    &__toggle-div {
+      margin: 1.75rem 0 0;
+    }
+  }
+}
+
 @include media-xl {
   .carousel {
       &__toggle-div {

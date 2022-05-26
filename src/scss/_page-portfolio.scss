@@ -206,12 +206,28 @@
 
 @include media-lg-landscape {
   .portfolio {
+    &__title-icon-div {
+      margin: -1rem 0 0;
+    }
+
+    &__container {
+      &-carousel {
+        @include absolute-center(-42%);
+      }
+    }
+  }
+}
+
+@include media-xl {
+  .portfolio {
+      &__title-icon-div {
+        margin: 0;
+      }
+  
       &__container {
         &-carousel {
-          @include absolute-center(-40%);
+          @include absolute-center(-46%);
         }
       }
     }
 }
-
-@include media-xl {}
