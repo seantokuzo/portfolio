@@ -1,13 +1,8 @@
 .contact {
   width: 100%;
   max-width: 800px;
-  height: calc(100% - 7rem);
-
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 4rem);
-  
+  @include absolute-center;
+  min-height: 70%;
   z-index: 1;
 
   background-size: cover;
@@ -15,59 +10,43 @@
   background-repeat: no-repeat;
 
   box-shadow: inset 0 0 10px 20px $color-light;
-
   &__title {
-    margin-bottom: 2rem;
+    text-align: center;
   }
-  
   &__form {
     @include flex(column, center, center);
-    width: 80%;
-    max-width: 300px;
-  
-    padding: 1rem;
-    
+    max-width: 500px;
     background-color: rgba($color-light, .75);
-  }
-  
-  &__form-label {
-    @include flex(column, flex-start, center);
-    width: 100%;
-  
-    padding: 2px 5px;
-    
-    &:active,
-    &:focus {
-      border: none;
-      appearance: none;
+    &-label {
+      @include flex(column, flex-start, center);
+      width: 100%;
+      &:active,
+      &:focus {
+        border: none;
+        appearance: none;
+      }
+    }
+    &-el {
+      margin: 5px 0 10px;
     }
   }
   
-  &__form-el {
-    margin: 5px 0 10px;
-  }
   
   &__input,
   &__text-area {
     width: 100%;
-    font-size: .75em;
     padding: .25rem;
   }
   
   &__text-area {
     max-width: 100%;
     min-width: 100%;
-    font-size: .75em;
     padding: .25rem;
     min-height: 5rem;
   }
   
   &__submit {
-    margin: 1rem 0;
-    padding: .5rem 1rem;
-  
     font-weight: bolder;
-  
     color: $color-light;
     background-color: $kuzo-sherbert;
     border: none;
@@ -94,21 +73,125 @@
   }
 }
 
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
 .dark-mode {
   .contact { 
     box-shadow: inset 0 0 10px 20px $color-dark;
-  }
-  
-  .contact__form {
-    background-color: rgba($color-dark, .75);
-  }
-
-  .contact__submit {
-    color: $color-dark;
-    background-color: $kuzo-purp;
+    &__form {
+      background-color: rgba($color-dark, .75);
+    }
+    &__submit {
+      color: $color-dark;
+      background-color: $kuzo-purp;
+    }
   }
 
   .thankyou {
     background-color: rgba($color-dark, .75);
   }
 }
+
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {
+  .contact {
+    max-height: 55%;
+    &__title {
+      margin-bottom: .5rem;
+      font-size: .9em;
+    }
+    &__form {
+      width: 70%;
+      padding: .5rem 1rem;
+      &-label {
+        font-size: .75em;
+        padding: 2px 5px;
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+      &-el {
+        margin: 2px 0 5px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .75em;
+    }
+
+    &__text-area {
+      font-size: .75em;
+      min-height: 1rem;
+    }
+
+    &__submit {
+      font-size: .75em;
+      margin: .25rem 0;
+      padding: .4rem .75rem;
+    }
+  }
+}
+
+@include media-sm {
+  .contact {
+    &__title {
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+    }
+
+    &__form {
+      width: 70%;
+      padding: 1rem;
+
+      &-label {
+        font-size: 1em;
+        padding: 2px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+      &-el {
+        margin: 5px 0 10px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .75em;
+    }
+
+    &__text-area {
+      font-size: .75em;
+      min-height: 5rem;
+    }
+
+    &__submit {
+      font-size: .85em;
+      margin: 1rem 0;
+      padding: .5rem 1rem;
+    }
+  }
+}
+
+// @include media-sm-short {}
+
+@include media-rg {}
+
+@include media-md {}
+
+// @include media-md-landscape {}
+
+@include media-lg {}
+
+// @include media-lg-landscape {}
+
+@include media-xl {}
