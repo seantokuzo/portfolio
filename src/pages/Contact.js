@@ -33,9 +33,9 @@ export default function Contact() {
       className="contact__form contact-anim"
       name="contact"
       method="POST"
-      action="https://formsubmit.co/38042c1553ef5f2587e7306e98faf815"
+      // action="https://formsubmit.co/38042c1553ef5f2587e7306e98faf815"
       // GMAIL nahhh
-      // action="https://formsubmit.co/2fa702bb7180b1de86a943b3b462dc5a"
+      action="https://formsubmit.co/2fa702bb7180b1de86a943b3b462dc5a"
     >
       <h3 className="section__subtitle contact__title contact-anim">
         SEND ME A MESSAGE
