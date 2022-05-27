@@ -21,7 +21,7 @@ export default function Contact() {
     tl.from(q('.contact-anim'), {
       opacity: 0,
       y: -20,
-      stagger: .05,
+      stagger: 0.05,
       ease: 'bounce.out'
     })
   }, [darkMode])
@@ -31,9 +31,11 @@ export default function Contact() {
   const contactForm = (
     <form
       className="contact__form contact-anim"
-      action="https://formsubmit.co/38042c1553ef5f2587e7306e98faf815"
-      // action="https://formsubmit.co/me@seantokuzo.dev"
+      name="contact"
       method="POST"
+      action="https://formsubmit.co/38042c1553ef5f2587e7306e98faf815"
+      // GMAIL nahhh
+      // action="https://formsubmit.co/2fa702bb7180b1de86a943b3b462dc5a"
     >
       <h3 className="section__subtitle contact__title contact-anim">
         SEND ME A MESSAGE
