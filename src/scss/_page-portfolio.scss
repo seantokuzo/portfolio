@@ -1,10 +1,11 @@
 .portfolio {
   width: 100%;
+  padding: 0 0 5rem;
   
   &__container {
     width: 100%;
     &-carousel {
-      @include absolute-center;
+      // @include absolute-center;
     }
     &-grid {
       @include flex(column, center, center);
@@ -12,7 +13,7 @@
   }
   
   &__title-icon-div {
-    margin: -.25rem 0 0;
+    margin: 0;
     width: 100%;
     @include flex(row, center, center);
   }
@@ -68,12 +69,6 @@
 @include media-xs {
   .portfolio {
     margin: 0;
-    &__container {
-      &-carousel {
-        @include absolute-center(-44%);
-      }
-    }
-
     &__title-icon-div {
       margin-bottom: .5em;
     }
@@ -112,14 +107,8 @@
 
 @include media-sm {
   .portfolio {
-    margin: 0;
-
     &__container {
       width: 100%;
-  
-      &-carousel {
-        @include absolute-center(-45%);
-      }
     }
 
     &__title-icon-div {
@@ -161,11 +150,6 @@
 @include media-sm-short {
   .portfolio {
     margin: 0;
-    &__container {
-      &-carousel {
-        @include absolute-center(-46%);
-      }
-    }
     &__icon-grid {
       padding: 4px;
 
@@ -196,11 +180,6 @@
 
 @include media-rg {
   .portfolio {
-    &__container {
-      &-carousel {
-        @include absolute-center(-44%);
-      }
-    }
     &__icon-grid {
       padding: 5px;
     }
@@ -215,14 +194,6 @@
 
 @include media-md {
   .portfolio {
-    &__container {
-      &-carousel {
-        @include absolute-center(-46%);
-      }
-    }
-    &__title-icon-div {
-      margin: 0;
-    }
     &__icon-grid {
       padding: 5px;
 
@@ -251,27 +222,8 @@
   }
 }
 
-// @include media-md-landscape {
-//   .portfolio {
-//     &__title-icon-div {
-//       margin: -1rem 0 0;
-//     }
-
-//     &__container {
-//       &-carousel {
-//         @include absolute-center(-42%);
-//       }
-//     }
-//   }
-// }
-
 @include media-lg {
   .portfolio {
-    &__container {
-      &-carousel {
-        @include absolute-center(-48%);
-      }
-    }
     &__icon{
       margin-left: 1rem;
     }
@@ -298,12 +250,6 @@
     &__title-icon-div {
       margin: -1rem 0 0;
     }
-
-    &__container {
-      &-carousel {
-        @include absolute-center(-42%);
-      }
-    }
   }
 }
 
@@ -312,13 +258,6 @@
       &__title-icon-div {
         margin: 0;
       }
-  
-      // &__container {
-      //   &-carousel {
-      //     @include absolute-center(-42%);
-      //   }
-      // }
-
       &__icon-grid {
         padding: 8px;
         grid-template-columns: repeat(4, 7px);

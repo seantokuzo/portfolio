@@ -110,6 +110,7 @@
 /* ************************* */
 @include media-xs {
   .project-card {
+    margin-top: 0.25rem;
     padding: .5rem 1rem .5rem;
     border-width: 3px;
     letter-spacing: 1px;
@@ -174,6 +175,7 @@
 
 @include media-sm-short {
   .project-card {
+    margin-top: 0.75rem;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto auto;
 
@@ -231,6 +233,7 @@
 @include media-sm {
   .project-card {
     max-width: 375px;
+    margin-top: .5rem;
     padding: .75rem;
 
     grid-template-columns: auto;
@@ -302,6 +305,7 @@
 
 @include media-rg {
   .project-card {
+    margin-top: 1rem;
     padding: 1rem;
 
     &__title {
@@ -363,6 +367,7 @@
 @include media-md {
   .project-card {
     max-width: 450px;
+    margin-top: 2rem;
     padding: 1.5rem 0;
     border-width: 4px;
 
@@ -440,11 +445,84 @@
   }
 }
 
+@include media-sm-landscape {
+  .project-card {
+    border-width: 3px;
+    width: 80%;
+    max-width: 800px;
+    padding: 1rem 2rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title title title"
+      "links img stack"
+      "tag tag tag";
+      align-items: center;
+
+    &__title {
+      // font-size: .75em;
+    }
+
+    &__img-container {
+      width: 150px;
+      height: 150px;
+      margin: 0 2rem 1rem;
+      border-width: 1px;
+    }
+
+    &__tagline {
+      width: 92%;
+      margin: .25rem auto 0;
+      min-height: 2rem;
+    }
+
+    &__links {
+      margin: .25rem 0;
+
+      &-div {
+        width: 90%;
+      }
+
+      &-link {
+        margin: .25rem 0 0;
+
+        &-icon {
+          font-size: 1.35em;
+        }
+
+        &-text {
+          font-size: .75em;
+        }
+      }
+    }
+
+    &__stack {
+      &-title {
+        margin: .5rem 0 .25rem;
+      }
+
+      &-icons {
+        &-icon {
+          width: 1.5rem;
+          margin: 3px 7px;
+
+          &-special {
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @include media-lg-landscape {
   .project-card {
+    margin-top: 1.5rem;
     padding: 1rem 2rem;
     max-width: 650px;
 
+    grid-template-columns: auto auto;
     grid-template-areas:
         "title title"
         "img links"
