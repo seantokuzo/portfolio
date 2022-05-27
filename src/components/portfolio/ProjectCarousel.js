@@ -13,11 +13,11 @@ export default function ProjectCarousel() {
   const q = gsap.utils.selector(carouselRef)
 
   useEffect(() => {
-    if (carouselRef && slide !== 'no') {
+    if (carouselRef) {
       gsap.from(q('.project-card'), {
         rotateY: slide === 'next' ? '180deg' : '-180deg',
         duration: 0.4,
-        x: slide === 'next' ? '100%' : '-100%'
+        x: slide === 'next' ? '100%' : slide === 'prev' ? '-100%' : '0'
       })
     }
   }, [currentProject])
