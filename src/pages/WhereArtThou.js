@@ -1,19 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { auxButtonFactory } from '../utils/buttonFactory'
 
 export default function WhereArtThou() {
   const navigate = useNavigate()
-
-  const sampleBtn = (
-    <div
-      className="sample-btn-out where-art-thou__btn-out"
-      onClick={() => navigate(-1)}
-    >
-      <div className="sample-btn-in where-art-thou__btn-in">
-        <i className="fa-solid fa-backward where-art-thou__btn-icon"></i>
-      </div>
-    </div>
-  )
 
   return (
     <section className="where-art-thou section">
@@ -31,7 +21,7 @@ export default function WhereArtThou() {
       <h3 className="section__subtitle where-art-thou__subtitle">
         Get Me Outta Here
       </h3>
-      {sampleBtn}
+      {auxButtonFactory(() => navigate(-1))}
     </section>
   )
 }

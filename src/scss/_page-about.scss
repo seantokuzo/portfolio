@@ -14,9 +14,7 @@
   
   &__nav {
     @include flex(row, center, center);
-    margin: 2.5rem auto -2px 0;
     &-link {
-      padding: 4px 7px;
       border: 2px solid;
     }
   }
@@ -42,7 +40,6 @@
   &__starter {
     width: 100%;
     @include flex(column, center, center);
-    padding: 6rem .15rem 5rem;
     &-title {
       margin: -2rem 0 2rem;
       font-weight: bolder;
@@ -183,6 +180,18 @@ $stack-icon-sm: 35px;
     &__blurb {
       padding: 2rem;
     }
+
+    &__nav {
+      margin: 1rem auto -2px 0;
+
+      &-link {
+        padding: 4px 7px;
+      }
+    }
+
+    &__starter {
+      padding: 4rem 0 2.5rem;
+    }
   }
 }
 
@@ -215,6 +224,13 @@ $stack-icon-sm: 35px;
       &-text {
         // margin: .75rem 0;
         font-size: 1em;
+      }
+    }
+
+    &__nav {
+      margin: 2.5rem auto -2px 0;
+      &-link {
+        padding: 4px 7px;
       }
     }
 
@@ -270,7 +286,7 @@ $stack-icon-sm: 35px;
     &__blurb {
       &-text {
         // margin: .75rem 0;
-        font-size: 1em;
+        font-size: 1.1em;
       }
     }
     &__subpage-btn-div {
@@ -313,12 +329,6 @@ $stack-icon-sm: 35px;
 @include media-lg {
   .about {
     padding: 0 0 7rem;
-    &__blurb {
-      &-text {
-        // margin: .75rem 0;
-        font-size: 1.1em;
-      }
-    }
     &__subpage-btn-div {
       margin: 3rem 0 1rem;
     }
@@ -361,7 +371,6 @@ $stack-icon-sm: 35px;
   .about {
     &__blurb {
       &-text {
-        // margin: .75rem 0;
         font-size: 1.2em;
       }
     }

@@ -1,6 +1,7 @@
 .where-art-thou {
   @include absolute-center;
-  width: 100%;
+  width: 90%;
+  text-align: center;
 
   &__title {
     margin: 0;
@@ -16,55 +17,140 @@
   &__subtitle {
     margin: 2rem 0 1rem;
   }
+}
 
-  &__btn-out {
-    width: 75px;
-    height: 75px;
-    .where-art-thou__btn-in {
-      &:active {
-        width: 71px;
-        height: 71px;
-
-        .where-art-thou__btn-icon {
-          font-size: 1.65em;
-        }
-      }
-    }
-  }
-  
-  &__btn-in {
-    width: 68px;
-    height: 68px;
-    
-  }
-
-  &__btn-icon {
-    color: $kuzo-sherbert;
-    font-size: 1.75em;
-    margin-right: .05em;
-  }
+.aux-btn-text {
+  color: darken($kuzo-sherbert, 30)
 }
 
 /* ************************* */
 /* ***   MEDIA QUERIES   *** */
 /* ************************* */
-@include media-xs {}
+@include media-xs {
+  .where-art-thou {
+    &__title {
+      font-size: .9em;
+    }
+    &__gif {
+      margin: 1rem 0 0;
+      width: 65%;
+    }
+    &__subtitle {
+      font-size: .8em;
+      margin: 1rem;
+    }
+  }
+  .aux-btn-text {
+    font-size: 1.25em;
+  }
+}
 
-@include media-sm {}
+@include media-sm {
+  .where-art-thou {
+    &__title {
+      font-size: 1.15em;
+    }
+    
+    &__gif {
+      margin: 2rem 0 0;
+      width: 75%;
+    }
+    
+    &__subtitle {
+      font-size: 1em;
+      margin: 1rem 0 1rem;
+    }
+  }
+  .aux-btn-text {
+    font-size: 1.3em;
+  }
+}
 
-@include media-sm-short {}
+@include media-rg {
+  .where-art-thou {
+      &__title {
+        font-size: 1.5em;
+      }
+  
+      &__gif {
+        margin: 3rem 0 0;
+        width: 70%;
+      }
+  
+      &__subtitle {
+        font-size: 1.1em;
+        margin: 2rem 0;
+      }
+    }
+  
+    .aux-btn-text {
+      font-size: 1.6em;
+    }
+}
 
-@include media-rg {}
+@include media-md {
+  .where-art-thou {
+    &__title {
+      font-size: 2em;
+    }
 
-@include media-md {}
+    &__subtitle {
+      font-size: 1.5em;
+      margin: 3rem 0;
+    }
+  }
 
-@include media-md-landscape {}
+  .aux-btn-text {
+    font-size: 1.6em;
+  }
+}
+
+@include media-sm-landscape {
+  .where-art-thou {
+    &__gif {
+      margin: 2rem 0 0;
+      width: 30%;
+      max-width: 100px;
+    }
+  }
+}
+
+@include media-md-landscape {
+  .where-art-thou {
+    &__gif {
+      margin: 2rem 0 0;
+      width: 40%;
+      max-width: 400px;
+    }
+  }
+}
 
 @include media-lg {}
 
-@include media-lg-landscape {}
+@include media-lg-landscape {
+  .where-art-thou {
+    &__gif {
+      max-width: 500px;
+    }
+  }
+}
 
-@include media-xl {}
+@include media-xl {
+  .where-art-thou {
+    &__title {
+      font-size: 2.5em;
+    }
+  
+    &__subtitle {
+      font-size: 1.5em;
+      margin: 3rem 0;
+    }
+    &__gif {
+      max-width: 600px;
+      margin: 3rem 0 0;
+    }
+  }
+}
 
 /* ************************* */
 /* ***     DARK MODE     *** */
@@ -74,5 +160,9 @@
     &__btn-icon {
       color: darken($kuzo-purp, 40);
     }
+  }
+
+  .aux-btn-text {
+    color: darken($kuzo-purp, 30)
   }
 }

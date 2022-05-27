@@ -14,37 +14,37 @@ export default function Home({ logoActive, toggleLogoActive }) {
   const q = gsap.utils.selector(home)
   const tl = gsap.timeline()
 
-  // useEffect(() => {
-  //   tl.from(q('.home__span'), {
-  //     opacity: 0,
-  //     stagger: 0.05,
-  //     delay: 0.25
-  //   })
-  //   tl.from(q('.home__span-name'), {
-  //     opacity: 0,
-  //     rotateY: '180deg',
-  //     stagger: 0.06,
-  //     delay: -0.06
-  //   })
-  //   tl.from(q('.home__span-fed'), {
-  //     y: 10,
-  //     opacity: 0,
-  //     stagger: 0.3,
-  //     delay: -0.1
-  //   })
-  //   tl.from(q('.home__subtitle-welcome'), {
-  //     opacity: 0,
-  //     duration: 2
-  //   })
-  //   tl.from(
-  //     q('.home__next'),
-  //     {
-  //       opacity: 0,
-  //       duration: 2
-  //     },
-  //     '-=1.5'
-  //   )
-  // }, [])
+  useEffect(() => {
+    tl.from(q('.home__span'), {
+      opacity: 0,
+      stagger: 0.05,
+      delay: 0.25
+    })
+    tl.from(q('.home__span-name'), {
+      opacity: 0,
+      rotateY: '180deg',
+      stagger: 0.06,
+      delay: -0.06
+    })
+    tl.from(q('.home__span-fed'), {
+      y: 10,
+      opacity: 0,
+      stagger: 0.3,
+      delay: -0.1
+    })
+    tl.from(q('.home__subtitle-welcome'), {
+      opacity: 0,
+      duration: 2
+    })
+    tl.from(
+      q('.home__next'),
+      {
+        opacity: 0,
+        duration: 2
+      },
+      '-=1.5'
+    )
+  }, [])
 
   const line1El = (
     <>
@@ -86,19 +86,10 @@ export default function Home({ logoActive, toggleLogoActive }) {
     ></i>
   )
 
-  // const sampleBtn = (
-  //   <div className="sample-btn-out">
-  //     <div className="sample-btn-in">
-  //       <i id="break-increment" className="fa-solid fa-angle-up btn-icon"></i>
-  //     </div>
-  //   </div>
-  // )
-
   return (
     <section className="home section" ref={home}>
       <div className="home__title-container">
         <h1 className="home__title section__title">{line1El}</h1>
-        {/* <h1 className="home__title section__title">{line2aEl}</h1> */}
         <h1 className="home__title home__title-name section__title">
           {line2El}
         </h1>
@@ -108,7 +99,6 @@ export default function Home({ logoActive, toggleLogoActive }) {
         <h3 className="home__subtitle-welcome section__subtitle">welcome</h3>
         {playLink}
       </div>
-      {/* {logoActive && sampleBtn} */}
     </section>
   )
 }

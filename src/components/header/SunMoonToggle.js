@@ -13,21 +13,21 @@ export default function SunMoonToggle() {
   const q = gsap.utils.selector(toggleBtn)
 
   useEffect(() => {
-    // if (pathname === '/') {
-    //   gsap.from(q('.toggle-btn'), {
-    //     opacity: 0,
-    //     duration: 1,
-    //     delay: 6.75,
-    //     y: '-100px'
-    //   })
-    // } else {
-    //   gsap.from(q('.toggle-btn'), {
-    //     y: '-10px',
-    //     opacity: 0,
-    //     duration: 1,
-    //     delay: 0.5
-    //   })
-    // }
+    if (pathname === '/') {
+      gsap.from(q('.toggle-btn'), {
+        opacity: 0,
+        duration: 1,
+        delay: 6.75,
+        y: '-100px'
+      })
+    } else {
+      gsap.from(q('.toggle-btn'), {
+        y: '-10px',
+        opacity: 0,
+        duration: 1,
+        delay: 0.5
+      })
+    }
 
     Draggable.create('.toggle-btn', {
       type: 'x,y',

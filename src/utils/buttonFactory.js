@@ -13,4 +13,14 @@ const buttonFactory = (text) => {
   )
 }
 
-export { buttonFactory }
+const auxButtonFactory = (handleClick) => {
+  return (
+    <div className={`sample-btn`} onClick={handleClick}>
+      <div className="sample-btn-in">
+        <i className="fa-solid fa-chevron-left aux-btn-text"></i>
+      </div>
+    </div>
+  )
+}
+
+export { buttonFactory, auxButtonFactory }

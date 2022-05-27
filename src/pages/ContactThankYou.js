@@ -1,16 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { auxButtonFactory } from '../utils/buttonFactory'
 
 export default function ContactThankYou({ name }) {
-  const returnBtn = (
-    <Link to="/portfolio">
-      <div className="sample-btn-out where-art-thou__btn-out">
-        <div className="sample-btn-in where-art-thou__btn-in">
-          <i className="fa-solid fa-backward where-art-thou__btn-icon"></i>
-        </div>
-      </div>
-    </Link>
-  )
+  const returnBtn = <Link to="/portfolio">{auxButtonFactory()}</Link>
 
   return (
     <div className="section thankyou">

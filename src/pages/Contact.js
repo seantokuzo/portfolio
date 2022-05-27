@@ -13,20 +13,19 @@ export default function Contact() {
 
   const { pathname } = useLocation()
 
-  const contactEl = useRef()
-  const q = gsap.utils.selector(contactEl)
+  const contactRef = useRef()
+  const q = gsap.utils.selector(contactRef)
+  console.log(q)
   const tl = gsap.timeline()
 
-  // useEffect(() => {
-  //   if (pathname === '/contact') {
-  //     tl.from(q('contact-anim'), {
-  //       opacity: 0,
-  //       y: -10,
-  //       stagger: 2,
-  //       ease: 'power1.in'
-  //     })
-  //   }
-  // }, [pathname])
+  useEffect(() => {
+    tl.from(q('.contact-anim'), {
+      opacity: 0,
+      y: -20,
+      stagger: .05,
+      ease: 'bounce.out'
+    })
+  }, [darkMode])
 
   const bgImg = darkMode ? nightBg : dayBg
 
@@ -38,12 +37,12 @@ export default function Contact() {
       method="POST"
     >
       <h3 className="section__subtitle contact__title contact-anim">
-        send me a message
+        SEND ME A MESSAGE
       </h3>
       <label className="contact__form-label contact-anim">
         name
         <input
-          className="contact__input contact__form-el"
+          className="contact__input contact__form-el contact-anim"
           onChange={(e) => setName(e.target.value)}
           type="text"
           max={40}
@@ -56,7 +55,7 @@ export default function Contact() {
       <label className="contact__form-label contact-anim">
         email
         <input
-          className="contact__input contact__form-el"
+          className="contact__input contact__form-el contact-anim"
           onChange={(e) => setEmail(e.target.value)}
           type="email"
           placeholder="bart@simpson.com"
@@ -67,7 +66,7 @@ export default function Contact() {
       <label className="contact__form-label contact-anim">
         message
         <textarea
-          className="contact__text-area contact__form-el"
+          className="contact__text-area contact__form-el contact-anim"
           onChange={(e) => setMessage(e.target.value)}
           placeholder="this portfolio stinks"
           name="message"
@@ -91,7 +90,7 @@ export default function Contact() {
     <section
       className="contact section"
       style={{ backgroundImage: `url(${bgImg})` }}
-      ref={contactEl}
+      ref={contactRef}
     >
       {pathname === '/contact' && contactForm}
       <Outlet name={name} />

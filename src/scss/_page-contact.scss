@@ -1,6 +1,6 @@
 .contact {
-  width: 100%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 1000px;
   @include absolute-center;
   min-height: 70%;
   z-index: 1;
@@ -8,8 +8,9 @@
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
+  border-color: $color-light;
 
-  box-shadow: inset 0 0 10px 20px $color-light;
+  @include box-shadow($bs-dark);
   &__title {
     text-align: center;
   }
@@ -36,6 +37,7 @@
   &__text-area {
     width: 100%;
     padding: .25rem;
+    font-family: 'Orbitron', monospace, sans-serif;
   }
   
   &__text-area {
@@ -78,7 +80,7 @@
 /* ************************* */
 .dark-mode {
   .contact { 
-    box-shadow: inset 0 0 10px 20px $color-dark;
+    @include box-shadow($bs-purp);
     &__form {
       background-color: rgba($color-dark, .75);
     }
@@ -101,7 +103,7 @@
     max-height: 55%;
     &__title {
       margin-bottom: .5rem;
-      font-size: .9em;
+      font-size: .8em;
     }
     &__form {
       width: 70%;
@@ -122,16 +124,15 @@
 
     &__input,
     &__text-area {
-      font-size: .75em;
+      font-size: .6em;
     }
 
     &__text-area {
-      font-size: .75em;
       min-height: 1rem;
     }
 
     &__submit {
-      font-size: .75em;
+      font-size: .7em;
       margin: .25rem 0;
       padding: .4rem .75rem;
     }
@@ -142,15 +143,16 @@
   .contact {
     &__title {
       margin-bottom: 1rem;
-      font-size: 1.1em;
+      font-size: 1em;
     }
 
     &__form {
-      width: 70%;
+      width: 80%;
+      max-width: 265px;
       padding: 1rem;
 
       &-label {
-        font-size: 1em;
+        font-size: .9em;
         padding: 2px 5px;
 
         &:active,
@@ -170,8 +172,51 @@
     }
 
     &__text-area {
-      font-size: .75em;
       min-height: 5rem;
+    }
+
+    &__submit {
+      font-size: .95em;
+      margin: 1rem 0;
+      padding: .5rem 1rem;
+    }
+  }
+}
+
+@include media-sm-short {
+  .contact {
+    &__title {
+      margin-bottom: 1rem;
+      font-size: .9em;
+    }
+
+    &__form {
+      width: 80%;
+      max-width: 265px;
+
+      &-label {
+        font-size: .75em;
+        padding: 2px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+
+      &-el {
+        margin: 5px 0 10px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .75em;
+    }
+
+    &__text-area {
+      min-height: 3rem;
     }
 
     &__submit {
@@ -182,16 +227,175 @@
   }
 }
 
-// @include media-sm-short {}
+@include media-rg {
+  .contact {
+    &__title {
+      font-size: 1.2em;
+    }
 
-@include media-rg {}
+    &__form {
+      max-width: 290px;
 
-@include media-md {}
+      &-label {
+        font-size: 1em;
+        padding: 4px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+
+      &-el {
+        margin: 5px 0 10px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .75em;
+    }
+
+    &__text-area {
+      min-height: 5rem;
+    }
+
+    &__submit {
+      font-size: 1em;
+      margin: 1.5rem 0;
+      padding: .75rem 1.5rem;
+    }
+  }
+}
+
+@include media-md {
+  .contact {
+    &__title {
+      font-size: 1.3em;
+    }
+
+    &__form {
+      max-width: 350px;
+
+      &-label {
+        font-size: 1.15em;
+        padding: 4px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+
+      &-el {
+        margin: 5px 0 10px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .75em;
+    }
+
+    &__text-area {
+      min-height: 7rem;
+    }
+
+    &__submit {
+      font-size: 1em;
+      margin: 1.5rem 0;
+      padding: .75rem 1.5rem;
+    }
+  }
+}
 
 // @include media-md-landscape {}
 
-@include media-lg {}
+@include media-lg {
+  .contact {
+    &__title {
+      font-size: 1.4em;
+    }
 
-// @include media-lg-landscape {}
+    &__form {
+      max-width: 475px;
 
-@include media-xl {}
+      &-label {
+        font-size: 1.3em;
+        padding: 4px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
+        }
+      }
+
+      &-el {
+        margin: 5px 0 10px;
+      }
+    }
+
+    &__input,
+    &__text-area {
+      font-size: .9em;
+    }
+
+    &__text-area {
+      min-height: 9rem;
+    }
+
+    &__submit {
+      font-size: 1.15em;
+      margin: 1.5rem 0;
+      padding: .75rem 1.5rem;
+    }
+  }
+}
+
+@include media-lg-landscape {
+  .contact {
+    width: 65%;
+    max-width: 800px;
+      &__title {
+        font-size: 1.3em;
+      }
+    
+      &__form {
+        max-width: 400px;
+    
+        &-label {
+          font-size: 1.15em;
+          padding: 4px 5px;
+    
+          &:active,
+          &:focus {
+            border: none;
+            appearance: none;
+          }
+        }
+    
+        &-el {
+          margin: 5px 0 10px;
+        }
+      }
+    
+      &__text-area {
+        min-height: 7rem;
+      }
+    
+      &__submit {
+        font-size: 1em;
+        margin: 1.5rem 0;
+        padding: .75rem 1.5rem;
+      }
+  }
+}
+
+@include media-xl {
+  .contact {
+    max-width: 1000px;
+  }
+}
