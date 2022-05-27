@@ -4,7 +4,7 @@ import meCaddy from '../img/me/me-caddy.png'
 
 export default function AboutCaddy() {
   const caddy = (
-    <div className="about__blurb-div" id="extended-about">
+    <div className="about__blurb" id="extended-about">
       <img
         className="about__blurb-img"
         src={meCaddy}

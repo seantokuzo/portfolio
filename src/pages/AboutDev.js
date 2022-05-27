@@ -5,7 +5,7 @@ import meHiking from '../img/me/me-hiking.jpg'
 
 export default function AboutDev() {
   const dev = (
-    <div className="about__blurb-div">
+    <div className="about__blurb">
       <img
         className="about__blurb-img"
         src={meHiking}

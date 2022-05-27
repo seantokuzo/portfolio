@@ -44,6 +44,11 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
   box-shadow: $type;
 }
 
+@mixin bs-inset($color: $color-dark, $darken: 30, $amt1: 0.35, $amt2: 0.4) {
+  box-shadow: inset 0 0 2rem -.5rem rgba(darken($color, $darken), $amt1),
+              inset 0 0 1rem -.1rem rgba(darken($color, $darken), $amt2);
+}
+
 @mixin page-container {
   position: fixed;
   width: 100%;

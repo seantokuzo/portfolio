@@ -16,7 +16,7 @@ export default function About() {
         opacity: 0,
         duration: 0.15
       })
-      tl.from(q('.sample-btn-out'), {
+      tl.from(q('.sample-btn'), {
         opacity: 0,
         y: -100,
         ease: 'bounce.out',
@@ -52,7 +52,7 @@ export default function About() {
           stagger: 0.1
         })
       }
-      tl.from(q('.sample-btn-out'), {
+      tl.from(q('.sample-btn'), {
         opacity: 0,
         y: -50,
         ease: 'bounce.out',
@@ -77,7 +77,7 @@ export default function About() {
   )
 
   const aboutStarter = (
-    <div className="about__blurb-div about__starter-div about--initial">
+    <div className="about__blurb about__starter about--initial">
       <h3 className="section__subtitle about__starter-title">
         Pick a button, any button
       </h3>

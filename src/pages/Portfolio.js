@@ -4,7 +4,7 @@ import ProjectCarousel from '../components/portfolio/ProjectCarousel'
 import ProjectGrid from '../components/portfolio/ProjectGrid'
 
 export default function Portfolio() {
-  const [gridMode, setGridMode] = useState(true)
+  const [gridMode, setGridMode] = useState(false)
   const portfolio = useRef()
   const q = gsap.utils.selector(portfolio)
 

@@ -4,7 +4,7 @@ import meGuitar from '../img/me/me-guitar.png'
 
 export default function AboutAudio() {
   const audio = (
-    <div className="about__blurb-div" id="extended-about">
+    <div className="about__blurb" id="extended-about">
       <img
         className="about__blurb-img"
         src={meGuitar}
