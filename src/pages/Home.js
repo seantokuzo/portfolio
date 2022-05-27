@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useContext } from 'react'
-import { ThemeContext } from '../context/ThemeContext'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
 
 export default function Home({ logoActive, toggleLogoActive }) {
-  const { darkMode } = useContext(ThemeContext)
-  // console.log(darkMode)
-  const line1 = "hello there, i am"
+  const line1 = 'hello there, i am'
   const line2 = 'sean.tokuzo.simpson'
   const line3 = 'front end developer'
   const home = useRef()

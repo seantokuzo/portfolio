@@ -15,7 +15,6 @@ export default function Contact() {
 
   const contactRef = useRef()
   const q = gsap.utils.selector(contactRef)
-  console.log(q)
   const tl = gsap.timeline()
 
   useEffect(() => {

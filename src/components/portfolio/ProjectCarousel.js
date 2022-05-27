@@ -2,13 +2,12 @@ import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import ProjectCard from './ProjectCard'
 import projects from '../../data/projects'
-// import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid'
 
 export default function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(1)
   const [disableBtns, setDisableBtns] = useState(false)
   const [slide, setSlide] = useState('no')
-  // console.log(currentProject)
   const carouselRef = useRef()
   const q = gsap.utils.selector(carouselRef)
 
@@ -68,6 +67,7 @@ export default function ProjectCarousel() {
               : 'section__subtitle carousel__toggle-number'
           }
           onClick={() => jumpToProject(i + 1)}
+          key={nanoid()}
         >
           {i + 1}
         </p>
@@ -95,16 +95,3 @@ export default function ProjectCarousel() {
     </div>
   )
 }
-
-// const allProjects = (
-//   <div
-//     className="carousel__cards-container"
-//     style={{ transform: `translateX(-${currentProject - 1 * 100}%)` }}
-//   >
-//     {projects.map((project) => (
-//       <div className="carousel__item" key={nanoid()}>
-//         <ProjectCard project={project} currentProject={currentProject} />
-//       </div>
-//     ))}
-//   </div>
-// )

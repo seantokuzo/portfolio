@@ -5,7 +5,6 @@ import { buttonFactory } from '../utils/buttonFactory'
 
 export default function About() {
   const { pathname } = useLocation()
-  console.log(pathname)
   const about = useRef()
   const q = gsap.utils.selector(about)
   const tl = gsap.timeline()

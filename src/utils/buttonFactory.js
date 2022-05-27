@@ -13,7 +13,7 @@ const buttonFactory = (text) => {
   )
 }
 
-const auxButtonFactory = (handleClick) => {
+const auxButtonFactory = (handleClick = undefined) => {
   return (
     <div className={`sample-btn`} onClick={handleClick}>
       <div className="sample-btn-in">

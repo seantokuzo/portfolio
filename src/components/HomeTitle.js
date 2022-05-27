@@ -8,7 +8,6 @@ export default function HeaderTitle() {
   const [title3, setTitle3] = useState([])
   const [typingName, setTypingName] = useState(true)
   const [textMove, setTextMove] = useState(false)
-  // console.log(textMove)
 
   useEffect(() => {
     if (title1.length + title2.length + title3.length === 17) {

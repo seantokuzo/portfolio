@@ -32,6 +32,17 @@ a {
   cursor: pointer;
 }
 
+input,
+textarea {
+  border: 0;
+  outline: 0;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
 .dark-mode {
   color: $kuzo-purp;
   background: $color-dark;

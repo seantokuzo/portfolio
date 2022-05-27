@@ -6,7 +6,6 @@ import SunMoonToggle from './SunMoonToggle'
 
 export default function Header({ logoActive, toggleLogoActive }) {
   const { pathname } = useLocation()
-  console.log(pathname)
 
   const navList = useRef()
   const q = gsap.utils.selector(navList)
