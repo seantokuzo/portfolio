@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { useLocation } from 'react-router-dom'
 import { nanoid } from 'nanoid'
-import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
 
 export default function ProjectCard({ project }) {
@@ -16,20 +14,20 @@ export default function ProjectCard({ project }) {
     tl.from(q('.thumb'), {
       opacity: 0,
       scale: 0,
-      duration: 0.25
+      duration: 0.2
     })
     tl.from(q('.meow'), {
       opacity: 0,
       scale: 0,
       stagger: 0.1,
-      delay: -0.35
+      delay: -0.4
     })
     tl.from(q('.bark'), {
       opacity: 0,
-      y: -10,
-      scale: 1.5,
-      stagger: 0.1,
-      delay: -0.6
+      // scale: 0,
+      stagger: 0.15,
+      ease: 'power1.out',
+      delay: -0.7
     })
   }, [project])
 
@@ -79,7 +77,7 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
       <div className="project-card__stack meow">
-        <p className="project-card__stack-title project-card__text section__text meow">
+        <p className="project-card__stack-title project-card__text section__text bark">
           Made with:
         </p>
         <div className="project-card__stack-icons">

@@ -5,6 +5,7 @@ import ProjectGrid from '../components/portfolio/ProjectGrid'
 
 export default function Portfolio() {
   const [gridMode, setGridMode] = useState(false)
+  const [disableToggle, setDisableToggle] = useState(false)
   const portfolio = useRef()
   const q = gsap.utils.selector(portfolio)
 
@@ -28,8 +29,17 @@ export default function Portfolio() {
     })
   }, [gridMode])
 
+  const pauseToggle = () => {
+    setDisableToggle(true)
+    setTimeout(() => {
+      setDisableToggle(false)
+    }, 750)
+  }
+
   function toggleGridMode() {
+    if (disableToggle) return
     setGridMode((prev) => !prev)
+    pauseToggle()
   }
 
   const gridIcon = (
