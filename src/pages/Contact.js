@@ -94,7 +94,7 @@ export default function Contact() {
       ref={contactRef}
     >
       {pathname === '/contact' && contactForm}
-      <Outlet name={name} />
+      <Outlet />
     </section>
   )
 }
