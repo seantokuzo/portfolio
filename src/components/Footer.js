@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { gsap } from 'gsap'
 
 export default function Footer() {
+  const footerRef = useRef()
+  const q = gsap.utils.selector(footerRef)
+
+  useEffect(() => {
+    gsap.from(q('.footie-anim'), {
+      opacity: 0,
+      y: 20,
+      duration: 2,
+      ease: 'power4.out',
+      delay: 7
+    })
+  }, [])
+
   return (
-    <footer className="footer">
-      <p className="footer__text section__text">
+    <footer className="footer" ref={footerRef}>
+      <p className="footer__text section__text footie-anim">
         <span className="footer__copy">©</span> seantokuzo 2022
       </p>
-      <div className="footer__links">
+      <div className="footer__links footie-anim">
         <a
           href="https://www.linkedin.com/in/sean-tokuzo/"
           className="footer__link"

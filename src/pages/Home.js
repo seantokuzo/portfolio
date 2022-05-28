@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
@@ -10,6 +10,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
   const home = useRef()
   const q = gsap.utils.selector(home)
   const tl = gsap.timeline()
+  let windowWidth = window.innerWidth
 
   useEffect(() => {
     tl.from(q('.home__span'), {
@@ -72,7 +73,15 @@ export default function Home({ logoActive, toggleLogoActive }) {
     </>
   )
 
-  const playLink = logoActive ? (
+  // EASTER EGG PATICLES
+  const yesEgg = (
+    <Link to="/portfolio">
+      <i className="fa-solid fa-chevron-right section__next home__next home__next-link"></i>
+    </Link>
+  )
+
+  // FIRST BUTTON STARTS PARTICLES
+  const noEgg = logoActive ? (
     <Link to="/portfolio">
       <i className="fa-solid fa-chevron-right section__next home__next home__next-link"></i>
     </Link>
@@ -94,7 +103,8 @@ export default function Home({ logoActive, toggleLogoActive }) {
       </div>
       <div className="home__subtitle-container">
         <h3 className="home__subtitle-welcome section__subtitle">welcome</h3>
-        {playLink}
+        {/* TRY TO GUESS IF ITS MOBILE DEVICE TO HIDE PARTICLES LOL */}
+        {windowWidth < 1024 ? yesEgg : noEgg}
       </div>
     </section>
   )

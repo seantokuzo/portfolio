@@ -43,7 +43,7 @@ export default function App() {
         <Route path="*" element={<WhereArtThou />} />
       </Routes>
       <Footer />
-      {/* {logoActive && <Particles />} */}
+      {logoActive && <Particles />}
     </div>
   )
 }
