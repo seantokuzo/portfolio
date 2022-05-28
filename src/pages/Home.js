@@ -104,7 +104,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
       <div className="home__subtitle-container">
         <h3 className="home__subtitle-welcome section__subtitle">welcome</h3>
         {/* TRY TO GUESS IF ITS MOBILE DEVICE TO HIDE PARTICLES LOL */}
-        {windowWidth < 1024 ? yesEgg : noEgg}
+        {windowWidth < 1025 ? yesEgg : noEgg}
       </div>
     </section>
   )
