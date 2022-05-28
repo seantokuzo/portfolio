@@ -27,7 +27,7 @@ export default function ProjectCarousel() {
     setTimeout(() => {
       setDisableBtns(false)
       setSlide('no')
-    }, 750)
+    }, 850)
   }
 
   function toggleCarouselNext() {

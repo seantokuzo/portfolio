@@ -23,7 +23,6 @@ export default function App() {
 
   return (
     <div className="app">
-      {logoActive && <Particles />}
       <Header logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
       <Routes>
         <Route
@@ -44,6 +43,7 @@ export default function App() {
         <Route path="*" element={<WhereArtThou />} />
       </Routes>
       <Footer />
+      {/* {logoActive && <Particles />} */}
     </div>
   )
 }

@@ -20,16 +20,16 @@ export default function ProjectCard({ project }) {
     })
     tl.from(q('.meow'), {
       opacity: 0,
-      x: -10,
+      scale: 0,
       stagger: 0.1,
       delay: -0.35
     })
     tl.from(q('.bark'), {
       opacity: 0,
-      x: -10,
+      y: -10,
       scale: 1.5,
       stagger: 0.1,
-      delay: -0.85
+      delay: -0.6
     })
   }, [project])
 
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }) {
           className="project-card__img-link thumb"
           href={link}
           target="_blank"
-          referrer="noreferrer"
+          rel="noreferrer"
         >
           <img
             className="project-card__img thumb"
@@ -53,25 +53,25 @@ export default function ProjectCard({ project }) {
       <p className="project-card__tagline project-card__text section__text meow">
         {tagline}
       </p>
-      <div className="project-card__links meow">
-        <p className="project-card__links-title project-card__text section__text">
+      <div className="project-card__links">
+        <p className="project-card__links-title project-card__text section__text meow">
           Check it out:
         </p>
         <div className="project-card__links-div">
           <a
-            className="project-card__links-link"
+            className="project-card__links-link meow"
             href={link}
             target="_blank"
-            referrer="noreferrer"
+            rel="noreferrer"
           >
             <i className="fa-solid fa-arrow-up-right-from-square project-card__links-link-icon"></i>
             <span className="project-card__links-link-text">Website</span>
           </a>
           <a
-            className="project-card__links-link"
+            className="project-card__links-link meow"
             href={github}
             target="_blank"
-            referrer="noreferrer"
+            rel="noreferrer"
           >
             <i className="fa-brands fa-github project-card__links-link-icon"></i>
             <span className="project-card__links-link-text">Github</span>
@@ -79,7 +79,7 @@ export default function ProjectCard({ project }) {
         </div>
       </div>
       <div className="project-card__stack meow">
-        <p className="project-card__stack-title project-card__text section__text bark">
+        <p className="project-card__stack-title project-card__text section__text meow">
           Made with:
         </p>
         <div className="project-card__stack-icons">

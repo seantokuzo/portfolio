@@ -63,7 +63,7 @@ export default function ProjectGrid() {
             href={proj.link}
             className="project-grid__links-link section__text"
             target="_blank"
-            referrer="no-referrer"
+            rel="no-referrer"
           >
             <i className="fa-solid fa-arrow-up-right-from-square project-grid__links-icon"></i>
             <p className="project-grid__links-text">Website</p>
@@ -72,7 +72,7 @@ export default function ProjectGrid() {
             className="project-grid__links-link section__text"
             href={proj.github}
             target="_blank"
-            referrer="noreferrer"
+            rel="noreferrer"
           >
             <i className="fa-brands fa-github project-grid__links-icon"></i>
             <p className="project-grid__links-text">Github</p>

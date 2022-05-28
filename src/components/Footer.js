@@ -11,7 +11,7 @@ export default function Footer() {
           href="https://www.linkedin.com/in/sean-tokuzo/"
           className="footer__link"
           target="_blank"
-          referrer="no-referrer"
+          rel="noreferrer"
         >
           <i className="fa-brands fa-linkedin footer__link-icon"></i>
         </a>
@@ -19,7 +19,7 @@ export default function Footer() {
           href="https://github.com/seantokuzo"
           className="footer__link"
           target="_blank"
-          referrer="no-referrer"
+          rel="noreferrer"
         >
           <i className="fa-brands fa-github footer__link-icon"></i>
         </a>
@@ -27,7 +27,7 @@ export default function Footer() {
           href="https://codepen.io/seantokuzo"
           className="footer__link"
           target="_blank"
-          referrer="no-referrer"
+          rel="noreferrer"
         >
           <i className="fa-brands fa-codepen footer__link-icon"></i>
         </a>

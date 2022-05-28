@@ -44,6 +44,7 @@
   
   
   &__links {
+    width: 100%;
     grid-area: links;
     @include flex(column, center, space-evenly);
     &-div {
@@ -129,7 +130,7 @@
 
     &__img-container {
       width: 85px;
-      height: 85px;
+      height: 83px;
       
       margin: .5rem auto 0;
       
@@ -185,7 +186,7 @@
 
     &__img-container {
       width: 130px;
-      height: 130px;
+      height: 127px;
       margin: .5rem auto 0;
 
       border-radius: 2px;
@@ -251,7 +252,7 @@
 
     &__img-container {
       width: 150px;
-      height: 150px;
+      height: 147px;
       margin: .75rem auto;
 
       border-radius: 2px;
@@ -314,7 +315,7 @@
 
     &__img-container {
       width: 200px;
-      height: 200px;
+      height: 196px;
       margin: .75rem auto;
   
       border-radius: 2px;
@@ -377,7 +378,7 @@
 
     &__img-container {
       width: 250px;
-      height: 250px;
+      height: 245px;
       margin: .75rem auto 0;
 
       border-width: 2.25px;
@@ -466,7 +467,7 @@
 
     &__img-container {
       width: 150px;
-      height: 150px;
+      height: 147px;
       margin: 0 2rem 1rem;
       border-width: 1px;
     }
@@ -520,7 +521,7 @@
   .project-card {
     margin-top: 1.5rem;
     padding: 1rem 2rem;
-    max-width: 650px;
+    max-width: 700px;
 
     grid-template-columns: auto auto;
     grid-template-areas:
