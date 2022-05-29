@@ -1,11 +1,12 @@
-import { Router } from 'react-router-dom'
-
 const projects = [
   {
     id: 1,
     name: 'Bobby Shmurdle',
     tagline: 'A Bobby Shmurda themed Wordle clone you can play forever',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
     link: 'https://bobby-shmurdle.netlify.app/',
     github: 'https://github.com/seantokuzo/bobby-shmurdle',
     stack: ['React', 'CSS3']
@@ -13,7 +14,10 @@ const projects = [
   {
     id: 2,
     name: 'My Portfolio',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
     link: 'https://www.seantokuzo.dev/',
     github: 'https://github.com/seantokuzo/portfolio',
     tagline: 'My portfolio on my portfolio?! Woooah, my brain',
@@ -22,7 +26,10 @@ const projects = [
   {
     id: 3,
     name: 'Movie Watchlist',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr-light.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr-dark.png',
     link: 'https://seantokuzo.github.io/MovieWatchlist/',
     github: 'https://github.com/seantokuzo/MovieWatchlist',
     tagline:
@@ -32,7 +39,10 @@ const projects = [
   {
     id: 4,
     name: 'Natours',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
     link: 'https://natours-seantokuzo.herokuapp.com/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A fullstack mock e-commerce site for a tour company',
@@ -41,7 +51,10 @@ const projects = [
   {
     id: 5,
     name: 'Study Timer',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/study-timer-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/study-timer-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/study-timer-800sqr.png',
     link: 'https://study-timer-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A nintendo themed study & break session timer.',
@@ -50,7 +63,10 @@ const projects = [
   {
     id: 6,
     name: 'Le Calculator',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
     link: 'https://seantokuzo.github.io/Calculator/',
     github: 'https://github.com/seantokuzo/Calculator',
     tagline:
@@ -60,7 +76,10 @@ const projects = [
   {
     id: 7,
     name: 'Drum Machine',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
     link: 'https://seantokuzo.github.io/DER-PC3000/',
     github: 'https://github.com/seantokuzo/DER-PC3000',
     tagline:
@@ -70,7 +89,10 @@ const projects = [
   {
     id: 8,
     name: 'Trivial Trivia',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/trivial-trivia-800sqr.png',
+    imgLight:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/trivial-trivia-800sqr.png',
+    imgDark:
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/trivial-trivia-800sqr.png',
     link: 'https://trivial-trivia-seantokuzo.netlify.app/',
     github: 'https://github.com/seantokuzo/TrivialTrivia',
     tagline: 'A trivia game to test your trivial knowledge',
@@ -79,7 +101,8 @@ const projects = [
   // {
   //   id: 9,
   //   name: 'Blackjack',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/blackjack-800sqr.png',
+  //   imgLight: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/blackjack-800sqr.png',
+  //   imgDark: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/blackjack-800sqr.png',
   //   link: 'https://seantokuzo.github.io/Blackjack/',
   //   github: 'https://github.com/seantokuzo/Blackjack',
   //   tagline:

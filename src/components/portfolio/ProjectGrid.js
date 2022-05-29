@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
+import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
 
 export default function ProjectGrid() {
+  const { darkMode } = useContext(ThemeContext)
   const gridRef = useRef()
   const q = gsap.utils.selector(gridRef)
   const tl = gsap.timeline()
@@ -31,7 +33,7 @@ export default function ProjectGrid() {
     >
       <img
         className="project-grid__img"
-        src={proj.img}
+        src={darkMode ? proj.imgDark : proj.imgLight}
         alt={`${proj.name} project preview`}
       />
       <div className="project-grid__details">
