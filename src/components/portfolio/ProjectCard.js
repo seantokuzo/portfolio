@@ -16,20 +16,19 @@ export default function ProjectCard({ project }) {
     tl.from(q('.thumb'), {
       opacity: 0,
       scale: 0,
-      duration: 0.2
+      duration: 0.5
     })
     tl.from(q('.meow'), {
       opacity: 0,
       scale: 0,
       stagger: 0.1,
-      delay: -0.4
+      delay: -0.7
     })
     tl.from(q('.bark'), {
       opacity: 0,
-      // scale: 0,
       stagger: 0.15,
       ease: 'power1.out',
-      delay: -0.7
+      delay: -0.75
     })
   }, [project])
 
@@ -44,7 +43,7 @@ export default function ProjectCard({ project }) {
           rel="noreferrer"
         >
           <img
-            className="project-card__img thumb"
+            className="project-card__img"
             src={darkMode ? imgDark : imgLight}
             alt={`${name} project preview`}
           />
