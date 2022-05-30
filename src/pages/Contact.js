@@ -48,7 +48,6 @@ export default function Contact() {
           type="text"
           max={40}
           min={1}
-          placeholder="bart simpson"
           name="name"
           required
         />
@@ -59,7 +58,6 @@ export default function Contact() {
           className="contact__input contact__form-el contact-anim"
           onChange={(e) => setEmail(e.target.value)}
           type="email"
-          placeholder="bart@simpson.com"
           name="email"
           required
         />
@@ -69,7 +67,6 @@ export default function Contact() {
         <textarea
           className="contact__text-area contact__form-el contact-anim"
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="this portfolio stinks"
           name="message"
           minLength={10}
           maxLength={400}
