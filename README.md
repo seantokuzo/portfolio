@@ -30,9 +30,9 @@
 <br>
 <br>
   <p align="center">
-    <a href="https://github.com/seantokuzo/bobby-shmurdle/issues">Report Bug</a>
+    <a href="https://github.com/seantokuzo/portfolio/issues">Report Bug</a>
     ·
-    <a href="https://github.com/seantokuzo/bobby-shmurdle/issues">Request Feature</a>
+    <a href="https://github.com/seantokuzo/portfolio/issues">Request Feature</a>
   </p>
   <br>
   <br>
