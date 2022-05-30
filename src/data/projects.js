@@ -15,9 +15,9 @@ const projects = [
     id: 2,
     name: 'My Portfolio',
     imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-light.png',
     imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr.png',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-dark.png',
     link: 'https://www.seantokuzo.dev/',
     github: 'https://github.com/seantokuzo/portfolio',
     tagline: 'My portfolio on my portfolio?! Woooah, my brain',
