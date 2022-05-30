@@ -1,8 +1,8 @@
 <div align="center">
 <br>
 <p align="center">
-  <img align="center" width="49%" alt="Portfolio preview dark mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme1.png">
-  <img align="center" width="49%" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme2.png">
+  <img align="center" width="49%" alt="Portfolio preview dark mode" src="./public/pfolio-readme1.png">
+  <img align="center" width="49%" alt="Portfolio preview light mode" src="./public/pfolio-readme2.png">
 </p>
 <h1 align="center">My Portfolio</h1>
 <h3 align="center">A collection of my projects</h3>
@@ -22,10 +22,10 @@
 <br>
 <br>
 <br>
-  <img align="center" width="60%" alt="Portfolio preview contact page dark mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme3.png">
+  <img align="center" width="60%" alt="Portfolio preview contact page dark mode" src="./public/pfolio-readme3.png">
   <br>
   <br>
-  <img align="center" width="60%" alt="Portfolio preview contact page light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme4.png">
+  <img align="center" width="60%" alt="Portfolio preview contact page light mode" src="./public/pfolio-readme4.png">
 <br>
 <br>
 <br>
