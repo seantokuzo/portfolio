@@ -2,7 +2,7 @@
 <br>
 <p align="center">
   <img align="center" width="49%" alt="Portfolio preview dark mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme1.png">
-  <img align="center" width="49%" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme2.png">
+  <!-- <img align="center" width="49%" alt="Portfolio preview light mode" src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/ProjectAssets/Portfolio/pfolio-readme2.png"> -->
 </p>
 <h1 align="center">My Portfolio</h1>
 <h3 align="center">A collection of my projects</h3>
