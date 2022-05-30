@@ -5,7 +5,12 @@ function ThemeContextProvider(props) {
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme: dark)'
   ).matches
-  const [darkMode, setDarkMode] = useState(prefersDarkMode)
+
+  const [darkMode, setDarkMode] = useState(true)
+
+  useEffect(() => {
+    if (prefersDarkMode !== darkMode) setDarkMode(prefersDarkMode)
+  }, [])
 
   //DARKMODE SET BACKGROUND COLOR
   useEffect(() => {
