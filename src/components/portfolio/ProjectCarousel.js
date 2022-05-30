@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useSwipeable } from 'react-swipeable'
 import { gsap } from 'gsap'
 import ProjectCard from './ProjectCard'
 import projects from '../../data/projects'
@@ -74,23 +75,33 @@ export default function ProjectCarousel() {
       ))}
     </>
   )
+
+  const handlers = useSwipeable({
+    delta: 50,
+    preventScrollOnSwipe: true,
+    onSwipedLeft: () => toggleCarouselNext(),
+    onSwipedRight: () => toggleCarouselPrev()
+  })
+
   return (
     <div className="carousel" ref={carouselRef}>
-      <ProjectCard project={projects[currentProject - 1]} />
-      <div className="carousel__toggles">
-        <button
-          className="carousel__toggle carousel__toggle-left"
-          onClick={toggleCarouselPrev}
-        >
-          <i className="fa-solid fa-chevron-left carousel__toggle-icon"></i>
-        </button>
-        {carouselToggleNumbers}
-        <button
-          className="carousel__toggle carousel__toggle-right"
-          onClick={toggleCarouselNext}
-        >
-          <i className="fa-solid fa-chevron-right carousel__toggle-icon"></i>
-        </button>
+      <div {...handlers} className="carousel__swiper">
+        <ProjectCard project={projects[currentProject - 1]} />
+        <div className="carousel__toggles">
+          <button
+            className="carousel__toggle carousel__toggle-left"
+            onClick={toggleCarouselPrev}
+          >
+            <i className="fa-solid fa-chevron-left carousel__toggle-icon"></i>
+          </button>
+          {carouselToggleNumbers}
+          <button
+            className="carousel__toggle carousel__toggle-right"
+            onClick={toggleCarouselNext}
+          >
+            <i className="fa-solid fa-chevron-right carousel__toggle-icon"></i>
+          </button>
+        </div>
       </div>
     </div>
   )

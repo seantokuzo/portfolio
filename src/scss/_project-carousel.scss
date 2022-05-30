@@ -1,6 +1,10 @@
 .carousel {
   width: 100%;
   @include flex(column, center, center);
+  &__swiper {
+    width: 100%;
+    @include flex(column, center, center);
+  }
 
   &__toggles {
     @include flex(row, center, center);

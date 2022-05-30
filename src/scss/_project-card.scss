@@ -517,6 +517,8 @@
   }
 }
 
+// @mixin media-md-landscape {}
+
 @include media-lg-landscape {
   .project-card {
     margin-top: 1.5rem;
