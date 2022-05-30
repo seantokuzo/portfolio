@@ -173,6 +173,7 @@
 
 @include media-lg-landscape {
   .carousel {
+    margin-bottom: 1rem;
     &__toggles {
       max-width: 620px;
       margin: 1.75rem 0 0;
