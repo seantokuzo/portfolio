@@ -4,9 +4,9 @@ const projects = [
     name: 'Bobby Shmurdle',
     tagline: 'A Bobby Shmurda themed Wordle clone you can play forever',
     imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-light.png',
     imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-shmurdle.png',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-dark.png',
     link: 'https://bobby-shmurdle.netlify.app/',
     github: 'https://github.com/seantokuzo/bobby-shmurdle',
     stack: ['React', 'CSS3']
