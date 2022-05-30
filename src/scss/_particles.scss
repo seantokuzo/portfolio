@@ -40,19 +40,13 @@ $time-4: 200s;
 .particle-1 {
   animation: animParticle $time-1 linear infinite;
   @include particles(1000);
-  height: 3px;
-  width: 3px;
-}
-
-.dark-mode .particle-1 {
   height: 2px;
   width: 2px;
-}
-
-.particle-1:after {
-  @include particles(900);
-  height: 2px;
-  width: 2px;
+  &:after {
+    @include particles(900);
+    height: 2px;
+    width: 2px;
+  }
 }
 
 .particle-2 {
@@ -80,12 +74,26 @@ $time-4: 200s;
   @include particles(1200);
   height: 1px;
   width: 1px;
+  &:after {
+    @include particles(700);
+    height: 1px;
+    width: 1px;
+  }
 }
 
-.particle-4:after {
-  @include particles(700);
-  height: 1px;
-  width: 1px;
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
+.light-mode {
+  .particle-1 {
+    height: 3px;
+    width: 3px;
+
+    &:after {
+      height: 3px;
+      width: 3px;
+    }
+  }
 }
 
 @keyframes animParticle {

@@ -5,7 +5,7 @@
   max-width: 1200px;
   
   &__img-container {
-    background-color: $kuzo-sherbert;
+    background-color: $kuzo-purp;
     @include flex(column, center, center);
     object-fit: cover;
     overflow: hidden;
@@ -33,8 +33,8 @@
   
   &__details {
     position: absolute;
-    color: $color-light;
-    background-color: rgba($kuzo-sherbert, .9);
+    color: $kuzo-purp;
+    background-color: rgba($color-dark, .9);
     opacity: 0;
     border-radius: 2px;
     border-style: solid;
@@ -58,12 +58,32 @@
     &-link {
       text-decoration: none;
       border: none;
-      color: $color-light;
+      color: $kuzo-purp;
       @include flex(column, center, center);
       @include transition-ease;
       &:hover {
         transform: scale(1.1);
       }
+    }
+  }
+}
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
+.light-mode {
+  .project-grid {
+    &__img-container {
+      background-color: $kuzo-sherbert;
+    }
+
+    &__details {
+      color: $kuzo-sherbert;
+      background-color: $color-light;
+    }
+
+    &__links-div {
+      color: $kuzo-sherbert;
     }
   }
 }
@@ -225,27 +245,5 @@
 @include media-xl {
   .project-grid {
     max-width: 1400px;
-  }
-}
-
-
-
-/* ************************* */
-/* ***     DARK MODE     *** */
-/* ************************* */
-.dark-mode {
-  .project-grid {
-    &__img-container {
-      background-color: $kuzo-purp;
-    }
-    
-    &__details {
-      color: $kuzo-purp;
-      background-color: rgba($color-dark, .9);
-    }
-    
-    &__links-div {
-      color: $kuzo-purp;
-    }
   }
 }

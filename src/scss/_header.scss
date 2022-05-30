@@ -37,21 +37,21 @@
 /* *** SUN MOON DARKMODE TOGGLER *** */
 /* ********************************* */
 .toggle-btn {
-  background: $color-light;
+  background: $color-dark;
   border: 0;
   border-width: 2px;
   border-style: solid;
-  border-color: $kuzo-sherbert;
+  border-color: $kuzo-purp;
   border-radius: 50%;
   overflow: hidden;
   transform: scale(.75);
-  @include box-shadow($bs-dark);
+  @include box-shadow($bs-purp);
 }
 
-.dark-mode {
+.light-mode {
   .toggle-btn {
-    border-color: $kuzo-purp;
-    background: $color-dark;
+    border-color: $kuzo-sherbert;
+    background: $color-light;
   }
 }
 

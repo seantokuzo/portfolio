@@ -34,15 +34,16 @@
   &__icon-carousel {
     @include flex(row, center, center);
     border-style: solid;
+    cursor: pointer;
   }
   
   &__icon-grid,
   &__icon-grid-sqr {
     border-style: solid;
-    border-color: $kuzo-sherbert;
+    border-color: $kuzo-purp;
   }
   &__icon-grid-sqr {
-      background-color: $kuzo-sherbert;
+      background-color: $kuzo-purp;
   }
 }
 
@@ -50,15 +51,15 @@
 /* ************************* */
 /* ***     DARK MODE     *** */
 /* ************************* */
-.dark-mode {
+.light-mode {
   .portfolio {
     &__icon-grid,
     &__icon-grid-sqr {
       border-style: solid;
-      border-color: $kuzo-purp;
+      border-color: $kuzo-sherbert;
     }
     &__icon-grid-sqr {
-      background-color: $kuzo-purp;
+      background-color: $kuzo-sherbert;
     }
   }
 }

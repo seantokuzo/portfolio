@@ -11,16 +11,23 @@
   }
   
   &__toggle {
-    color: $kuzo-sherbert;
-    background-color: $color-light;
-    border-color: $kuzo-sherbert;
+    color: $kuzo-purp;
+    background-color: $color-dark;
+    border-color: $kuzo-purp;
     border-style: solid;
     border-radius: 50%;
     
     cursor: pointer;
     
     @include flex(row, center, center);
-    @include box-shadow($bs-dark);
+    @include box-shadow($bs-purp);
+    @include transition-ease(150ms);
+
+    &:hover,
+    &:focus {
+      color: lighter($kuzo-purp, 20%);
+      @include box-shadow($bs-purp);
+    }
 
     &-number {
       cursor: pointer;
@@ -198,17 +205,17 @@
 /* ************************* */
 /* ***     DARK MODE     *** */
 /* ************************* */
-.dark-mode {
+.light-mode {
   .carousel {
     &__toggle {
-      color: $kuzo-purp;
-      border-color: $kuzo-purp;
-      background-color: $color-dark;
+      color: $kuzo-sherbert;
+      border-color: $kuzo-sherbert;
+      background-color: $color-light;
       
       &:hover,
       &:focus {
-        color: lighter($kuzo-purp, 20%);
-        @include box-shadow($bs-purp);
+        color: lighter($kuzo-sherbert, 20%);
+        @include box-shadow($bs-dark);
       }
     }
   }

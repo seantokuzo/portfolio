@@ -14,10 +14,10 @@ function ThemeContextProvider(props) {
 
   //DARKMODE SET BACKGROUND COLOR
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode')
+    if (!darkMode) {
+      document.body.classList.add('light-mode')
     } else {
-      document.body.classList.remove('dark-mode')
+      document.body.classList.remove('light-mode')
       return
     }
   }, [darkMode])

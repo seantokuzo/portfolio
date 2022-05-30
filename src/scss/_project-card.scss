@@ -3,12 +3,12 @@
   max-width: 1000px;
   width: 85%;
   border-style: solid;
-  border-color: $kuzo-sherbert;
+  border-color: $kuzo-purp;
   border-radius: 2px;
-  background-color: $color-light;
+  background-color: $color-dark;
   text-align: center;
   display: grid;
-  @include box-shadow($bs-dark);
+  @include box-shadow($bs-purp);
 
   &__title {
     grid-area: title;
@@ -17,14 +17,14 @@
   
   &__img-container {
     grid-area: img;
-    background-color: $kuzo-sherbert;
+    background-color: $kuzo-purp;
     @include flex(row,center,center);
     object-fit: cover;
     overflow: hidden;
     border-style: solid;
     @include transition-ease;
     &:hover {
-      @include box-shadow($bs-dark);
+      @include box-shadow($bs-purp);
     }
   }
   
@@ -57,7 +57,7 @@
       cursor: pointer;
       &:hover {
         transform: scale(1.1);
-        color: lighten($kuzo-sherbert, 5);
+        color: lighten($kuzo-purp, 5%);
       }
       &:focus {
         position: relative;
@@ -83,23 +83,23 @@
   
 }
 
-.dark-mode {
+.light-mode {
   .project-card {
-    border-color: $kuzo-purp;
-    background-color: $color-dark;
-    @include box-shadow($bs-purp);
+    border-color: $kuzo-sherbert;
+    background-color: $color-light;
+    @include box-shadow($bs-dark);
 
     &__img-container {
-      background-color: $kuzo-purp;
+      background-color: $kuzo-sherbert;
       &:hover {
-        @include box-shadow($bs-purp);
+        @include box-shadow($bs-dark);
       }
     }
   
     &__links{
       &-link {
         &:hover {
-          color: lighten($kuzo-purp, 5)
+          color: lighten($kuzo-sherbert, 5%)
         }
       }
     }

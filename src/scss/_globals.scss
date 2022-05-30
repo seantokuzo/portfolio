@@ -19,13 +19,13 @@
   }
 
   &__next {
-    background-color: $color-light;
+    background-color: $color-dark;
   }
 }
 
-.dark-mode {
+.light-mode {
   .section__next {
-    background-color: $color-dark;
+    background-color: $color-light;
   
   }
 }

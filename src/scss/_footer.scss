@@ -7,7 +7,7 @@
   bottom: 0;
   left: 0;
 
-  background-color: $color-light;
+  background-color: $color-dark;
   
   @include flex(row, flex-end, space-between);
   z-index: 9999;
@@ -23,9 +23,9 @@
 /* ************************* */
 /* ***     DARK MODE     *** */
 /* ************************* */
-.dark-mode {
+.light-mode {
   .footer {
-    background-color: $color-dark;
+    background-color: $color-light;
   }
 }
 

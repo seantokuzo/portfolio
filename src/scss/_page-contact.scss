@@ -8,16 +8,16 @@
   background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
-  border-color: $color-light;
+  border-color: $color-dark;
 
-  @include box-shadow($bs-dark);
+  @include box-shadow($bs-purp);
   &__title {
     text-align: center;
   }
   &__form {
     @include flex(column, center, center);
     max-width: 500px;
-    background-color: rgba($color-light, .75);
+    background-color: rgba($color-dark, .75);
     &-label {
       @include flex(column, flex-start, center);
       width: 100%;
@@ -49,8 +49,8 @@
   
   &__submit {
     font-weight: bolder;
-    color: $color-light;
-    background-color: $kuzo-sherbert;
+    color: $color-dark;
+    background-color: $kuzo-purp;
     border: none;
     border-radius: 2px;
 
@@ -62,7 +62,7 @@
   width: fit-content;
   max-width: 75%;
   padding: 2rem .5rem;
-  background-color: rgba($color-light, .75);
+  background-color: rgba($color-dark, .75);
 
   &__text {
     margin: .5rem 0;
@@ -78,20 +78,20 @@
 /* ************************* */
 /* ***     DARK MODE     *** */
 /* ************************* */
-.dark-mode {
+.light-mode {
   .contact { 
-    @include box-shadow($bs-purp);
+    @include box-shadow($bs-dark);
     &__form {
-      background-color: rgba($color-dark, .75);
+      background-color: rgba($color-light, .75);
     }
     &__submit {
-      color: $color-dark;
-      background-color: $kuzo-purp;
+      color: $color-light;
+      background-color: $kuzo-sherbert;
     }
   }
 
   .thankyou {
-    background-color: rgba($color-dark, .75);
+    background-color: rgba($color-light, .75);
   }
 }
 

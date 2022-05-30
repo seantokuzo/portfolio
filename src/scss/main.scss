@@ -9,7 +9,6 @@
 @import 'project-grid';
 @import 'page-about';
 @import 'page-contact';
-@import 'volume-slider';
 @import 'particles';
 @import 'where-art-thou';
 
@@ -19,15 +18,15 @@ html {
 
 body {
   margin: 0;
-  color: $kuzo-sherbert;
-  background: $color-light;
+  color: $kuzo-purp;
+  background: $color-dark;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
   letter-spacing: .75px;
   line-height: 1;
 }
 
 a {
-  color: $kuzo-sherbert;
+  color: $kuzo-purp;
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,12 +42,12 @@ textarea:focus {
   outline: none;
 }
 
-.dark-mode {
-  color: $kuzo-purp;
-  background: $color-dark;
+.light-mode {
+  color: $kuzo-sherbert;
+  background: $color-light;
 
   a {
-    color: $kuzo-purp;
+    color: $kuzo-sherbert;
   }
 }
 
