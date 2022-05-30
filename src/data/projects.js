@@ -30,8 +30,8 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr-light.png',
     imgDark:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr-dark.png',
-    link: 'https://seantokuzo.github.io/MovieWatchlist/',
-    github: 'https://github.com/seantokuzo/MovieWatchlist',
+    link: 'https://shmovie-watchlist.netlify.app/',
+    github: 'https://github.com/seantokuzo/shmovie-watchlist',
     tagline:
       'Build your own movie watchlist. Powered by The Movie Database API',
     stack: ['React', 'CSS3']
