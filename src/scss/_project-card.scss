@@ -53,11 +53,10 @@
     }
     &-link {
       @include flex(column, center, center);
-      // @include transition-ease;
       cursor: pointer;
       &:hover {
-        transform: scale(1.1);
-        color: lighten($kuzo-purp, 5%);
+        color: darken($kuzo-purp, 7%);
+        @include text-shadow;
       }
       &:focus {
         position: relative;
@@ -72,6 +71,9 @@
     &-icons {
       @include flex(row,center,center);
       &-icon {
+        &:hover {
+          transform: scale(1.2);
+        }
         &-special {
           background-color: $color-light;
         }
@@ -99,7 +101,8 @@
     &__links{
       &-link {
         &:hover {
-          color: lighten($kuzo-sherbert, 5%)
+          color: darken($kuzo-sherbert, 5%);
+          @include text-shadow($color-dark, 0.35);
         }
       }
     }

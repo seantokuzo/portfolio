@@ -20,23 +20,46 @@
     cursor: pointer;
     
     @include flex(row, center, center);
-    @include box-shadow($bs-purp);
-    @include transition-ease(150ms);
+    // @include transition-ease(150ms);
 
     &:hover,
     &:focus {
       color: lighter($kuzo-purp, 20%);
       @include box-shadow($bs-purp);
+      transform: scale(1.05);
     }
-
+    
     &-number {
       cursor: pointer;
+      // @include transition-ease;
+      &:hover,
+      &:focus {
+        transform: scale(1.1) translateY(-3px);
+      }
     }
   }
   
   &__toggle:hover,
   &__toggle:focus {
-    transform: scale(1.1);
+  }
+}
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
+.light-mode {
+  .carousel {
+    &__toggle {
+      color: $kuzo-sherbert;
+      border-color: $kuzo-sherbert;
+      background-color: $color-light;
+      @include box-shadow($bs-dark);
+
+      &:hover,
+      &:focus {
+        color: lighter($kuzo-sherbert, 20%);
+      }
+    }
   }
 }
 
@@ -201,23 +224,4 @@
         font-size: 2.8em;
       }
     }
-}
-
-/* ************************* */
-/* ***     DARK MODE     *** */
-/* ************************* */
-.light-mode {
-  .carousel {
-    &__toggle {
-      color: $kuzo-sherbert;
-      border-color: $kuzo-sherbert;
-      background-color: $color-light;
-      
-      &:hover,
-      &:focus {
-        color: lighter($kuzo-sherbert, 20%);
-        @include box-shadow($bs-dark);
-      }
-    }
-  }
 }

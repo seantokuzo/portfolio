@@ -49,6 +49,10 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
               inset 0 0 1rem -.1rem rgba(darken($color, $darken), $amt2);
 }
 
+@mixin text-shadow($color: darken($kuzo-purp, 20%), $trans: 0.5) {
+  text-shadow: .25em .25em .5em rgba($color, $trans);
+}
+
 @mixin page-container {
   position: fixed;
   width: 100%;

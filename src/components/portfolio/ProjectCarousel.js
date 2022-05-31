@@ -11,6 +11,16 @@ export default function ProjectCarousel() {
   const [slide, setSlide] = useState('no')
   const carouselRef = useRef()
   const q = gsap.utils.selector(carouselRef)
+  const tl = gsap.timeline()
+
+  useEffect(() => {
+    tl.from(q('.togs'), {
+      opacity: 0,
+      scale: 0,
+      y: 10,
+      stagger: 0.05,
+    })
+  }, [])
 
   useEffect(() => {
     if (carouselRef) {
@@ -64,8 +74,8 @@ export default function ProjectCarousel() {
         <p
           className={
             currentProject === i + 1
-              ? 'section__subtitle carousel__toggle-number carousel__toggle-number--current underline'
-              : 'section__subtitle carousel__toggle-number'
+              ? 'section__subtitle carousel__toggle-number carousel__toggle-number--current underline togs'
+              : 'section__subtitle carousel__toggle-number togs'
           }
           onClick={() => jumpToProject(i + 1)}
           key={nanoid()}
@@ -89,14 +99,14 @@ export default function ProjectCarousel() {
         <ProjectCard project={projects[currentProject - 1]} />
         <div className="carousel__toggles">
           <button
-            className="carousel__toggle carousel__toggle-left"
+            className="carousel__toggle carousel__toggle-left togs"
             onClick={toggleCarouselPrev}
           >
             <i className="fa-solid fa-chevron-left carousel__toggle-icon"></i>
           </button>
           {carouselToggleNumbers}
           <button
-            className="carousel__toggle carousel__toggle-right"
+            className="carousel__toggle carousel__toggle-right togs"
             onClick={toggleCarouselNext}
           >
             <i className="fa-solid fa-chevron-right carousel__toggle-icon"></i>
