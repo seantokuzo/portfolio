@@ -27,8 +27,11 @@
     @include transition-ease;
 
     &:hover {
-      transform: translateY(-3px);
-      font-weight: 500;
+      transform: translateY(-5px);
+    }
+
+    &--active {
+      text-decoration: underline;
     }
   }
 }
@@ -45,13 +48,18 @@
   border-radius: 50%;
   overflow: hidden;
   transform: scale(.75);
-  @include box-shadow($bs-purp);
+  cursor: pointer;
+  // @include transition-ease(200ms);
+  &:hover {
+    @include box-shadow($bs-purp);
+  }
 }
 
 .light-mode {
   .toggle-btn {
     border-color: $kuzo-sherbert;
     background: $color-light;
+    @include box-shadow($bs-dark);
   }
 }
 

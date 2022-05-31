@@ -34,7 +34,9 @@ export default function Header({ logoActive, toggleLogoActive }) {
       <Link to={path}>
         <h2
           className={
-            '/' + pathname.split('/')[1] === path ? 'nav__link underline' : 'nav__link'
+            '/' + pathname.split('/')[1] === path
+              ? 'nav__link nav__link--active'
+              : 'nav__link'
           }
         >
           {label}

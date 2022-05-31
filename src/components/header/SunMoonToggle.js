@@ -28,12 +28,11 @@ export default function SunMoonToggle() {
         delay: 0.5
       })
     }
-
-    Draggable.create('.toggle-btn', {
-      type: 'x,y',
-      bounds: document.querySelector('.header'),
-      inertia: true
-    })
+    // Draggable.create('.toggle-btn', {
+    //   type: 'x,y',
+    //   bounds: document.querySelector('.header'),
+    //   inertia: true
+    // })
   }, [])
 
   const toggleButton = (

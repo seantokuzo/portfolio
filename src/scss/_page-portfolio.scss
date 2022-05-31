@@ -215,11 +215,6 @@
       width: 4px;
       height: 4px;
     }
-
-    &__icon-grid {
-     
-    }
-    
   }
 }
 
@@ -260,9 +255,9 @@
         margin: 0;
       }
       &__icon-grid {
-        padding: 8px;
-        grid-template-columns: repeat(4, 7px);
-        grid-template-rows: repeat(4, 7px);
+        padding: 6px;
+        grid-template-columns: repeat(4, 8px);
+        grid-template-rows: repeat(4, 8px);
       }
       &__icon-grid-sqr {
         width: 5px;
