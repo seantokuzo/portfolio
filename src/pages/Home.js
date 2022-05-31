@@ -73,15 +73,8 @@ export default function Home({ logoActive, toggleLogoActive }) {
     </>
   )
 
-  // EASTER EGG PATICLES
-  const yesEgg = (
-    <Link to="/portfolio">
-      <i className="fa-solid fa-chevron-right section__next home__next home__next-link"></i>
-    </Link>
-  )
-
   // FIRST BUTTON STARTS PARTICLES
-  const noEgg = logoActive ? (
+  const homeButtons = logoActive ? (
     <Link to="/portfolio">
       <i className="fa-solid fa-chevron-right section__next home__next home__next-link"></i>
     </Link>
@@ -104,7 +97,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
       <div className="home__subtitle-container">
         <h3 className="home__subtitle-welcome section__subtitle">welcome</h3>
         {/* TRY TO GUESS IF ITS MOBILE DEVICE TO HIDE PARTICLES LOL */}
-        {windowWidth < 1025 ? yesEgg : noEgg}
+        {homeButtons}
       </div>
     </section>
   )

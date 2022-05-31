@@ -15,7 +15,6 @@ export default function ProjectCard({ project }) {
   useEffect(() => {
     tl.from(q('.thumb'), {
       opacity: 0,
-      scale: 0,
       duration: 0.5
     })
     tl.from(q('.meow'), {
