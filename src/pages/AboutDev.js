@@ -1,14 +1,13 @@
 import React from 'react'
 import MyToolbox from '../components/MyToolbox'
 import { buttonFactory } from '../utils/buttonFactory'
-import meHiking from '../img/me/me-hiking.jpg'
 
 export default function AboutDev() {
   const dev = (
     <div className="about__blurb">
       <img
         className="about__blurb-img"
-        src={meHiking}
+        src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/me/me-desert600.png"
         alt="Sean hiking in Hawai'i"
       />
       <div className="about__blurb-text-div">
@@ -19,8 +18,8 @@ export default function AboutDev() {
           I love developing web apps with React and styling with Sass.
         </h5>
         <h5 className="about__blurb-text section__text">
-          My latest obsession is building and testing APIs with Node, Express, MongoDB
-          and Postman.
+          My latest obsession is building and testing APIs with Node, Express,
+          MongoDB and Postman.
         </h5>
         <h5 className="about__blurb-text section__text">
           Currently learning Next.js.

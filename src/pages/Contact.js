@@ -2,8 +2,6 @@ import React, { useState, useContext, useEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { ThemeContext } from '../context/ThemeContext'
 import { gsap } from 'gsap'
-import dayBg from '../img/ctm/cb-day.png'
-import nightBg from '../img/ctm/cb-night.png'
 
 export default function Contact() {
   const { darkMode } = useContext(ThemeContext)
@@ -26,7 +24,10 @@ export default function Contact() {
     })
   }, [darkMode])
 
-  const bgImg = darkMode ? nightBg : dayBg
+  // const bgImg = darkMode ? nightBg : dayBg
+  const bgImg = darkMode
+    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_night-1024.png'
+    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_day-1024.png'
 
   const contactForm = (
     <form

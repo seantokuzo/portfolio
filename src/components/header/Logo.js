@@ -4,8 +4,6 @@ import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
-import kuzoDayIcon from '../../img/luna/kuzo-nobck-hiRes.png'
-import kuzoNightIcon from '../../img/luna/kuzo-nobck-purp.png'
 
 export default function Logo({ logoActive, toggleLogoActive }) {
   const { darkMode } = useContext(ThemeContext)
@@ -26,20 +24,22 @@ export default function Logo({ logoActive, toggleLogoActive }) {
     })
   }, [])
 
-  const dynamicLogo = darkMode ? kuzoNightIcon : kuzoDayIcon
+  const dynamicLogo = darkMode
+    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-144.png'
+    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-144.png'
 
   return (
-      <div
-        className="header__logo-div"
-        ref={logo}
-        style={{ animation: logoActive ? 'spin 4s linear infinite' : '' }}
-      >
-        <img
-          src={dynamicLogo}
-          alt="logo"
-          className="header__logo"
-          onClick={toggleLogoActive}
-        ></img>
-      </div>
+    <div
+      className="header__logo-div"
+      ref={logo}
+      style={{ animation: logoActive ? 'spin 4s linear infinite' : '' }}
+    >
+      <img
+        src={dynamicLogo}
+        alt="logo"
+        className="header__logo"
+        onClick={toggleLogoActive}
+      ></img>
+    </div>
   )
 }

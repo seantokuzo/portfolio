@@ -1,14 +1,13 @@
 import React from 'react'
 import { buttonFactory } from '../utils/buttonFactory'
-import meGuitar from '../img/me/me-guitar.png'
 
 export default function AboutAudio() {
   const audio = (
     <div className="about__blurb" id="extended-about">
       <img
         className="about__blurb-img"
-        src={meGuitar}
-        alt="Sean hiking in Hawai'i"
+        src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/me/me-guitar600.png"
+        alt="Sean playing guitar"
       />
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">

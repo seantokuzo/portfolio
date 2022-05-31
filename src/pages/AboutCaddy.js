@@ -1,13 +1,12 @@
 import React from 'react'
 import { buttonFactory } from '../utils/buttonFactory'
-import meCaddy from '../img/me/me-caddy.png'
 
 export default function AboutCaddy() {
   const caddy = (
     <div className="about__blurb" id="extended-about">
       <img
         className="about__blurb-img"
-        src={meCaddy}
+        src="https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/me/me-caddy600.png"
         alt="Sean hiking in Hawai'i"
       />
       <div className="about__blurb-text-div">

@@ -20,7 +20,7 @@ export default function MyToolbox() {
       <a
         href={link}
         target="_blank"
-        rel="noreferrer"
+        rel="noreferrer noopener"
         className="stack-icon-link"
         key={name}
       >

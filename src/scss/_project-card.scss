@@ -138,6 +138,11 @@
       border-width: 2px;
     }
     
+    &__img {
+      width: 83px;
+      height: 83px;
+    }
+    
     &__tagline {
       width: 92%;
       margin: .5rem auto 0;
@@ -164,6 +169,7 @@
       &-icons {
         &-icon {
           width: 1rem;
+          height: 1rem;
           margin: 0 5px;
           &-special {
             height: 1rem;
@@ -188,9 +194,15 @@
       width: 130px;
       height: 127px;
       margin: .5rem auto 0;
-
+      
       border-radius: 2px;
       border-width: 2px;
+    }
+    
+    &__img {
+      width: 127px;
+      height: 127px;
+
     }
 
     &__tagline {
@@ -220,6 +232,7 @@
       &-icons {
         &-icon {
           width: 1.25rem;
+          height: 1.25rem;
           margin: 0 5px;
 
           &-special {
@@ -254,9 +267,14 @@
       width: 150px;
       height: 147px;
       margin: .75rem auto;
-
+      
       border-radius: 2px;
       border-width: 2px;
+    }
+    
+    &__img {
+      width: 147px;
+      height: 147px;
     }
 
     &__tagline {
@@ -293,6 +311,7 @@
       &-icons {
         &-icon {
           width: 1.5rem;
+          height: 1.5rem;
           margin: 3px 7px;
 
           &-special {
@@ -317,9 +336,14 @@
       width: 200px;
       height: 196px;
       margin: .75rem auto;
-  
+      
       border-radius: 2px;
       border-width: 2px;
+    }
+
+    &__img {
+      width: 196px;
+      height: 196px;
     }
 
     &__tagline {
@@ -354,6 +378,7 @@
       &-icons {
         &-icon {
           width: 1.65rem;
+          height: 1.65rem;
           margin: 3px 8px;
 
           &-special {
@@ -380,10 +405,15 @@
       width: 250px;
       height: 245px;
       margin: .75rem auto 0;
-
+      
       border-width: 2.25px;
     }
 
+    &__img {
+      width: 245px;
+      height: 245px;
+    }
+    
     &__tagline {
       width: 80%;
       margin-top: 1.55rem;
@@ -411,6 +441,7 @@
       &-icons {
         &-icon {
           width: 1.9rem;
+          height: 1.9rem;
           margin: .5rem 9px 0;
 
           &-special {
@@ -436,8 +467,13 @@
       width: 280px;
       height: 275px;
       margin: 1.5rem auto 0;
-
+      
       border-width: 2.9px;
+    }
+
+    &__img {
+      width: 275px;
+      height: 275px;
     }
 
     &__tagline {
@@ -461,10 +497,6 @@
       "tag tag tag";
       align-items: center;
 
-    &__title {
-      // font-size: .75em;
-    }
-
     &__img-container {
       width: 150px;
       height: 147px;
@@ -472,6 +504,11 @@
       border-width: 1px;
     }
 
+    &__img {
+      width: 147px;
+      height: 147px;
+    }
+    
     &__tagline {
       width: 92%;
       margin: .25rem auto 0;
@@ -506,6 +543,7 @@
       &-icons {
         &-icon {
           width: 1.5rem;
+          height: 1.5rem;
           margin: 3px 7px;
 
           &-special {
@@ -535,11 +573,16 @@
     &__img-container {
       width: 260px;
       height: 255px;
-  
+      
       margin: 1rem auto .75rem;
-  
+      
       border-radius: 2px;
       border-width: 4px;
+    }
+
+    &__img {
+      width: 255px;
+      height: 255px;
     }
   
     &__tagline {
@@ -593,8 +636,13 @@
       &__img-container {
         width: 300px;
         height: 295px;
-  
+        
         margin: 1.5rem auto 1.25rem;
+      }
+
+      &__img {
+        width: 295px;
+        height: 295px;
       }
   
       &__tagline {
@@ -621,8 +669,9 @@
   
         &-icons {
           &-icon {
-            margin: 0 8px;
             width: 2.25rem;
+            height: 2.25rem;
+            margin: 0 8px;
           
             &-special {
               height: 2.25rem;

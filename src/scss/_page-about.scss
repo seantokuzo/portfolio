@@ -131,7 +131,7 @@ $stack-icon-sm: 35px;
     height: 45px;
   
     border-radius: 50%;
-    @include bs-inset($kuzo-purp, 55%, 20%);
+    @include bs-inset($kuzo-purp, 50%, 20%);
   
     @include flex(row,center,center);
     background-color: $kuzo-purp;
