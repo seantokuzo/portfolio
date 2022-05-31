@@ -12,7 +12,7 @@ export default function AboutAudio() {
       />
       <div className="about__blurb-text-div">
         <h5 className="about__blurb-text section__text">
-          Before teaching myself to code I worked as an audio engineer.
+          Before learning to code, I worked as an audio engineer.
         </h5>
         <h5 className="about__blurb-text section__text">
           After working in a commercial studio for years, I started freelancing.
