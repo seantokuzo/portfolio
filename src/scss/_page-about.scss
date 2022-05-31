@@ -122,7 +122,7 @@ $stack-icon-sm: 35px;
     .sample-btn-in {
       width: 47px;
       height: 47px;
-      background-color: darken($kuzo-purp, 50%);
+      background-color: darken($kuzo-purp, 5%);
     }
   }
 
@@ -131,7 +131,7 @@ $stack-icon-sm: 35px;
     height: 45px;
   
     border-radius: 50%;
-    @include bs-inset($kuzo-purp, 45);
+    @include bs-inset($kuzo-purp, 55%, 20%);
   
     @include flex(row,center,center);
     background-color: $kuzo-purp;
@@ -165,7 +165,7 @@ $stack-icon-sm: 35px;
     }
     &-in {
       background-color: $kuzo-sherbert;
-      @include bs-inset($kuzo-sherbert, 35%, 40%);
+      @include bs-inset($color-light, 60%, 90%);
     }
   }
 
