@@ -256,15 +256,15 @@
       }
       &__icon-grid {
         padding: 6px;
-        grid-template-columns: repeat(4, 8px);
-        grid-template-rows: repeat(4, 8px);
+        grid-template-columns: repeat(4, 7px);
+        grid-template-rows: repeat(4, 7px);
       }
       &__icon-grid-sqr {
         width: 5px;
         height: 5px;
       }
       &__icon-carousel {
-        padding: 11px;
+        // padding: 10px;
         font-size: 1.35em;
       }
     }
