@@ -1,0 +1,397 @@
+.about {
+  width: 85%;
+  max-width: 600px;
+
+  margin: 0 auto;
+  padding: 0 0 4rem;
+
+  letter-spacing: 1.1px;
+  text-align: center;
+
+  &__title {
+    margin: 0;
+  }
+  
+  &__nav {
+    @include flex(row, center, center);
+    &-link {
+      border-style: solid;
+      border-width: 2px;
+      &-active {
+        font-weight: bolder;
+        border: 2px solid;
+        border-color: $color-dark;
+        color: $color-dark;
+        background-color: $kuzo-purp;
+      }
+    }
+  }
+
+  &__blurb {
+    @include flex(column, center, center);
+    width: 100%;
+    border: 2px solid;
+    &-img {
+      width: 100%;
+      border-radius: 3px;
+    }
+    &-text-div {
+      margin: .75rem 0 0;
+    }
+    &-text {
+      margin: .75rem 0;
+      font-size: .8em;
+      line-height: 1.25em;
+    }
+  }
+
+  &__starter {
+    width: 100%;
+    @include flex(column, center, center);
+    &-title {
+      margin: -2rem 0 2rem;
+      font-weight: bolder;
+    }
+    &-btn-div {
+      width: 100%;
+      @include flex(row, center, space-evenly);
+    }
+  }
+  &__btn-text {
+    color: darken($kuzo-purp, 30%);
+    font-weight: bolder;
+  }
+  &__subpage-btn-div {
+    @include flex(row, center, space-evenly);
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+
+.section__toolbox {
+  width: 100%;
+  max-width: 450px;
+
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+
+.toolbox-div {
+  margin: 1rem auto;
+  @include flex(row, center, space-evenly);
+  flex-wrap: wrap;
+}
+
+.stack-icon-div {
+  opacity: .85;
+
+  &:hover {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+$stack-icon-sm: 35px;
+
+.stack-icon {
+  width: $stack-icon-sm;
+  margin: .5rem;
+  
+}
+
+// .next-icon,
+.special-icon {
+  width: $stack-icon-sm;
+  height: $stack-icon-sm;
+  padding: 2px;
+  background-color: $color-light;
+  border-radius: 2px;
+}
+
+.sample-btn {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  cursor: pointer;
+  @include box-shadow($bs-dark);
+  background-color: darken($kuzo-purp, 30%);
+
+
+  &:active {
+    .sample-btn-in {
+      width: 47px;
+      height: 47px;
+      background-color: darken($kuzo-purp, 5%);
+    }
+  }
+
+  &-in {
+    width: 45px;
+    height: 45px;
+  
+    border-radius: 50%;
+    @include bs-inset($kuzo-purp, 50%, 20%);
+  
+    @include flex(row,center,center);
+    background-color: $kuzo-purp;
+  }
+}
+
+
+/* ************************* */
+/* ***     DARK MODE     *** */
+/* ************************* */
+.light-mode {
+  .about {
+    &__nav-link-active {
+      border-color: $kuzo-sherbert;
+      color: $color-light;
+      background-color: $kuzo-sherbert;
+    }
+    &__btn-text {
+      color: darken($kuzo-sherbert, 30%);
+      font-weight: bolder;
+    }
+  }
+
+  .sample-btn {
+    background-color: darken($kuzo-sherbert, 30%);
+    @include box-shadow($bs-sherbert);
+    &:active {
+      .sample-btn-in {
+        background-color: darken($kuzo-sherbert, 5%);
+      }
+    }
+    &-in {
+      background-color: $kuzo-sherbert;
+      @include bs-inset($color-light, 60%, 90%);
+    }
+  }
+
+}
+
+/* ************************* */
+/* ***   MEDIA QUERIES   *** */
+/* ************************* */
+@include media-xs {
+  .about {
+    &__blurb {
+      padding: 2rem;
+    }
+
+    &__nav {
+      margin: 1rem auto -2px 0;
+
+      &-link {
+        padding: 4px 7px;
+      }
+    }
+
+    &__starter {
+      padding: 4rem 0 2.5rem;
+    }
+  }
+}
+
+@include media-sm {
+  .about {
+    &__nav {
+      margin: 2rem auto -2px 0;
+    }
+  }
+
+  .sample-btn {
+    width: 52px;
+    height: 52px;
+    &:active {
+      .sample-btn-in {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &-in {
+      width: 47px;
+      height: 47px;
+    }
+  }
+}
+
+@include media-sm-short {
+  .about {
+      &__nav {
+        margin: 2rem auto -2px 0;
+      }
+    }
+}
+
+@include media-rg {
+  .about {
+    padding: 0 0 5rem;
+    &__blurb {
+      padding: 3rem;
+      &-text {
+        // margin: .75rem 0;
+        font-size: 1em;
+      }
+    }
+
+    &__nav {
+      margin: 2.5rem auto -2px 0;
+      &-link {
+        padding: 5px 9px;
+      }
+    }
+
+    &__starter {
+      padding: 6rem 0 5rem;
+
+      &-title {
+        margin: -2rem 0 3rem;
+      }
+
+      &-btn-div {
+        width: 100%;
+        @include flex(row, center, space-evenly);
+      }
+    }
+  }
+
+  .sample-btn {
+    width: 65px;
+    height: 65px;
+
+    &:active {
+      .sample-btn-in {
+        width: 63px;
+        height: 63px;
+      }
+    }
+
+    &-in {
+      width: 59px;
+      height: 59px;
+    }
+    &-text {
+      font-size: 1.25em;
+    }
+  }
+
+  $stack-icon-rg: 40px;
+  .stack-icon {
+    width: $stack-icon-rg;
+    margin: .65rem;
+  }
+  .special-icon {
+    width: $stack-icon-rg;
+    height: $stack-icon-rg;
+    padding: 3px;
+  }
+}
+
+@include media-md {
+  .about {
+    padding: 0 0 6rem;
+    &__blurb {
+      &-text {
+        // margin: .75rem 0;
+        font-size: 1.1em;
+      }
+    }
+    &__subpage-btn-div {
+      margin: 2rem 0 1rem;
+    }
+  }
+
+  .sample-btn {
+    width: 75px;
+    height: 75px;
+
+    &:active {
+      .sample-btn-in {
+        width: 72px;
+        height: 72px;
+      }
+    }
+    &-in {
+      width: 68px;
+      height: 68px;
+    }
+    &-text {
+      font-size: 1.5em;
+    }
+  }
+
+  $stack-icon-md: 48px;
+  .stack-icon {
+    width: $stack-icon-md;
+    margin: .75rem;
+  }
+  .special-icon {
+    width: $stack-icon-md;
+    height: $stack-icon-md;
+  }
+}
+
+@include media-md-landscape {}
+
+@include media-lg {
+  .about {
+    padding: 0 0 7rem;
+    &__subpage-btn-div {
+      margin: 3rem 0 1rem;
+    }
+    &__blurb {
+      border-width: 3px;
+    }
+    &__nav {
+      margin: 2.5rem auto -3px 0;
+      &-link {
+        border-width: 3px;
+        padding: 5px 9px;
+      }
+    }
+  }
+
+  .sample-btn {
+    width: 83px;
+    height: 83px;
+
+    &:active {
+      .sample-btn-in {
+        width: 79px;
+        height: 79px;
+      }
+    }
+    &-in {
+      width: 76px;
+      height: 76px;
+    }
+    &-text {
+      font-size: 1.75em;
+    }
+  }
+
+  $stack-icon-lg: 52px;
+  .stack-icon {
+    width: $stack-icon-lg;
+    margin: .85rem;
+  }
+  .special-icon {
+    width: $stack-icon-lg;
+    height: $stack-icon-lg;
+  }
+}
+
+@include media-lg-landscape {
+}
+
+@include media-xl {
+  .about {
+    &__blurb {
+      &-text {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
