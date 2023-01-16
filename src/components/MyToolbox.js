@@ -4,9 +4,15 @@ import stackIcons from '../data/stackIcons'
 
 export default function MyToolbox() {
   const toolbox = useRef()
+  const q = gsap.utils.selector(toolbox)
 
-  // useEffect(() => {
-  // }, [])
+  useEffect(() => {
+    gsap.from(q('.stack-icon-link'), {
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.1
+    })
+  }, [])
 
   function createIcon(link, img, name, special) {
     return (

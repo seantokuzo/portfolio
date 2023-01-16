@@ -22,7 +22,7 @@
   width: 95%;
   max-width: 450px;
 
-  margin: 0 auto;
+  margin: 1rem auto 0;
   padding: 0;
 }
 
@@ -189,28 +189,7 @@ $stack-icon-sm: 35px;
     }
   }
 
-  .sample-btn {
-    width: 83px;
-    height: 83px;
-
-    &:active {
-      .sample-btn-in {
-        width: 79px;
-        height: 79px;
-      }
-    }
-
-    &-in {
-      width: 76px;
-      height: 76px;
-    }
-
-    &-text {
-      font-size: 1.75em;
-    }
-  }
-
-  $stack-icon-lg: 52px;
+  $stack-icon-lg: 50px;
 
   .stack-icon {
     width: $stack-icon-lg;
