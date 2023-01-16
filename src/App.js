@@ -4,9 +4,9 @@ import Header from './components/header/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
 import About from './pages/About'
-import AboutDev from './pages/AboutDev'
-import AboutAudio from './pages/AboutAudio'
-import AboutCaddy from './pages/AboutCaddy'
+// import AboutDev from './pages/AboutDev'
+// import AboutAudio from './pages/AboutAudio'
+// import AboutCaddy from './pages/AboutCaddy'
 import Portfolio from './pages/Portfolio'
 import Contact from './pages/Contact'
 import ContactThankYou from './pages/ContactThankYou'
@@ -32,11 +32,11 @@ export default function App() {
           }
         />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="about" element={<About />}>
-          <Route path="dev" element={<AboutDev />} />
+        <Route path="about" element={<About />} />
+        {/* <Route path="dev" element={<AboutDev />} />
           <Route path="audio" element={<AboutAudio />} />
           <Route path="caddy" element={<AboutCaddy />} />
-        </Route>
+        </Route> */}
         <Route path="contact" element={<Contact />}>
           <Route path="thankyou" element={<ContactThankYou />} />
         </Route>
