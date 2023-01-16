@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { nanoid } from 'nanoid'
 import projects from '../../data/projects'
 import stackIcons from '../../data/stackIcons'
+import otherStackIcons from '../../data/otherIcons'
 
 export default function ProjectGrid() {
   const { darkMode } = useContext(ThemeContext)
@@ -45,7 +46,10 @@ export default function ProjectGrid() {
         </p>
         <div className="project-grid__details-stack">
           {proj.stack.map((icon) => {
-            const thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+            let thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+            if (!thisIcon) {
+              thisIcon = otherStackIcons.filter((proj) => proj.name === icon)[0]
+            }
             return (
               <img
                 key={nanoid()}

@@ -18,21 +18,33 @@ const stackIcons = [
     special: false
   },
   {
+    link: 'https://www.typescriptlang.org/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/typescript-icon.svg',
+    name: 'TypeScript',
+    special: false
+  },
+  {
     link: 'https://reactjs.org/',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/react-icon.svg',
     name: 'React',
     special: false
   },
   {
-    link: 'https://reactrouter.com/',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/react-router-icon.svg',
-    name: 'React Router',
+    link: 'https://nextjs.org/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/nextjs-icon.svg',
+    name: 'Next.js',
     special: true
   },
   {
     link: 'https://sass-lang.com/',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/sass-icon.svg',
     name: 'Sass',
+    special: false
+  },
+  {
+    link: 'https://tailwindcss.com/',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/tailwindcss-icon.svg',
+    name: 'Tailwind CSS',
     special: false
   },
   {
@@ -48,21 +60,21 @@ const stackIcons = [
     special: false
   },
   {
-    link: 'https://www.postman.com/',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/postman-icon.svg',
-    name: 'Postman',
-    special: false
-  },
-  {
     link: 'https://git-scm.com/',
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/git-icon.svg',
     name: 'Git',
     special: false
   },
   {
-    link: 'https://greensock.com/',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/gsap-icon.svg',
-    name: 'Green Sock Animation Platform',
+    link: '',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/docker-icon.svg',
+    name: 'Docker',
+    special: false
+  },
+  {
+    link: '',
+    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/kubernetes.svg',
+    name: 'Kubernetes',
     special: false
   },
   {
@@ -76,43 +88,7 @@ const stackIcons = [
     img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/ableton-icon.svg',
     name: 'Ableton Live',
     special: true
-  },
-  {
-    link: 'https://pugjs.org/api/getting-started.html',
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/pug-icon.svg',
-    name: 'Pug',
-    special: false
   }
-  // {
-  //   link: 'https://nextjs.org/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/nextjs-icon.svg',
-  //   name: 'Next.js',
-  //   special: true
-  // },
-  // {
-  //   link: 'https://www.typescriptlang.org/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/typescript-icon.svg',
-  //   name: 'TypeScript',
-  //   special: false
-  // },
-  // {
-  //   link: 'https://tailwindcss.com/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/tailwindcss-icon.svg',
-  //   name: 'Tailwind CSS',
-  //   special: false
-  // },
-  // {
-  //   link: 'https://www.gatsbyjs.com/',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/gatsby.svg',
-  //   name: 'Gatsby.js',
-  //   special: false
-  // },
-  // {
-  //   link: 'https://www.adobe.com/products/illustrator.html',
-  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/illustrator-icon.svg',
-  //   name: 'Adobe Illustrator',
-  //   special: false
-  // }
 ]
 
 export default stackIcons

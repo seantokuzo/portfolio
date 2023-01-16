@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
 import { gsap } from 'gsap'
 
 export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = 'hello there, i am'
-  const line2 = 'sean.tokuzo.simpson'
+  const line2 = 'sean' + '_' + 'tokuzo' + '_' + 'simpson'
   const line3 = 'front end developer'
   const home = useRef()
   const q = gsap.utils.selector(home)
   const tl = gsap.timeline()
-  let windowWidth = window.innerWidth
 
   useEffect(() => {
     tl.from(q('.home__span'), {
@@ -56,11 +55,13 @@ export default function Home({ logoActive, toggleLogoActive }) {
 
   const line2El = (
     <>
-      {line2.split('').map((str) => (
-        <span key={nanoid()} className="home__span-name">
-          {str}
-        </span>
-      ))}
+      {line2.split('').map((str) => {
+        return (
+          <span key={nanoid()} className="home__span-name">
+            {str !== ' ' ? str : ' '}
+          </span>
+        )
+      })}
     </>
   )
   const line3El = (

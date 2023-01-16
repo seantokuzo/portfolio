@@ -3,6 +3,7 @@ import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { nanoid } from 'nanoid'
 import stackIcons from '../../data/stackIcons'
+import otherStackIcons from '../../data/otherIcons'
 
 export default function ProjectCard({ project }) {
   const { darkMode } = useContext(ThemeContext)
@@ -82,7 +83,10 @@ export default function ProjectCard({ project }) {
         </p>
         <div className="project-card__stack-icons">
           {stack.map((icon) => {
-            const thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+            let thisIcon = stackIcons.filter((proj) => proj.name === icon)[0]
+            if (!thisIcon) {
+              thisIcon = otherStackIcons.filter((proj) => proj.name === icon)[0]
+            }
             return (
               <img
                 key={nanoid()}
