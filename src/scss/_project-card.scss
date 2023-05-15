@@ -10,9 +10,10 @@
   display: grid;
   @include box-shadow($bs-purp);
   z-index: 10;
-
+  
   &__title {
     grid-area: title;
+    text-align: center;
     margin: 0 auto;
   }
   
