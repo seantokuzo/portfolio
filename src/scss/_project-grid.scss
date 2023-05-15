@@ -38,6 +38,7 @@
     opacity: 0;
     border-radius: 2px;
     border-style: solid;
+    text-align: center;
     @include flex(column, center, center);
     @include transition-ease;
     &-stack-text {

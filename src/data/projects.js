@@ -10,7 +10,7 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/wmgt-800sqr.png',
     link: 'https://walkabout-mini-golf-tournament-stats.netlify.app/',
     github: 'https://github.com/seantokuzo/wmgt',
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js']
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/juicygames-800sqr.png',
     link: 'https://juicy-games.onrender.com/',
     github: 'https://github.com/seantokuzo/wmgt',
-    stack: ['React', 'JavaScript', 'Sass', 'Node.js', 'MongoDB']
+    stack: ['React', 'JavaScript', 'Sass', 'Node.js', 'MongoDB'],
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jpmusic-800sqr.png',
     link: 'https://jordanparkermusic.com/',
     github: 'https://github.com/seantokuzo/jordanparkermusic',
-    stack: ['React', 'TypeScript', 'Tailwind CSS']
+    stack: ['React', 'TypeScript', 'Tailwind CSS'],
   },
   {
     id: 4,
@@ -49,19 +49,7 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
     link: 'https://jobby-dobby.onrender.com/',
     github: 'https://github.com/seantokuzo/jobby-dobby-final',
-    stack: ['React', 'CSS3', 'Node.js', 'MongoDB']
-  },
-  {
-    id: 5,
-    name: 'Bobby Shmurdle',
-    tagline: 'A Bobby Shmurda themed Wordle clone you can play forever',
-    imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-light.png',
-    imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-dark.png',
-    link: 'https://bobby-shmurdle.netlify.app/',
-    github: 'https://github.com/seantokuzo/bobby-shmurdle',
-    stack: ['React', 'CSS3']
+    stack: ['React', 'CSS3', 'Node.js', 'MongoDB'],
   },
   {
     id: 6,
@@ -73,7 +61,7 @@ const projects = [
     link: 'https://www.seantokuzo.dev/',
     github: 'https://github.com/seantokuzo/portfolio',
     tagline: 'My portfolio on my portfolio?! Woooah, my brain',
-    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform']
+    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform'],
   },
   {
     id: 7,
@@ -85,8 +73,20 @@ const projects = [
     link: 'https://natours-seantokuzo.herokuapp.com/',
     github: 'https://github.com/seantokuzo/StudyTimer',
     tagline: 'A fullstack mock e-commerce site for a tour company',
-    stack: ['Node.js', 'MongoDB', 'Pug', 'Postman']
-  }
+    stack: ['Node.js', 'MongoDB', 'Pug', 'Postman'],
+  },
+  // {
+  //   id: 5,
+  //   name: 'Bobby Shmurdle',
+  //   tagline: 'A Bobby Shmurda themed Wordle clone you can play forever',
+  //   imgLight:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-light.png',
+  //   imgDark:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/bobby-800sqr-dark.png',
+  //   link: 'https://bobby-shmurdle.netlify.app/',
+  //   github: 'https://github.com/seantokuzo/bobby-shmurdle',
+  //   stack: ['React', 'CSS3']
+  // },
   // {
   //   id: 3,
   //   name: 'Movie Watchlist',
