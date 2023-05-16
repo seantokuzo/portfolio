@@ -25,8 +25,8 @@ export default function Logo({ logoActive, toggleLogoActive }) {
   }, [])
 
   const dynamicLogo = darkMode
-    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-144.png'
-    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-144.png'
+    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-576.png'
+    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-576.png'
 
   return (
     <div

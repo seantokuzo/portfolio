@@ -1,12 +1,15 @@
 .about {
   width: 85%;
-  max-width: 650px;
-
+  
   margin: 0 auto;
   padding: 0 0 4rem;
-
+  
   letter-spacing: 1.1px;
   text-align: center;
+  
+  &__about-div {
+    max-width: 650px;
+  }
 
   &__title {
     margin: 0 0 1rem;
@@ -20,14 +23,14 @@
 
 .section__toolbox {
   width: 95%;
-  max-width: 450px;
+  max-width: 1000px;
 
   margin: 1rem auto 0;
   padding: 0;
 }
 
 .toolbox-div {
-  max-width: 550px;
+  max-width: 100%;
   margin: 1rem auto;
   @include flex(row, center, space-evenly);
   flex-wrap: wrap;
@@ -35,6 +38,7 @@
 
 .stack-icon-div {
   opacity: .85;
+  margin: 7px 0;
 
   &:hover {
     transform: scale(1.05);
@@ -45,8 +49,8 @@
 $stack-icon-sm: 35px;
 
 .stack-icon {
-  width: 10px;
   width: $stack-icon-sm;
+  height: $stack-icon-sm;
   margin: .5rem;
 }
 
@@ -54,6 +58,7 @@ $stack-icon-sm: 35px;
 .special-icon {
   width: $stack-icon-sm;
   height: $stack-icon-sm;
+  margin: .5rem;
   padding: 2px;
   background-color: $color-light;
   border-radius: 2px;
@@ -116,15 +121,15 @@ $stack-icon-sm: 35px;
       padding: 4rem 0 2.5rem;
     }
   }
-}
 
-@include media-sm {
-  .about {
+  .stack-icon-div {
+    width: 80px;
   }
 }
 
-@include media-sm-short {
-  .about {
+@include media-sm {
+  .stack-icon-div {
+    width: 90px;
   }
 }
 
@@ -133,10 +138,15 @@ $stack-icon-sm: 35px;
     padding: 0 0 5rem;
   }
 
+  .stack-icon-div {
+    width: 110px;
+  }
+
   $stack-icon-rg: 40px;
 
   .stack-icon {
     width: $stack-icon-rg;
+    height: $stack-icon-rg;
     margin: .65rem;
   }
 
@@ -152,10 +162,15 @@ $stack-icon-sm: 35px;
     padding: 0 0 6rem;
   }
 
+  .stack-icon-div {
+    width: 125px;
+  }
+
   $stack-icon-md: 48px;
 
   .stack-icon {
     width: $stack-icon-md;
+    height: $stack-icon-md;
     margin: .75rem;
   }
 
@@ -164,8 +179,6 @@ $stack-icon-sm: 35px;
     height: $stack-icon-md;
   }
 }
-
-@include media-md-landscape {}
 
 @include media-lg {
   .about {
@@ -189,10 +202,15 @@ $stack-icon-sm: 35px;
     }
   }
 
+  .stack-icon-div {
+    width: 140px;
+  }
+
   $stack-icon-lg: 50px;
 
   .stack-icon {
     width: $stack-icon-lg;
+    height: $stack-icon-lg;
     margin: .85rem;
   }
 

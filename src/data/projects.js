@@ -3,20 +3,19 @@ const projects = [
     id: 1,
     name: 'Walkabout Mini Golf Tournament',
     tagline:
-      'A site hosting results and stats for the weekly Walkabout VR miniature golf tournament. Built with React and TypeScript and styled with TailwindCSS. Old results were converted from Google Sheets to JSON using Node.js. Includes customized views for individual players.',
+      'A site hosting results and stats for the weekly Walkabout VR miniature golf tournament',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/wmgt-800sqr.png',
     imgDark:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/wmgt-800sqr.png',
     link: 'https://walkabout-mini-golf-tournament-stats.netlify.app/',
     github: 'https://github.com/seantokuzo/wmgt',
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+    stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
   },
   {
     id: 2,
     name: 'Juicy Games',
-    tagline:
-      'A social gaming site where users can add friends and play games. The front end is built with React and styled using Sass. The backend was created with Node.js, Express and uses MongoDB. Uses SendGrid for email confirmation on signup and password changes',
+    tagline: 'A social gaming site where users can add friends and play games',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/juicygames-800sqr.png',
     imgDark:
@@ -29,20 +28,20 @@ const projects = [
     id: 3,
     name: 'Jordan Parker Music',
     tagline:
-      'A website built for music artist Jordan Parker. It hosts info, music previews and other media as well as contact page to get in touch with the artist.',
+      'A website built for music artist Jordan Parker hosting music previews and other media',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jpmusic-800sqr.png',
     imgDark:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jpmusic-800sqr.png',
     link: 'https://jordanparkermusic.com/',
     github: 'https://github.com/seantokuzo/jordanparkermusic',
-    stack: ['React', 'TypeScript', 'Tailwind CSS'],
+    stack: ['React', 'TypeScript', 'TailwindCSS'],
   },
   {
     id: 4,
     name: 'Jobby Dobby',
     tagline:
-      'A full stack web application for tracking and organizing job applications. The front end is built with React and vanilla JavaScript and is styled with CSS. The back end was made with Node.js, Express and uses MongoDB for the database. Includes full authorization and authentication using cookies. Demo the app using the Test User feature.',
+      'A full stack web application for tracking and organizing job applications',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
     imgDark:
@@ -52,7 +51,7 @@ const projects = [
     stack: ['React', 'CSS3', 'Node.js', 'MongoDB'],
   },
   {
-    id: 6,
+    id: 5,
     name: 'My Portfolio',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-light.png',
@@ -60,11 +59,12 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-dark.png',
     link: 'https://www.seantokuzo.dev/',
     github: 'https://github.com/seantokuzo/portfolio',
-    tagline: 'My portfolio on my portfolio?! Woooah, my brain',
+    tagline:
+      'My personal portfolio to showcase my experience with web development',
     stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform'],
   },
   {
-    id: 7,
+    id: 6,
     name: 'Natours',
     imgLight:
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',

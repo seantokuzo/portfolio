@@ -10,7 +10,7 @@ export default function MyToolbox() {
     gsap.from(q('.stack-icon-link'), {
       opacity: 0,
       duration: 0.5,
-      stagger: 0.1
+      stagger: 0.1,
     })
   }, [])
 
@@ -30,7 +30,7 @@ export default function MyToolbox() {
             alt={`${name} icon`}
             title={name}
           />
-          {/* <p className="stack-icon--title">{name}</p> */}
+          <p className="stack-icon--title section__text">{name}</p>
         </div>
       </a>
     )

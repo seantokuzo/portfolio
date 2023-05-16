@@ -33,6 +33,7 @@
   
   &__details {
     position: absolute;
+    max-width: 90%;
     color: $kuzo-purp;
     background-color: rgba($color-dark, .9);
     opacity: 0;
