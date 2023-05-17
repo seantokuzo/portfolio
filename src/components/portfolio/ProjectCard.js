@@ -16,19 +16,19 @@ export default function ProjectCard({ project }) {
   useEffect(() => {
     tl.from(q('.thumb'), {
       opacity: 0,
-      duration: 0.5
+      duration: 0.5,
     })
     tl.from(q('.meow'), {
       opacity: 0,
       scale: 0,
       stagger: 0.1,
-      delay: -0.7
+      delay: -0.7,
     })
     tl.from(q('.bark'), {
       opacity: 0,
       stagger: 0.15,
       ease: 'power1.out',
-      delay: -0.75
+      delay: -0.75,
     })
   }, [project])
 
@@ -97,6 +97,7 @@ export default function ProjectCard({ project }) {
                     : 'project-card__stack-icons-icon bark'
                 }
                 alt={`${icon} icon`}
+                title={thisIcon.name}
               />
             )
           })}

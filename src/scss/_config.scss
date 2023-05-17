@@ -39,6 +39,10 @@ $bs-sherbert: 0.25em 0.25em 0.75em rgba($kuzo-sherbert, $bs-val1),
   transform: translate(-50%, $transY);
 }
 
+@mixin transition-all($time: 100ms) {
+  transition: all $time ease-in;
+}
+
 @mixin transition-ease($time: 350ms) {
   transition: all $time ease-in-out ;
 }

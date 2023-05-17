@@ -61,6 +61,8 @@
       &:hover {
         color: darken($kuzo-purp, 7%);
         @include text-shadow;
+        transform: scale(1.25);
+        @include transition-all;
       }
       &:focus {
         position: relative;
