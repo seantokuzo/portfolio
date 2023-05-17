@@ -14,7 +14,7 @@ export default function Footer() {
         y: 20,
         duration: 2,
         ease: 'power4.out',
-        delay: 7
+        delay: 7,
       })
     }
   }, [])
@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer className="footer" ref={footerRef}>
       <p className="footer__text section__text footie-anim">
-        <span className="footer__copy">©</span> seantokuzo 2022
+        <span className="footer__copy">©</span> seantokuzo 2023
       </p>
       <div className="footer__links footie-anim">
         <a
