@@ -21,7 +21,7 @@ body {
   color: $kuzo-purp;
   background: $color-dark;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
   line-height: 1;
   animation: start 1s ease-in forwards;
 }
@@ -61,7 +61,14 @@ textarea:focus {
   }
 }
 
-h1, h2, h3, h4, h5, p {margin: 0;}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
 
 .app {
   margin: 0;

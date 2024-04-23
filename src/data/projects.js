@@ -1,6 +1,19 @@
 const projects = [
   {
     id: 1,
+    name: 'Chronos',
+    tagline:
+      'A site hosting results and stats for the weekly Walkabout VR miniature golf tournament',
+    imgLight:
+      'https://media.licdn.com/dms/image/C4D0BAQGgx4OrPKp8bg/company-logo_200_200/0/1630551340376/chronosmd_logo?e=1721865600&v=beta&t=6gzbf3siaJZMOwwK3SzU_FZlaJlbPcHPEUKdkxlr5lo',
+    imgDark:
+      'https://media.licdn.com/dms/image/C4D0BAQGgx4OrPKp8bg/company-logo_200_200/0/1630551340376/chronosmd_logo?e=1721865600&v=beta&t=6gzbf3siaJZMOwwK3SzU_FZlaJlbPcHPEUKdkxlr5lo',
+    link: 'https://chronoslany.com/',
+    github: 'https://github.com/open-source-labs/Chronos',
+    stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
+  },
+  {
+    id: 2,
     name: 'Walkabout Mini Golf Tournament',
     tagline:
       'A site hosting results and stats for the weekly Walkabout VR miniature golf tournament',
@@ -13,7 +26,7 @@ const projects = [
     stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
   },
   {
-    id: 2,
+    id: 3,
     name: 'Juicy Games',
     tagline: 'A social gaming site where users can add friends and play games',
     imgLight:
@@ -25,7 +38,7 @@ const projects = [
     stack: ['React', 'JavaScript', 'Sass', 'Node.js', 'MongoDB'],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Jordan Parker Music',
     tagline:
       'A website built for music artist Jordan Parker hosting music previews and other media',
@@ -38,7 +51,7 @@ const projects = [
     stack: ['React', 'TypeScript', 'TailwindCSS'],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Jobby Dobby',
     tagline:
       'A full stack web application for tracking and organizing job applications',
@@ -50,33 +63,33 @@ const projects = [
     github: 'https://github.com/seantokuzo/jobby-dobby-final',
     stack: ['React', 'CSS3', 'Node.js', 'MongoDB'],
   },
-  {
-    id: 5,
-    name: 'My Portfolio',
-    imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-light.png',
-    imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-dark.png',
-    link: 'https://www.seantokuzo.dev/',
-    github: 'https://github.com/seantokuzo/portfolio',
-    tagline:
-      'My personal portfolio to showcase my experience with web development',
-    stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform'],
-  },
-  {
-    id: 6,
-    name: 'Natours',
-    imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
-    imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
-    link: 'https://natours-seantokuzo.herokuapp.com/',
-    github: 'https://github.com/seantokuzo/StudyTimer',
-    tagline: 'A fullstack mock e-commerce site for a tour company',
-    stack: ['Node.js', 'MongoDB', 'Pug', 'Postman'],
-  },
   // {
-  //   id: 5,
+  //   id: 6,
+  //   name: 'My Portfolio',
+  //   imgLight:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-light.png',
+  //   imgDark:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/portfolio-800sqr-dark.png',
+  //   link: 'https://www.seantokuzo.dev/',
+  //   github: 'https://github.com/seantokuzo/portfolio',
+  //   tagline:
+  //     'My personal portfolio to showcase my experience with web development',
+  //   stack: ['React', 'React Router', 'Sass', 'Green Sock Animation Platform'],
+  // },
+  // {
+  //   id: 7,
+  //   name: 'Natours',
+  //   imgLight:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
+  //   imgDark:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/natours-800sqr.png',
+  //   link: 'https://natours-seantokuzo.herokuapp.com/',
+  //   github: 'https://github.com/seantokuzo/StudyTimer',
+  //   tagline: 'A fullstack mock e-commerce site for a tour company',
+  //   stack: ['Node.js', 'MongoDB', 'Pug', 'Postman'],
+  // },
+  // {
+  //   id: 8,
   //   name: 'Bobby Shmurdle',
   //   tagline: 'A Bobby Shmurda themed Wordle clone you can play forever',
   //   imgLight:
@@ -88,7 +101,7 @@ const projects = [
   //   stack: ['React', 'CSS3']
   // },
   // {
-  //   id: 3,
+  //   id: 9,
   //   name: 'Movie Watchlist',
   //   imgLight:
   //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/movie-watchlist-800sqr-light.png',
@@ -101,7 +114,7 @@ const projects = [
   //   stack: ['React', 'CSS3']
   // },
   // {
-  //   id: 5,
+  //   id: 10,
   //   name: 'Study Timer',
   //   imgLight:
   //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/study-timer-800sqr.png',
@@ -113,7 +126,7 @@ const projects = [
   //   stack: ['React', 'CSS3']
   // },
   // {
-  //   id: 6,
+  //   id: 11,
   //   name: 'Le Calculator',
   //   imgLight:
   //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/calculator-800sqr.png',
@@ -126,7 +139,7 @@ const projects = [
   //   stack: ['React', 'CSS3']
   // },
   // {
-  //   id: 7,
+  //   id: 12,
   //   name: 'Drum Machine',
   //   imgLight:
   //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/drum-machine-800sqr.png',
@@ -139,7 +152,7 @@ const projects = [
   //   stack: ['React', 'CSS3', 'Ableton Live']
   // },
   // {
-  //   id: 8,
+  //   id: 13,
   //   name: 'Trivial Trivia',
   //   imgLight:
   //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/trivial-trivia-800sqr.png',
@@ -151,7 +164,7 @@ const projects = [
   //   stack: ['React', 'CSS3']
   // }
   // {
-  //   id: 9,
+  //   id: 14,
   //   name: 'Blackjack',
   //   imgLight: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/blackjack-800sqr.png',
   //   imgDark: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/blackjack-800sqr.png',

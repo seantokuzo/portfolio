@@ -1,4 +1,5 @@
 /* Config */
+$random-spacing: 2560;
 $spacing: 2560px;
 $time-1: 60s;
 $time-2: 120s;
@@ -10,8 +11,7 @@ $time-4: 200s;
   $val: 0px 0px;
 
   @for $i from 1 through $max {
-    $val: #{$val},
-    random($spacing)+px random($spacing)+px;
+    $val: #{$val}, random($random-spacing) + px random($random-spacing) + px;
   }
 
   @return $val;
@@ -113,11 +113,11 @@ $time-4: 200s;
     opacity: 0;
   }
   11% {
-    opacity: .2;
+    opacity: 0.2;
   }
 
   12% {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   14% {
@@ -145,7 +145,7 @@ $time-4: 200s;
   }
 
   28% {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   36% {
@@ -173,7 +173,7 @@ $time-4: 200s;
   }
 
   50% {
-    opacity: .6;
+    opacity: 0.6;
   }
 
   53% {
@@ -217,7 +217,7 @@ $time-4: 200s;
   }
 
   72% {
-    opacity: .4;
+    opacity: 0.4;
   }
 
   75% {
@@ -257,7 +257,7 @@ $time-4: 200s;
   }
 
   99% {
-    opacity: .5;
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
