@@ -16,17 +16,17 @@ export default function Logo({ logoActive, toggleLogoActive }) {
       opacity: 0,
       y: '-20px',
       duration: 1,
-      delay: pathname === '/' ? 5 : 0
+      delay: pathname === '/' ? 5 : 0,
     })
 
     Draggable.create('.header__logo-div', {
-      type: 'rotation'
+      type: 'rotation',
     })
   }, [])
 
   const dynamicLogo = darkMode
-    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-576.png'
-    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-576.png'
+    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-288.png'
+    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-288.png'
 
   return (
     <div

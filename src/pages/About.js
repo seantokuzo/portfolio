@@ -32,7 +32,7 @@ export default function About() {
           currently residing in Los Angeles. I'm obsessed with all things tech.
         </h3>
         <h3 className="about__text section__text">
-          Before getting into web development I worked as an audio engineer,
+          In previous lives I worked as an audio engineer,
           recording studio manager and golf caddy. When I'm not coding you can
           usually find me spending time with my doggo Steve, going for a run or
           playing music.

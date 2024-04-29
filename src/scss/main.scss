@@ -18,12 +18,16 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
   color: $kuzo-purp;
   background: $color-dark;
   font-family: 'Orbitron', 'Inter', Veranda, monospace, sans-serif;
   letter-spacing: 0.75px;
   line-height: 1;
   animation: start 1s ease-in forwards;
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 @keyframes start {
@@ -54,7 +58,16 @@ textarea:focus {
 
 .light-mode {
   color: $kuzo-sherbert;
-  background: $color-light;
+  // background: $color-light;
+  background: rgb(243, 238, 235);
+  background: linear-gradient(
+    0deg,
+    rgba(67, 112, 74, 1) -50%,
+    rgba(243, 238, 235, 1) 100%
+  );
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   a {
     color: $kuzo-sherbert;

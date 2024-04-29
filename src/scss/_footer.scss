@@ -8,6 +8,7 @@
   left: 0;
 
   background-color: $color-dark;
+  background-color: transparent;
 
   @include flex(row, flex-end, space-between);
   z-index: 9999;
@@ -25,7 +26,13 @@
 /* ************************* */
 .light-mode {
   .footer {
-    background-color: $color-light;
+    // background-color: $color-light;
+    color: darken($kuzo-sherbert, 50%);
+    background-color: transparent;
+
+    &__link {
+      color: darken($kuzo-sherbert, 50%);
+    }
   }
 }
 

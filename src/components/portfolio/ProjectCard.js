@@ -62,18 +62,21 @@ export default function ProjectCard({ project }) {
             href={link}
             target="_blank"
             rel="noreferrer"
+            title="Website"
           >
-            <i className="fa-solid fa-arrow-up-right-from-square project-card__links-link-icon"></i>
-            <span className="project-card__links-link-text">Website</span>
+            {/* <i className="fa-solid fa-arrow-up-right-from-square project-card__links-link-icon"></i> */}
+            <i className="fa-solid fa-link project-card__links-link-icon"></i>
+            {/* <span className="project-card__links-link-text">Website</span> */}
           </a>
           <a
             className="project-card__links-link meow"
             href={github}
             target="_blank"
             rel="noreferrer"
+            title="GitHub"
           >
             <i className="fa-brands fa-github project-card__links-link-icon"></i>
-            <span className="project-card__links-link-text">Github</span>
+            {/* <span className="project-card__links-link-text">Github</span> */}
           </a>
           {npm && (
             <a
@@ -81,6 +84,7 @@ export default function ProjectCard({ project }) {
               href={npm}
               target="_blank"
               rel="noreferrer"
+              title="NPM"
             >
               <i className="fa-brands fa-npm project-card__links-link-icon"></i>
               {/* <span className="project-card__links-link-text">npm</span> */}

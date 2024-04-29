@@ -46,7 +46,7 @@
   }
 }
 
-$stack-icon-sm: 35px;
+$stack-icon-sm: 30px;
 
 .stack-icon {
   width: $stack-icon-sm;
@@ -58,7 +58,7 @@ $stack-icon-sm: 35px;
 .special-icon {
   width: $stack-icon-sm;
   height: $stack-icon-sm;
-  margin: 0.5rem;
+  margin: 0.5rem 0rem;
   padding: 5px;
   background-color: $color-light;
   border-radius: 2px;
@@ -121,13 +121,13 @@ $stack-icon-sm: 35px;
   }
 
   .stack-icon-div {
-    width: 80px;
+    width: 50px;
   }
 }
 
 @include media-sm {
   .stack-icon-div {
-    width: 90px;
+    width: 70px;
   }
 }
 
@@ -137,7 +137,7 @@ $stack-icon-sm: 35px;
   }
 
   .stack-icon-div {
-    width: 110px;
+    width: 80px;
   }
 
   $stack-icon-rg: 40px;
@@ -161,7 +161,7 @@ $stack-icon-sm: 35px;
   }
 
   .stack-icon-div {
-    width: 125px;
+    width: 90px;
   }
 
   $stack-icon-md: 48px;
@@ -180,7 +180,7 @@ $stack-icon-sm: 35px;
 
 @include media-lg {
   .about {
-    padding: 0 0 7rem;
+    padding: 0 0 3rem;
 
     &__about-div {
       max-width: 700px;
@@ -204,8 +204,12 @@ $stack-icon-sm: 35px;
     }
   }
 
+  .section__toolbox {
+    max-width: 800px;
+  }
+
   .stack-icon-div {
-    width: 140px;
+    width: 100px;
   }
 
   $stack-icon-lg: 50px;
@@ -213,7 +217,7 @@ $stack-icon-sm: 35px;
   .stack-icon {
     width: $stack-icon-lg;
     height: $stack-icon-lg;
-    margin: 0.85rem;
+    margin: 0.5rem;
   }
 
   .special-icon {

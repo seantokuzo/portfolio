@@ -47,10 +47,11 @@
 /* ************************* */
 .light-mode {
   .carousel {
+    color: darken($kuzo-sherbert, 20%);
     &__toggle {
-      color: $kuzo-sherbert;
-      border-color: $kuzo-sherbert;
-      background-color: $color-light;
+      color: darken($kuzo-sherbert, 20%);
+      border-color: darken($kuzo-sherbert, 20%);
+      background-color: transparent;
 
       &:hover,
       &:focus {

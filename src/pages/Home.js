@@ -5,7 +5,7 @@ import { gsap } from 'gsap'
 
 export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = 'hello there, i am'
-  const line2 = 'sean' + '_' + 'tokuzo' + '_' + 'simpson'
+  const line2 = 'sean' + ' ' + 'tokuzo' + ' ' + 'simpson'
   const line3 = 'front end developer'
   const home = useRef()
   const q = gsap.utils.selector(home)
@@ -15,29 +15,35 @@ export default function Home({ logoActive, toggleLogoActive }) {
     tl.from(q('.home__span'), {
       opacity: 0,
       stagger: 0.05,
-      delay: 0.25
+      delay: 0.25,
+    })
+    tl.from(q('.home__title-name'), {
+      opacity: 0,
+      // rotateY: '180deg',
+      // stagger: 0.06,
+      height: '0px',
+      delay: 0.1,
     })
     tl.from(q('.home__span-name'), {
       opacity: 0,
-      rotateY: '180deg',
-      stagger: 0.06,
-      delay: -0.06
+      stagger: 0.07,
+      delay: 0.1,
     })
     tl.from(q('.home__span-fed'), {
       y: 10,
       opacity: 0,
       stagger: 0.3,
-      delay: -0.1
+      delay: -0.1,
     })
     tl.from(q('.home__subtitle-welcome'), {
       opacity: 0,
-      duration: 2
+      duration: 2,
     })
     tl.from(
       q('.home__next'),
       {
         opacity: 0,
-        duration: 2
+        duration: 2,
       },
       '-=1.5'
     )
@@ -58,7 +64,7 @@ export default function Home({ logoActive, toggleLogoActive }) {
       {line2.split('').map((str) => {
         return (
           <span key={nanoid()} className="home__span-name">
-            {str !== ' ' ? str : ' '}
+            {str}
           </span>
         )
       })}

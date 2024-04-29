@@ -129,11 +129,11 @@ const stackIcons = [
     name: 'GitHub',
     special: true,
   },
-  {
-    img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/photoshop-icon.svg',
-    name: 'Photoshop',
-    special: false,
-  },
+  // {
+  //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/photoshop-icon.svg',
+  //   name: 'Photoshop',
+  //   special: false,
+  // },
   // {
 
   //   img: 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/stack-icons/ableton-icon.svg',

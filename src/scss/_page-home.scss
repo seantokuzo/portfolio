@@ -4,12 +4,19 @@
   padding: 0 1rem;
 
   position: absolute;
-  top:50%;
-  left:50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 
   &__title:first-child {
     margin-top: 0;
+  }
+  &__title {
+    &-name {
+      border-radius: 5px;
+      padding: 0.5rem 0.15rem;
+      background-color: $kuzo-purp;
+    }
   }
 
   &__subtitle-container {
@@ -17,10 +24,8 @@
   }
 
   &__span-name {
-    display: inline-block;
     font-weight: bolder;
     color: $color-dark;
-    background-color: $kuzo-purp;
   }
 
   &__span-fed {
@@ -33,8 +38,10 @@
     border-style: solid;
     border-color: $kuzo-purp;
     cursor: pointer;
-    
-    &:hover, &:focus, &:active {
+
+    &:hover,
+    &:focus,
+    &:active {
       transform: scale(1.1);
     }
   }
@@ -45,14 +52,21 @@
 /* ************************* */
 .light-mode {
   .home {
+    &__title {
+      &-name {
+        background-color: $kuzo-sherbert;
+      }
+    }
+
     &__span-name {
       color: $color-light;
-      background-color: $kuzo-sherbert;
     }
-    
+
     &__next {
       border-color: $kuzo-sherbert;
-      &:hover, &:focus {
+      background-color: rgba($color-light, 0.5);
+      &:hover,
+      &:focus {
         @include box-shadow($bs-dark);
       }
     }
@@ -65,24 +79,24 @@
 @include media-xs {
   .home {
     &__title-container {
-      margin: 0 auto .75rem;
+      margin: 0 auto 0.75rem;
     }
 
     &__title {
-      margin-top: .25rem;
+      margin-top: 0.25rem;
     }
 
     &__span-name {
       padding: 3px 1px;
-      margin: 0 -.5px;
+      margin: 0 -0.5px;
     }
 
     &__span-fed {
-      margin-right: .35rem;
+      margin-right: 0.35rem;
     }
 
     &__next {
-      margin: .75rem auto 0;
+      margin: 0.75rem auto 0;
       width: 2.5rem;
       height: 2.5rem;
       border-width: 2px;
@@ -102,7 +116,7 @@
     }
 
     &__title {
-      margin-top: .3rem;
+      margin-top: 0.3rem;
     }
 
     &__span-name {
@@ -110,7 +124,7 @@
     }
 
     &__span-fed {
-      margin-right: .4rem;
+      margin-right: 0.4rem;
     }
 
     &__next {
@@ -133,11 +147,11 @@
     }
 
     &__title {
-      margin-top: .4rem;
+      margin-top: 0.4rem;
     }
 
     &__span-fed {
-      margin-right: .45rem;
+      margin-right: 0.45rem;
     }
 
     &__next {
@@ -161,11 +175,15 @@
     }
 
     &__title {
-      margin-top: .5rem;
+      margin-top: 0.5rem;
+      &-name {
+        border-radius: 5px;
+        padding: 0.75rem 0.25rem;
+      }
     }
 
     &__span-fed {
-      margin-right: .55rem;
+      margin-right: 0.55rem;
     }
 
     &__next {
@@ -189,7 +207,7 @@
     }
 
     &__span-fed {
-      margin-right: .55rem;
+      margin-right: 0.55rem;
     }
 
     &__next {
@@ -213,7 +231,7 @@
     }
 
     &__title {
-      margin-top: .6rem;
+      margin-top: 0.6rem;
     }
 
     &__span-name {
@@ -221,7 +239,7 @@
     }
 
     &__span-fed {
-      margin-right: .75rem;
+      margin-right: 0.75rem;
     }
   }
 }

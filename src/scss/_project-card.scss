@@ -4,7 +4,7 @@
   width: 85%;
   border-style: solid;
   border-color: $kuzo-purp;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: $color-dark;
   text-align: center;
   display: grid;
@@ -92,10 +92,18 @@
 .light-mode {
   .project-card {
     border-color: $kuzo-sherbert;
-    background-color: $color-light;
+    background-color: rgba($color-light, 0.65);
+    backdrop-filter: blur(500px);
     @include box-shadow($bs-dark);
 
+    &__title,
+    &__stack-title,
+    &__text {
+      color: darken($kuzo-sherbert, 20%);
+    }
+
     &__img-container {
+      border-color: darken($kuzo-sherbert, 10%);
       background-color: $kuzo-sherbert;
       &:hover {
         @include box-shadow($bs-dark);
@@ -188,6 +196,7 @@
     margin-top: 0.75rem;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto auto;
+    gap: 0.5rem 1rem;
 
     &__title {
       padding: 0.5rem 0;
@@ -216,16 +225,16 @@
     &__links {
       margin: 0.5rem 0 0.5rem;
       &-div {
-        @include flex(column, center, space-evenly);
+        @include flex(row, center, space-evenly);
       }
       &-link {
         margin: 0.25rem 0 0;
         &-icon {
-          font-size: 1.15em;
+          font-size: 1.15rem;
         }
 
         &-text {
-          font-size: 0.75em;
+          font-size: 0.75rem;
         }
       }
     }
@@ -373,9 +382,9 @@
     }
 
     &__stack {
-      // &-title {
-      //   margin: .5rem 0 .25rem;
-      // }
+      margin: 0 auto;
+      max-width: 300px;
+      width: 80%;
 
       &-icons {
         &-icon {
@@ -439,7 +448,9 @@
     }
 
     &__stack {
-      margin-top: 0.75rem;
+      margin: 0.75rem auto 0;
+      justify-self: center;
+
       &-icons {
         &-icon {
           width: 1.9rem;
@@ -571,6 +582,7 @@
       'img links'
       'img stack'
       'tag tag';
+    gap: 0 2rem;
 
     &__img-container {
       width: 260px;
@@ -594,12 +606,12 @@
     }
 
     &__links {
-      margin: 1.5rem 1rem 0 0;
+      margin: 1.5rem 0 0 0;
       @include flex(column, center, center);
       &-div {
         margin: 0.5rem 0 0;
         width: 85%;
-        @include flex(row, center, space-between);
+        @include flex(row, center, space-around);
       }
 
       &-link {
@@ -609,14 +621,14 @@
         }
 
         &-text {
-          font-size: 1.1em;
-          line-height: 1.2em;
+          font-size: 1.1rem;
+          line-height: 1.2rem;
         }
       }
     }
 
     &__stack {
-      margin: 0 1rem 1.5rem 0;
+      margin: 0 0 1.5rem 0;
       &-title {
         margin: 0 0 0.75rem;
       }
@@ -645,6 +657,9 @@
     }
 
     &__links {
+      &-div {
+        justify-content: space-around;
+      }
       &-link {
         &-icon {
           margin: 0;
@@ -658,8 +673,9 @@
     }
 
     &__stack {
+      max-width: 500px;
       &-title {
-        margin: 0 0 1rem;
+        margin: 1.5rem 0 1rem;
       }
 
       &-icons {

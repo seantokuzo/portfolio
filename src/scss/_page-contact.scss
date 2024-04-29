@@ -17,7 +17,8 @@
   &__form {
     @include flex(column, center, center);
     max-width: 500px;
-    background-color: rgba($color-dark, .75);
+    background-color: rgba($color-dark, 0.75);
+    backdrop-filter: blur(5px);
     &-label {
       @include flex(column, flex-start, center);
       width: 100%;
@@ -31,22 +32,21 @@
       margin: 5px 0 10px;
     }
   }
-  
-  
+
   &__input,
   &__text-area {
     width: 100%;
-    padding: .25rem;
+    padding: 0.25rem;
     font-family: 'Orbitron', monospace, sans-serif;
   }
-  
+
   &__text-area {
     max-width: 100%;
     min-width: 100%;
-    padding: .25rem;
+    padding: 0.25rem;
     min-height: 5rem;
   }
-  
+
   &__submit {
     font-weight: bolder;
     color: $color-dark;
@@ -61,11 +61,11 @@
 .thankyou {
   width: fit-content;
   max-width: 75%;
-  padding: 2rem .5rem;
-  background-color: rgba($color-dark, .75);
+  padding: 2rem 0.5rem;
+  background-color: rgba($color-dark, 0.75);
 
   &__text {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     text-align: center;
     width: 80%;
 
@@ -79,10 +79,10 @@
 /* ***     DARK MODE     *** */
 /* ************************* */
 .light-mode {
-  .contact { 
+  .contact {
     @include box-shadow($bs-dark);
     &__form {
-      background-color: rgba($color-light, .75);
+      background-color: rgba($color-light, 0.75);
     }
     &__submit {
       color: $color-light;
@@ -91,7 +91,7 @@
   }
 
   .thankyou {
-    background-color: rgba($color-light, .75);
+    background-color: rgba($color-light, 0.75);
   }
 }
 
@@ -102,14 +102,14 @@
   .contact {
     max-height: 55%;
     &__title {
-      margin-bottom: .5rem;
-      font-size: .8em;
+      margin-bottom: 0.5rem;
+      font-size: 0.8em;
     }
     &__form {
       width: 70%;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       &-label {
-        font-size: .75em;
+        font-size: 0.75em;
         padding: 2px 5px;
         &:active,
         &:focus {
@@ -124,7 +124,7 @@
 
     &__input,
     &__text-area {
-      font-size: .6em;
+      font-size: 0.6em;
     }
 
     &__text-area {
@@ -132,9 +132,9 @@
     }
 
     &__submit {
-      font-size: .7em;
-      margin: .25rem 0;
-      padding: .4rem .75rem;
+      font-size: 0.7em;
+      margin: 0.25rem 0;
+      padding: 0.4rem 0.75rem;
     }
   }
 }
@@ -152,7 +152,7 @@
       padding: 1rem;
 
       &-label {
-        font-size: .9em;
+        font-size: 0.9em;
         padding: 2px 5px;
 
         &:active,
@@ -168,7 +168,7 @@
 
     &__input,
     &__text-area {
-      font-size: .75em;
+      font-size: 0.75em;
     }
 
     &__text-area {
@@ -176,9 +176,9 @@
     }
 
     &__submit {
-      font-size: .95em;
+      font-size: 0.95em;
       margin: 1rem 0;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -187,7 +187,7 @@
   .contact {
     &__title {
       margin-bottom: 1rem;
-      font-size: .9em;
+      font-size: 0.9em;
     }
 
     &__form {
@@ -195,7 +195,7 @@
       max-width: 265px;
 
       &-label {
-        font-size: .75em;
+        font-size: 0.75em;
         padding: 2px 5px;
 
         &:active,
@@ -212,7 +212,7 @@
 
     &__input,
     &__text-area {
-      font-size: .75em;
+      font-size: 0.75em;
     }
 
     &__text-area {
@@ -220,9 +220,9 @@
     }
 
     &__submit {
-      font-size: .85em;
+      font-size: 0.85em;
       margin: 1rem 0;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
@@ -254,7 +254,7 @@
 
     &__input,
     &__text-area {
-      font-size: .75em;
+      font-size: 0.75em;
     }
 
     &__text-area {
@@ -264,7 +264,7 @@
     &__submit {
       font-size: 1em;
       margin: 1.5rem 0;
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 }
@@ -296,7 +296,7 @@
 
     &__input,
     &__text-area {
-      font-size: .75em;
+      font-size: 0.75em;
     }
 
     &__text-area {
@@ -306,7 +306,7 @@
     &__submit {
       font-size: 1em;
       margin: 1.5rem 0;
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 }
@@ -340,7 +340,7 @@
 
     &__input,
     &__text-area {
-      font-size: .9em;
+      font-size: 0.9em;
     }
 
     &__text-area {
@@ -350,7 +350,7 @@
     &__submit {
       font-size: 1.15em;
       margin: 1.5rem 0;
-      padding: .75rem 1.5rem;
+      padding: 0.75rem 1.5rem;
     }
   }
 }
@@ -359,38 +359,38 @@
   .contact {
     width: 65%;
     max-width: 800px;
-      &__title {
-        font-size: 1.3em;
-      }
-    
-      &__form {
-        max-width: 400px;
-    
-        &-label {
-          font-size: 1.15em;
-          padding: 4px 5px;
-    
-          &:active,
-          &:focus {
-            border: none;
-            appearance: none;
-          }
-        }
-    
-        &-el {
-          margin: 5px 0 10px;
+    &__title {
+      font-size: 1.3em;
+    }
+
+    &__form {
+      max-width: 400px;
+
+      &-label {
+        font-size: 1.15em;
+        padding: 4px 5px;
+
+        &:active,
+        &:focus {
+          border: none;
+          appearance: none;
         }
       }
-    
-      &__text-area {
-        min-height: 7rem;
+
+      &-el {
+        margin: 5px 0 10px;
       }
-    
-      &__submit {
-        font-size: 1em;
-        margin: 1.5rem 0;
-        padding: .75rem 1.5rem;
-      }
+    }
+
+    &__text-area {
+      min-height: 7rem;
+    }
+
+    &__submit {
+      font-size: 1em;
+      margin: 1.5rem 0;
+      padding: 0.75rem 1.5rem;
+    }
   }
 }
 
