@@ -6,7 +6,7 @@ import { gsap } from 'gsap'
 export default function Home({ logoActive, toggleLogoActive }) {
   const line1 = 'hello there, i am'
   const line2 = 'sean' + ' ' + 'tokuzo' + ' ' + 'simpson'
-  const line3 = 'front end developer'
+  const line3 = 'software engineer'
   const home = useRef()
   const q = gsap.utils.selector(home)
   const tl = gsap.timeline()
