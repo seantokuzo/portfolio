@@ -28,15 +28,14 @@ export default function About() {
       <div className="about__about-div">
         <h1 className="about__title section__title">About Me</h1>
         <h3 className="about__text section__text">
-          I am a Frontend Developer from San Diego, California - currently
-          residing in Los Angeles. My passion is all things web development. I
-          specialize in building accessible, engaging websites and applications.
+          I am a Full Stack Software Engineer from San Diego, California -
+          currently residing in Los Angeles. I'm obsessed with all things tech.
         </h3>
         <h3 className="about__text section__text">
           Before getting into web development I worked as an audio engineer,
-          studio manager and golf caddy. When I'm not coding you can usually
-          find me spending time with my doggo Steve, going for a run or playing
-          music.
+          recording studio manager and golf caddy. When I'm not coding you can
+          usually find me spending time with my doggo Steve, going for a run or
+          playing music.
         </h3>
       </div>
       <div className="toolbox-container">

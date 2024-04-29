@@ -8,28 +8,29 @@
   }
 
   &__toggles {
+    padding: 0.75rem 0;
     @include flex(row, center, center);
   }
-  
+
   &__toggle {
     color: $kuzo-purp;
     background-color: $color-dark;
     border-color: $kuzo-purp;
     border-style: solid;
-    border-radius: 50%;
-    
+    border-radius: 100%;
+
     cursor: pointer;
-    
+
     @include flex(row, center, center);
-    // @include transition-ease(150ms);
+    @include transition-all;
 
     &:hover,
     &:focus {
       color: lighter($kuzo-purp, 20%);
       @include box-shadow($bs-purp);
-      transform: scale(1.05);
+      transform: scale(1.1);
     }
-    
+
     &-number {
       cursor: pointer;
       // @include transition-ease;
@@ -38,10 +39,6 @@
         transform: scale(1.1) translateY(-3px);
       }
     }
-  }
-  
-  &__toggle:hover,
-  &__toggle:focus {
   }
 }
 
@@ -54,10 +51,10 @@
       color: $kuzo-sherbert;
       border-color: $kuzo-sherbert;
       background-color: $color-light;
-      @include box-shadow($bs-dark);
 
       &:hover,
       &:focus {
+        @include box-shadow($bs-dark);
         color: lighter($kuzo-sherbert, 20%);
       }
     }
@@ -70,21 +67,21 @@
 @include media-xs {
   .carousel {
     &__toggles {
-      margin: .75rem 0 0;
+      margin: 0.75rem 0 0;
       width: 80%;
       max-width: 350px;
-      @include flex(row,center,space-between);
+      @include flex(row, center, space-between);
     }
     &__toggle {
       width: 3em;
       height: 3em;
       border-width: 3px;
       &-left {
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
 
       &-right {
-        margin-left: .5rem;
+        margin-left: 0.5rem;
       }
     }
     &__toggle-icon {
@@ -103,10 +100,10 @@
       height: 3.5em;
       border-width: 3px;
       &-left {
-        margin-right: .75rem;
+        margin-right: 0.75rem;
       }
       &-right {
-        margin-left: .75rem;
+        margin-left: 0.75rem;
       }
     }
     &__toggle-icon {
@@ -126,11 +123,11 @@
       height: 3.5em;
       border-width: 3px;
       &-left {
-        margin-right: .75rem;
+        margin-right: 0.75rem;
       }
-    
+
       &-right {
-        margin-left: .75rem;
+        margin-left: 0.75rem;
       }
     }
     &__toggle-icon {
@@ -207,22 +204,22 @@
 
 @include media-xl {
   .carousel {
-      &__toggles {
-        max-width: 700px;
-        margin: 2.5rem 0 0;
+    &__toggles {
+      max-width: 700px;
+      margin: 2.5rem 0 0;
+    }
+    &__toggle {
+      width: 5.75em;
+      height: 5.75em;
+      &-left {
+        margin-right: 1.5rem;
       }
-      &__toggle {
-        width: 5.75em;
-        height: 5.75em;
-        &-left {
-          margin-right: 1.5rem;
-        }
-        &-right {
-          margin-left: 1.5rem;
-        }
-      }
-      &__toggle-icon {
-        font-size: 2.8em;
+      &-right {
+        margin-left: 1.5rem;
       }
     }
+    &__toggle-icon {
+      font-size: 2.8em;
+    }
+  }
 }

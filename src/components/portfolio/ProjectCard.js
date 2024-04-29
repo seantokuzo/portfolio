@@ -7,7 +7,7 @@ import otherStackIcons from '../../data/otherIcons'
 
 export default function ProjectCard({ project }) {
   const { darkMode } = useContext(ThemeContext)
-  const { name, tagline, imgLight, imgDark, link, github, stack } = project
+  const { name, tagline, imgLight, imgDark, link, github, npm, stack } = project
 
   const projectCard = useRef()
   const q = gsap.utils.selector(projectCard)
@@ -53,9 +53,9 @@ export default function ProjectCard({ project }) {
         {tagline}
       </p>
       <div className="project-card__links">
-        <p className="project-card__links-title project-card__text section__text meow">
+        {/* <p className="project-card__links-title project-card__text section__text meow">
           Check it out:
-        </p>
+        </p> */}
         <div className="project-card__links-div">
           <a
             className="project-card__links-link meow"
@@ -75,6 +75,17 @@ export default function ProjectCard({ project }) {
             <i className="fa-brands fa-github project-card__links-link-icon"></i>
             <span className="project-card__links-link-text">Github</span>
           </a>
+          {npm && (
+            <a
+              className="project-card__links-link meow"
+              href={npm}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa-brands fa-npm project-card__links-link-icon"></i>
+              {/* <span className="project-card__links-link-text">npm</span> */}
+            </a>
+          )}
         </div>
       </div>
       <div className="project-card__stack meow">

@@ -12,33 +12,7 @@ export default function Portfolio() {
       y: -20,
       duration: 1,
     })
-    gsap.from(q('.portfolio__icon'), {
-      opacity: 0,
-      y: -20,
-      duration: 1,
-    })
   }, [])
-
-  // useEffect(() => {
-  //   gsap.from(q('.portfolio__icon'), {
-  //     rotateY: '180deg',
-  //     duration: 0.25,
-  //   })
-  // }, [gridMode])
-
-  const pauseToggle = () => {
-    setDisableToggle(true)
-    setTimeout(() => {
-      setDisableToggle(false)
-    }, 750)
-  }
-
-  const carouselBtn = (
-    <div className="portfolio__icon-carousel portfolio__icon">
-      <i className="fa-solid fa-caret-left"></i>
-      <i className="fa-solid fa-caret-right"></i>
-    </div>
-  )
 
   const myWorkContent = (
     <>

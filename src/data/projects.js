@@ -3,14 +3,28 @@ const projects = [
     id: 1,
     name: 'Chronos',
     tagline:
-      'A site hosting results and stats for the weekly Walkabout VR miniature golf tournament',
+      'A comprehensive open-source monitoring tool for Node.js applications',
     imgLight:
-      'https://media.licdn.com/dms/image/C4D0BAQGgx4OrPKp8bg/company-logo_200_200/0/1630551340376/chronosmd_logo?e=1721865600&v=beta&t=6gzbf3siaJZMOwwK3SzU_FZlaJlbPcHPEUKdkxlr5lo',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/chronos_logo_500.png',
     imgDark:
-      'https://media.licdn.com/dms/image/C4D0BAQGgx4OrPKp8bg/company-logo_200_200/0/1630551340376/chronosmd_logo?e=1721865600&v=beta&t=6gzbf3siaJZMOwwK3SzU_FZlaJlbPcHPEUKdkxlr5lo',
+      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/chronos_logo_500.png',
     link: 'https://chronoslany.com/',
     github: 'https://github.com/open-source-labs/Chronos',
-    stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
+    npm: 'https://www.npmjs.com/package/@chronosmicro/tracker',
+    stack: [
+      'React',
+      'TypeScript',
+      'TailwindCSS',
+      'Node.js',
+      'PostgreSQL',
+      'MongoDB',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Prometheus',
+      'Grafana',
+      'Electron.js',
+    ],
   },
   {
     id: 2,
@@ -23,7 +37,7 @@ const projects = [
       'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/wmgt-800sqr.png',
     link: 'https://walkabout-mini-golf-tournament-stats.netlify.app/',
     github: 'https://github.com/seantokuzo/wmgt',
-    stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js'],
+    stack: ['React', 'TypeScript', 'TailwindCSS', 'Node.js', 'MongoDB'],
   },
   {
     id: 3,
@@ -50,19 +64,19 @@ const projects = [
     github: 'https://github.com/seantokuzo/jordanparkermusic',
     stack: ['React', 'TypeScript', 'TailwindCSS'],
   },
-  {
-    id: 5,
-    name: 'Jobby Dobby',
-    tagline:
-      'A full stack web application for tracking and organizing job applications',
-    imgLight:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
-    imgDark:
-      'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
-    link: 'https://jobby-dobby.onrender.com/',
-    github: 'https://github.com/seantokuzo/jobby-dobby-final',
-    stack: ['React', 'CSS3', 'Node.js', 'MongoDB'],
-  },
+  // {
+  //   id: 5,
+  //   name: 'Jobby Dobby',
+  //   tagline:
+  //     'A full stack web application for tracking and organizing job applications',
+  //   imgLight:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
+  //   imgDark:
+  //     'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/project-images/jobbydobby-800sqr.png',
+  //   link: 'https://jobby-dobby.onrender.com/',
+  //   github: 'https://github.com/seantokuzo/jobby-dobby-final',
+  //   stack: ['React', 'CSS3', 'Node.js', 'MongoDB'],
+  // },
   // {
   //   id: 6,
   //   name: 'My Portfolio',
