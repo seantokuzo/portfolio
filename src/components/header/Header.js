@@ -61,7 +61,7 @@ export default function Header({ logoActive, toggleLogoActive }) {
       <Logo logoActive={logoActive} toggleLogoActive={toggleLogoActive} />
       <div className="header__right-div">
         {navLinks}
-        <SunMoonToggle />
+        {/* <SunMoonToggle /> */}
       </div>
     </header>
   )

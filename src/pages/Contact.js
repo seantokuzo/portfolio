@@ -1,10 +1,11 @@
-import React, { useState, useContext, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+// import React, { useState, useContext, useEffect, useRef } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import { ThemeContext } from '../context/ThemeContext'
+// import { ThemeContext } from '../context/ThemeContext'
 import { gsap } from 'gsap'
 
 export default function Contact() {
-  const { darkMode } = useContext(ThemeContext)
+  // const { darkMode } = useContext(ThemeContext)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -20,14 +21,16 @@ export default function Contact() {
       opacity: 0,
       y: -20,
       stagger: 0.05,
-      ease: 'bounce.out'
+      ease: 'bounce.out',
     })
-  }, [darkMode])
+  }, [])
 
   // const bgImg = darkMode ? nightBg : dayBg
-  const bgImg = darkMode
-    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_night-1024.png'
-    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_day-1024.png'
+  const bgImg =
+    'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_night-1024.png'
+  // const bgImg = darkMode
+  //   ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_night-1024.png'
+  //   : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/portfolio-img/contact-img/cb_day-1024.png'
 
   const contactForm = (
     <form

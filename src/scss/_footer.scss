@@ -8,7 +8,7 @@
   left: 0;
 
   background-color: $color-dark;
-  background-color: transparent;
+  // background-color: transparent;
 
   @include flex(row, flex-end, space-between);
   z-index: 9999;

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
-import { ThemeContext } from '../../context/ThemeContext'
+// import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 gsap.registerPlugin(Draggable)
 
 export default function Logo({ logoActive, toggleLogoActive }) {
-  const { darkMode } = useContext(ThemeContext)
+  // const { darkMode } = useContext(ThemeContext)
   const { pathname } = useLocation()
   const logo = useRef()
   const q = gsap.utils.selector(logo)
@@ -24,9 +24,11 @@ export default function Logo({ logoActive, toggleLogoActive }) {
     })
   }, [])
 
-  const dynamicLogo = darkMode
-    ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-288.png'
-    : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-288.png'
+  const dynamicLogo =
+    'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-288.png'
+  // const dynamicLogo = darkMode
+  // ? 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_night-288.png'
+  // : 'https://seantokuzo-bucket.s3.us-west-1.amazonaws.com/kuzoLogo_sizes/kuzoLogo_day-288.png'
 
   return (
     <div

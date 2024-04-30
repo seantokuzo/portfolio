@@ -1,12 +1,12 @@
 .section {
   @include flex(column, center, center);
-  
+
   &__title {
     font-family: 'Orbitron', 'Inter', sans-serif;
     font-size: 1.5em;
     font-weight: 500;
   }
-  
+
   &__subtitle {
     font-size: 1.25em;
     font-weight: 500;
@@ -26,7 +26,6 @@
 .light-mode {
   .section__next {
     background-color: $color-light;
-  
   }
 }
 
@@ -38,13 +37,13 @@
     &__title {
       font-size: 1.1em;
     }
-  
+
     &__subtitle {
-      font-size: .9em;
+      font-size: 0.9em;
     }
-  
+
     &__text {
-      font-size: .65em;
+      font-size: 0.65em;
       // line-height: 1.05em;
     }
   }
@@ -55,13 +54,13 @@
     &__title {
       font-size: 1.35em;
     }
-  
+
     &__subtitle {
       font-size: 1.1em;
     }
-  
+
     &__text {
-      font-size: .75em;
+      font-size: 0.75em;
     }
   }
 }
@@ -71,13 +70,13 @@
     &__title {
       font-size: 1.4em;
     }
-  
+
     &__subtitle {
       font-size: 1.1em;
     }
-  
+
     &__text {
-      font-size: .75em;
+      font-size: 0.75em;
     }
   }
 }
@@ -91,7 +90,7 @@
       font-size: 1.35em;
     }
     &__text {
-      font-size: .85em;
+      font-size: 0.85em;
     }
   }
 }
@@ -105,7 +104,7 @@
       font-size: 1.6em;
     }
     &__text {
-      font-size: .95em;
+      font-size: 0.95em;
     }
   }
 }
@@ -115,11 +114,11 @@
     &__title {
       font-size: 2.35em;
     }
-  
+
     &__subtitle {
       font-size: 1.85em;
     }
-  
+
     &__text {
       font-size: 1.05em;
     }
@@ -131,11 +130,11 @@
     &__title {
       font-size: 2.75em;
     }
-  
+
     &__subtitle {
       font-size: 2.1em;
     }
-  
+
     &__text {
       font-size: 1.25em;
     }

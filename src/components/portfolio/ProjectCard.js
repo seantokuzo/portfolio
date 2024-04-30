@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useContext } from 'react'
-import { ThemeContext } from '../../context/ThemeContext'
+import React, { useEffect, useRef } from 'react'
+// import React, { useEffect, useRef, useContext } from 'react'
+// import { ThemeContext } from '../../context/ThemeContext'
 import { gsap } from 'gsap'
 import { nanoid } from 'nanoid'
 import stackIcons from '../../data/stackIcons'
 import otherStackIcons from '../../data/otherIcons'
 
 export default function ProjectCard({ project }) {
-  const { darkMode } = useContext(ThemeContext)
-  const { name, tagline, imgLight, imgDark, link, github, npm, stack } = project
+  // const { darkMode } = useContext(ThemeContext)
+  const { name, tagline, imgDark, link, github, npm, stack } = project
 
   const projectCard = useRef()
   const q = gsap.utils.selector(projectCard)
@@ -44,7 +45,8 @@ export default function ProjectCard({ project }) {
         >
           <img
             className="project-card__img"
-            src={darkMode ? imgDark : imgLight}
+            // src={darkMode ? imgDark : imgLight}
+            src={imgDark}
             alt={`${name} project preview`}
           />
         </a>
